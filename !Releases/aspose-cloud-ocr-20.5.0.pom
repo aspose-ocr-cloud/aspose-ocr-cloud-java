@@ -1,0 +1,107 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.aspose</groupId>
+    <artifactId>aspose-ocr-cloud</artifactId>
+    <packaging>jar</packaging>
+    <name>aspose-ocr-cloud</name>
+    <version>20.5.0</version>
+    <url>https://products.aspose.cloud/ocr/java</url>
+    <description>Aspose cloud java SDK</description>
+    <scm>
+        <connection>scm:git:git@github.com:aspose-ocr-cloud/aspose-ocr-cloud-java.git</connection>
+        <developerConnection>scm:git:git@github.com:aspose-ocr-cloud/aspose-ocr-cloud-java.git</developerConnection>
+        <url>https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-java</url>
+    </scm>
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <url>https://opensource.org/licenses/mit-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+        <license>
+            <name>MIT License</name>
+            <url>https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-java/blob/master/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Alexander Golshtein</name>
+            <email>alexander.golshtein@aspose.com</email>
+            <organization>Aspose Pty Ltd</organization>
+            <organizationUrl>http://www.aspose.com</organizationUrl>
+        </developer>
+    </developers>
+    <repositories>
+       <repository>
+            <id>AsposeJavaAPI</id>
+            <name>Aspose Java API</name>
+            <url>http://maven.aspose.com/repository/repo</url>
+        </repository>
+	    <repository>
+		  <id>apache.snapshots</id>
+		  <name>Apache Development Snapshot Repository</name>
+		  <url>https://repository.apache.org/content/repositories/snapshots/</url>
+		  <releases>
+		    <enabled>false</enabled>
+		  </releases>
+		  <snapshots>
+		    <enabled>true</enabled>
+		  </snapshots>
+	     </repository>
+    </repositories>               
+
+    <dependencies>
+		<dependency>
+		    <groupId>com.squareup.okhttp3</groupId>
+		    <artifactId>logging-interceptor</artifactId>
+		    <version>${logging-interceptor-version}</version>
+		</dependency>
+		<dependency>
+            <groupId>com.squareup.retrofit2</groupId>
+            <artifactId>converter-gson</artifactId>
+            <version>${retrofit-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.retrofit2</groupId>
+            <artifactId>retrofit</artifactId>
+            <version>${retrofit-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.retrofit2</groupId>
+            <artifactId>converter-scalars</artifactId>
+            <version>${retrofit-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.gsonfire</groupId>
+            <artifactId>gson-fire</artifactId>
+            <version>${gson-fire-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.threeten</groupId>
+            <artifactId>threetenbp</artifactId>
+            <version>${threetenbp-version}</version>
+        </dependency>
+        <!-- test dependencies -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit-version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.7</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <okhttp-version>2.7.5</okhttp-version>
+        <logging-interceptor-version>4.5.0</logging-interceptor-version>
+        <gson-fire-version>1.8.4</gson-fire-version>
+        <retrofit-version>2.8.1</retrofit-version>
+        <threetenbp-version>1.4.3</threetenbp-version>
+        <junit-version>4.12</junit-version>
+    </properties>
+</project>
