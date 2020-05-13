@@ -207,6 +207,9 @@ gradle-app.setting
 **/out/
 out/
 
+Builds
+Builds/
+
 !!Releases
 !!Releases/
 !!Releases/*

@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="jar" build-on-make="true" name="Aspose.OCR.Cloud.SDK.Java.main:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/Aspose_OCR_Cloud_SDK_Java_main_jar</output-path>
-    <root id="archive" name="Aspose.OCR.Cloud.SDK.Java.main.jar">
+    <root id="archive" name=" aspose-ocr-cloud-20.5.0.jar">
       <element id="module-output" name="Aspose.OCR.Cloud.SDK.Java.main" />
       <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.8.1/1a5041a46b61256101c49751eced5e657082e7e/retrofit-2.8.1.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.8.1/3dd6788fe5568b15df62735d7d16f09276989e9a/converter-gson-2.8.1.jar" path-in-jar="/" />

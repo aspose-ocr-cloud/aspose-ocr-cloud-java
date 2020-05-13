@@ -27,11 +27,15 @@ We are glad to introduce our new Java SDK.
 
 Our API is completely independent of your operating system, database system, or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone, and time-consuming. Therefore, we have provided and support [SDKs](#asposeocr-cloud-sdks) in many development languages to make it easier to integrate with us.
 
-## Example
+## Examples
 
 ```java
-Configuration.setAPI_KEY("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-Configuration.setAPP_SID("XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX");
+private static void setUpConfig() throws Exception {
+        Configuration.setAPP_SID("XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX");
+        Configuration.setAPI_KEY("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+    }
+
+OcrApi api = new ApiClient().createService(OcrApi.class);
 
 public String RecognizeFromUrl(String url) {
     Call<ResponseBody> call = api.RecognizeFromUrl(url);
@@ -92,8 +96,15 @@ Add this dependency to your project's POM:
     <groupId>com.aspose</groupId>
     <artifactId>aspose-ocr-cloud-java</artifactId>
     <version>20.5.0</version>
-    <type>jar</type>
+    <scope>compile</scope>
 </dependency>
+<repositories>
+   <repository>
+        <id>AsposeJavaAPI</id>
+        <name>Aspose Java API</name>
+        <url>http://repository.aspose.cloud/repo</url>
+    </repository>
+</repositories>            
 ```
 
 ### Dependencies

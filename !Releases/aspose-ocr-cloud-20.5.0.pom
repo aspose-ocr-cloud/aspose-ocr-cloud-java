@@ -38,7 +38,7 @@
        <repository>
             <id>AsposeJavaAPI</id>
             <name>Aspose Java API</name>
-            <url>http://maven.aspose.com/repository/repo</url>
+            <url>http://repository.aspose.cloud/repo</url>
         </repository>
 	    <repository>
 		  <id>apache.snapshots</id>
@@ -51,7 +51,7 @@
 		    <enabled>true</enabled>
 		  </snapshots>
 	     </repository>
-    </repositories>               
+    </repositories>
 
     <dependencies>
 		<dependency>

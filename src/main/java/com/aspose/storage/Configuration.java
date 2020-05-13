@@ -29,13 +29,12 @@
 package com.aspose.storage;
 
 public class Configuration {
-
-
-    static String basePath;
-    static String authPath;
+    
+    static String basePath = "https://api.aspose.cloud/v3.0";
+    static String authPath = "https://api.aspose.cloud/connect/token";
     static String apiKey;
     static String appSID;
-    static String defaultUserAgent;
+    static String defaultUserAgent = "WebKit";
     static String srcTest;
     static String dstTest;
     static boolean debug;
