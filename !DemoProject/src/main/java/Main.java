@@ -13,18 +13,10 @@ import static java.lang.System.out;
 
 
 public class Main {
-//    static {
-//        Configuration.setAPI_KEY("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-//        Configuration.setAPP_SID("XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX");
-//    }
-
     private static final String url = "https://upload.wikimedia.org/wikipedia/commons/2/2f/Book_of_Abraham_FirstPage.png";
 
     public static String RecognizeFromUrl(String url) throws IOException {
-        OcrApi api = new ApiClient().createService(OcrApi.class);
-        Call<ResponseBody> call = api.RecognizeFromUrl(url);
-        Response<ResponseBody> res = call.execute();
-        OCRResponse ocrResp = OCRResponse.Deserialize(res.body());
+        OCRResponse ocrResponse = RecognizeFromUrl(urlToFile, Language.English);
         return ocrResp.text;
     }
 

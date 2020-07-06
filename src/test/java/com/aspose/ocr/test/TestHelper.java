@@ -50,7 +50,7 @@ import static org.junit.Assert.assertTrue;
 
 public class TestHelper {
 
-    private static StorageApi storageApi = new ApiClient().createService(StorageApi.class);;
+    private static StorageApi storageApi = new ApiClient().createService(StorageApi.class);
 
     public static void checkAndSave(Call<ResponseBody> call, String fileName) throws IOException {
 

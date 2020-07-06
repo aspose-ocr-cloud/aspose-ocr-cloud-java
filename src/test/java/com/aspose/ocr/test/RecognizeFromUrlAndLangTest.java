@@ -29,7 +29,7 @@
 package com.aspose.ocr.test;
 
 import com.aspose.ocr.ApiClient;
-import com.aspose.ocr.api.OcrApi;
+import com.aspose.ocr.api.OcrApiInvoker;
 import com.aspose.ocr.api.Language;
 
 import org.junit.Before;
@@ -54,7 +54,7 @@ public class RecognizeFromUrlAndLangTest extends BaseTest {
 
     private String url;
     private Language language;
-    private OcrApi api;
+    private OcrApiInvoker api;
 
     //Constructor that takes test data.
     public RecognizeFromUrlAndLangTest(
@@ -68,7 +68,7 @@ public class RecognizeFromUrlAndLangTest extends BaseTest {
 
     @Before
     public void initialize() {
-        api = new ApiClient().createService(OcrApi.class);
+        api = new ApiClient().createService(OcrApiInvoker.class);
     }
 
     @Parameterized.Parameters
@@ -82,7 +82,7 @@ public class RecognizeFromUrlAndLangTest extends BaseTest {
 
     @Test
     public void RecognizeFromUrlAndLang() {
-        out.println("Test url: " + url + " + language: " + language.getCode());
+        out.println("Test url: " + url + " + language: " + language.getKey());
         try {
              Call<ResponseBody> call = api.RecognizeFromUrl(url, language);
 

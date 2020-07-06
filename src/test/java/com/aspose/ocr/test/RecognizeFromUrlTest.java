@@ -30,7 +30,7 @@ package com.aspose.ocr.test;
 
 import com.aspose.ocr.ApiClient;
 import com.aspose.ocr.api.OCRResponse;
-import com.aspose.ocr.api.OcrApi;
+import com.aspose.ocr.api.OcrApiInvoker;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -53,7 +53,7 @@ import static org.junit.Assert.fail;
 public class RecognizeFromUrlTest extends BaseTest {
 
     private String url;
-    private OcrApi api;
+    private OcrApiInvoker api;
 
     //Constructor that takes test data.
     public RecognizeFromUrlTest(
@@ -65,7 +65,7 @@ public class RecognizeFromUrlTest extends BaseTest {
 
     @Before
     public void initialize() {
-        api = new ApiClient().createService(OcrApi.class);
+        api = new ApiClient().createService(OcrApiInvoker.class);
     }
 
     @Parameterized.Parameters

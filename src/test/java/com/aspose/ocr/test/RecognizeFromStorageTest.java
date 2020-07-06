@@ -30,7 +30,7 @@ package com.aspose.ocr.test;
 
 import com.aspose.ocr.ApiClient;
 import com.aspose.ocr.api.Language;
-import com.aspose.ocr.api.OcrApi;
+import com.aspose.ocr.api.OcrApiInvoker;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -55,7 +55,7 @@ public class RecognizeFromStorageTest extends BaseTest {
     private String fileName;
     private String folder;
     private String storage;
-    private OcrApi api;
+    private OcrApiInvoker api;
     private Language language = null;
 
     //Constructor that takes test data.
@@ -73,7 +73,7 @@ public class RecognizeFromStorageTest extends BaseTest {
 
     @Before
     public void initialize() {
-        api = new ApiClient().createService(OcrApi.class);
+        api = new ApiClient().createService(OcrApiInvoker.class);
     }
 
     @Parameterized.Parameters

@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'com.aspose'
-version '20.5'
+version '20.7'
 
 repositories {
     mavenCentral()

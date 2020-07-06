@@ -54,7 +54,7 @@ import static org.junit.Assert.fail;
 public class RecognizeFromContentTest extends BaseTest {
 
     private String fileName;
-    private OcrApi api;
+    private OcrApiInvoker api;
 
     //Constructor that takes test data.
     public RecognizeFromContentTest(
@@ -66,7 +66,7 @@ public class RecognizeFromContentTest extends BaseTest {
 
     @Before
     public void initialize() {
-        api = new ApiClient().createService(OcrApi.class);
+        api = new ApiClient().createService(OcrApiInvoker.class);
     }
 
     @Parameterized.Parameters
