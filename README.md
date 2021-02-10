@@ -109,7 +109,7 @@ _________________________
 
 ## Aspose.OCR Cloud SDKs in Popular Languages
 
-| .NET | Java | Python| Android | ТNodeJS |
+| .NET | Java | Python| Android | NodeJS |
 |---|---|---|---|---|
 | [GitHub](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-dotnet) |[GitHub](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-java) | [GitHub](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-python)|[GitHub](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-android)|
 | [NuGet](https://www.nuget.org/packages/Aspose.ocr-Cloud/)| [Maven](https://repository.aspose.cloud/webapp/#/artifacts/browse/tree/General/repo/com/aspose/aspose-ocr-cloud) | [PIP](https://pypi.org/project/aspose-ocr-cloud/) | [Maven](https://repository.aspose.cloud/webapp/#/artifacts/browse/tree/General/repo/com/aspose/aspose-ocr-cloud)) | [NodeJS](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-nodejs)
