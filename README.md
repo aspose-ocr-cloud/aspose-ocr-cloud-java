@@ -25,27 +25,20 @@ BMP, JPG, GIF, PNG, TIFF
 
 Our API is completely independent of your operating system, database system, or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone, and time-consuming. Therefore, we have provided and support [SDKs](#asposeocr-cloud-sdks) in many development languages to make it easier to integrate with us.
 
-## Examples
+
+## OCR from URL in Java
 
 ```java
-import com.aspose.ocr.api.*;
-
-private static void setUpConfig() throws Exception {
-        Configuration.setAPP_SID("XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX");
-        Configuration.setAPI_KEY("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-    }
-
-public String RecognizeFromUrl(String url) {
-    String urlToFile = "https://upload.wikimedia.org/wikipedia/commons/2/2f/Book_of_Abraham_FirstPage.png";
-    OCRResponse ocrResponse = RecognizeFromUrl(urlToFile, Language.English);
-    return ocrResponse.text;
-}
-
-static String RecognizeFromContent(File f) {
-    File f = new File(Configuration.getTestSrcDir(), "de_1.jpg");
-    OCRResponse ocrResponse = RecognizeFromContent(f, Language.German);
-    return ocrResp.text;
-}
+	// Get your ClientId and ClientSecret from https://dashboard.aspose.cloud (free registration required).
+	Configuration.setAPP_SID("MY_CLIENT_ID");
+	Configuration.setAPI_KEY("MY_CLIENT_SECRET");
+	Configuration.setAuthPath("https://api.aspose.cloud/connect/token");
+	Configuration.setBasePath("https://api.aspose.cloud/v3.0");
+	Configuration.setUserAgent("WebKit");
+	
+	String urlToFile = "https://upload.wikimedia.org/wikipedia/commons/2/2f/Book_of_Abraham_FirstPage.png";
+	OCRResponse ocrResponse = OCRAPI.RecognizeFromUrl(urlToFile, Language.English);
+	return ocrResponse.text;
 ```
 _________________________
 
@@ -114,4 +107,4 @@ _________________________
 | [GitHub](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-dotnet) |[GitHub](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-java) | [GitHub](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-python)|[GitHub](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-android)|[GitHub](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-nodejs)
 | [NuGet](https://www.nuget.org/packages/Aspose.ocr-Cloud/)| [Maven](https://repository.aspose.cloud/webapp/#/artifacts/browse/tree/General/repo/com/aspose/aspose-ocr-cloud) | [PIP](https://pypi.org/project/aspose-ocr-cloud/) | [Maven](https://repository.aspose.cloud/webapp/#/artifacts/browse/tree/General/repo/com/aspose/aspose-ocr-cloud) | [NPM](https://www.npmjs.com/package/@asposecloud/aspose-ocr-cloud)
 
-[Product Page](https://products.aspose.cloud/ocr/nodejs) | [Documentation](https://docs.aspose.cloud/display/ocrcloud/Home) | [API Reference](https://apireference.aspose.cloud/ocr/) | [Code Samples](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-java) | [Blog](https://blog.aspose.cloud/category/ocr/) | [Free Support](https://forum.aspose.cloud/c/ocr) | [Free Trial](https://dashboard.aspose.cloud/#/apps)
+[Product Page](https://products.aspose.cloud/ocr/java) | [Documentation](https://docs.aspose.cloud/display/ocrcloud/Home) | [API Reference](https://apireference.aspose.cloud/ocr/) | [Code Samples](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-java) | [Blog](https://blog.aspose.cloud/category/ocr/) | [Free Support](https://forum.aspose.cloud/c/ocr) | [Free Trial](https://dashboard.aspose.cloud/#/apps)
