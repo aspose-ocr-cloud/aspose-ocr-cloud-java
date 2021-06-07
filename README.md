@@ -13,21 +13,15 @@ It is easy to get started with Aspose.OCR Cloud, and there is nothing to install
 ## Release 21.6:
 
 22 Language support: English, German, French, Italian, Spanish, Portuguese, Polish, Slovene, Slovak , Netherlands, Lithuania, Latvian, Danish , Norwegian, Finnish, Serbian, Croatian, Czech, Swedish, Estonian, Romanian, Chinese
-Spell Correction.
-Receipt Recognition.
-Multipage PDF as input format.
 
 
 New feature:
+-Spell Correction.
+-Receipt Recognition.
+-Multipage PDF as input format.
+-Tables OCR: API for table image recognition. Supported outputs: Formatted TXT, Excel, CSV.
+-Option to select or disable the Document Structure Recognition algorithm.
 
-Tables OCR: API for table image recognition. Supported outputs: Formatted TXT, Excel, CSV
-
-
-Option to select or disable the Document Structure Recognition algorithm.
-
-----
-Added Chinese language support
-New feature: Tables OCR: API for table image recognition. Supported outputs: Formatted TXT, Excel, CSV
 
 
 ## Features:
