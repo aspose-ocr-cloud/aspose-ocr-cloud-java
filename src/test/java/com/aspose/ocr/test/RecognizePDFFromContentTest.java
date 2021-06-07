@@ -31,6 +31,8 @@ package com.aspose.ocr.test;
 import com.aspose.ocr.ApiClient;
 import com.aspose.ocr.Configuration;
 import com.aspose.ocr.api.*;
+import com.aspose.ocr.api.models.pdf.PdfResultPage;
+import com.aspose.ocr.api.models.pdf.PdfSingleImageResult;
 import com.google.gson.Gson;
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
@@ -44,29 +46,25 @@ import retrofit2.Call;
 import retrofit2.Response;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
 
 import static java.lang.System.out;
 import static org.junit.Assert.*;
 
 @RunWith(Parameterized.class)
-public class RecognizeRegionsFromContentTest extends BaseTest {
+public class RecognizePDFFromContentTest extends BaseTest {
 
     private String fileName;
     private OcrApiInvoker api;
-    private  List<OCRRegion> mImage5PngRegions;
+    private OCRRequestData ocrRequestData;
 
-    //Constructor that takes test data.
-    public RecognizeRegionsFromContentTest(
-            String fileName,
-            List<OCRRegion> mImage5PngRegions
+    public RecognizePDFFromContentTest(
+            String fileName, OCRRequestData ocrRequestData
     ) throws Exception {
         super();
         this.fileName = fileName;
-        this.mImage5PngRegions = mImage5PngRegions;
+        this.ocrRequestData = ocrRequestData;
     }
 
     @Before
@@ -77,56 +75,55 @@ public class RecognizeRegionsFromContentTest extends BaseTest {
     @Parameterized.Parameters
     public static Collection testData() {
 
-        List<OCRRegion> mImage5PngRegions = new ArrayList<>();
-        mImage5PngRegions.add(new OCRRegion(new OCRRect(243, 308, 2095, 964), 0));
-        mImage5PngRegions.add(new OCRRegion(new OCRRect(240, 1045, 2108, 1826), 1));
-        mImage5PngRegions.add(new OCRRegion(new OCRRect(237, 1916, 2083, 3180), 2));
+        OCRRequestData ocrRequestData = new OCRRequestData(null, Language.English, false,
+                DsrConfidence.Default, DsrMode.DsrAndFilter, ResultType.Text);
 
         return Arrays.asList(new Object[][]
                 {
-                        {"5.png",mImage5PngRegions}
+                        {"sample.pdf", ocrRequestData}
                 });
     }
 
     @Test
-    public void RecognizeRegionsFromContent() {
+    public void RecognizePDFFromContent() {
         out.println("Test file: " + fileName);
         try {
-
 
             File f = new File(Configuration.getTestSrcDir(), fileName);
             if (!f.exists()) {
                 out.println("file not found");
                 fail();
             }
-
-            OCRRequestData ocrRequestData = new OCRRequestData(
-                    mImage5PngRegions,
-                    com.aspose.ocr.api.Language.English,
-                    false, DsrConfidence.Default, DsrMode.NoDsrNoFilter, ResultType.Text
-            );
-
             Gson gson = new Gson();
+
             String ocrRequestDataJson = gson.toJson(ocrRequestData);
-
             RequestBody requestData = RequestBody.create(MediaType.parse("application/json"), ocrRequestDataJson);
-            RequestBody requestFile = RequestBody.create(f, MediaType.parse("application/octet-stream"));
 
+            RequestBody requestFile = RequestBody.create(MediaType.parse("application/octet-stream"), f);
             MultipartBody.Part bodyFile = MultipartBody.Part.createFormData("picture", f.getName(), requestFile);
 
-            api = new ApiClient().createService(OcrApiInvoker.class);
-            Call<ResponseBody> call = api.RecognizeRegionsFromContent(requestData, bodyFile);
+            Call<ResponseBody> call = api.RecognizePDFFromContent(requestData, bodyFile);
+
             Response<ResponseBody> res = call.execute();
-
             assertTrue(res.isSuccessful());
-
             ResponseBody answer = res.body();
+
             assertNotNull("Answer is null, ", answer);
-            OCRResponse ocrResponse = OCRResponse.Deserialize(answer);
-            String text = ocrResponse.text;
+
+            OCRPDFResponse ocrResponse = OCRPDFResponse.Deserialize(answer);
+
+            String text = "";
+            if (ocrResponse.resultData != null) {
+                for (PdfResultPage pdfResult : ocrResponse.resultData) {
+                    if (pdfResult != null) {
+                        for (PdfSingleImageResult pdfSingleImageResult : pdfResult.ImageOcrResults) {
+                            text = text + '\n' + pdfSingleImageResult.ResultText;
+                        }
+                    }
+                }
+            }
             assertNotNull("Answer is null, ", text);
             out.println("Deserialized to OCRResponse: " + text);
-
         } catch (Exception e) {
             e.printStackTrace();
             fail();

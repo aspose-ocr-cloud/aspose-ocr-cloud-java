@@ -1,6 +1,7 @@
 package com.aspose.ocr.api;
 
 import java.util.List;
+
 import com.aspose.ocr.api.Language;
 
 /**
@@ -25,8 +26,9 @@ public class OCRRequestDataStorage extends OCRRequestData {
     public String Folder;
 
 
-    public OCRRequestDataStorage(List<OCRRegion> regions, Language language, boolean makeSkewCorrect, String fileName, String storage, String folder) {
-        super(regions, language, makeSkewCorrect);
+    public OCRRequestDataStorage(List<OCRRegion> regions, Language language, boolean makeSkewCorrect, String fileName,
+                                 String storage, String folder, DsrConfidence DsrConfidence, DsrMode DsrMode, ResultType ResultType) {
+        super(regions, language, makeSkewCorrect, DsrConfidence, DsrMode, ResultType);
         FileName = fileName;
         Storage = storage;
         Folder = folder;

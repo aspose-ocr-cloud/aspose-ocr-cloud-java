@@ -9,11 +9,12 @@ public class BaseTest {
     BaseTest() throws Exception {
         //Todo: Setup App_SID & App_Key; You can get them in your Aspose Dashboard https://dashboard.aspose.cloud
 
-        Configuration.setAPP_SID("");
-        Configuration.setAPI_KEY("");
+        Configuration.setAPP_SID("ocr.cloud");
+        Configuration.setAPI_KEY("ocr.cloud");
 
         Configuration.setAuthPath("https://api.aspose.cloud/connect/token");
         Configuration.setBasePath("https://api.aspose.cloud/v3.0");
+
 
         Configuration.setUserAgent("WebKit");
         Configuration.setDebug(true);

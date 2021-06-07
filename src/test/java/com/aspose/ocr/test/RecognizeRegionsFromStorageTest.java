@@ -29,7 +29,6 @@
 package com.aspose.ocr.test;
 
 import com.aspose.ocr.ApiClient;
-import com.aspose.ocr.OCRResponse;
 import com.aspose.ocr.api.*;
 import com.google.gson.Gson;
 import okhttp3.MediaType;
@@ -110,7 +109,7 @@ public class RecognizeRegionsFromStorageTest extends BaseTest {
                     false,
                     fileName,
                     storage,
-                    folder
+                    folder, DsrConfidence.Default, DsrMode.NoDsrNoFilter, ResultType.Text
             );
 
             Gson gson = new Gson();
@@ -124,7 +123,7 @@ public class RecognizeRegionsFromStorageTest extends BaseTest {
             assertTrue(res.isSuccessful());
             ResponseBody answer = res.body();
             assertNotNull("Answer is null, ", answer);
-            com.aspose.ocr.OCRResponse ocrResponse = OCRResponse.Deserialize(answer);
+            OCRResponse ocrResponse = OCRResponse.Deserialize(answer);
             String text = ocrResponse.text;
             assertNotNull("Text is empty" + res.toString(), text);
 
@@ -146,7 +145,7 @@ public class RecognizeRegionsFromStorageTest extends BaseTest {
                     false,
                     fileName,
                     storage,
-                    folder
+                    folder, DsrConfidence.Default, DsrMode.NoDsrNoFilter, ResultType.Text
             );
 
             Gson gson = new Gson();
@@ -160,9 +159,10 @@ public class RecognizeRegionsFromStorageTest extends BaseTest {
             assertTrue(res.isSuccessful());
             ResponseBody answer = res.body();
             assertNotNull("Answer is null, ", answer);
-            com.aspose.ocr.OCRResponse ocrResponse = OCRResponse.Deserialize(answer);
+            OCRResponse ocrResponse = OCRResponse.Deserialize(answer);
             String text = ocrResponse.text;
-            assertNotNull("Text is empty" + res.toString(), text);
+            assertNotNull("Answer is null, ", text);
+            out.println("Deserialized to OCRResponse: " + text);
 
         } catch (Exception e) {
             e.printStackTrace();

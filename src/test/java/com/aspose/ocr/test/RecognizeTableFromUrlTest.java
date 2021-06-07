@@ -29,11 +29,11 @@
 package com.aspose.ocr.test;
 
 import com.aspose.ocr.ApiClient;
-import com.aspose.ocr.Configuration;
 import com.aspose.ocr.api.*;
+import com.aspose.ocr.api.models.table.OCRTableRequestData;
+import com.aspose.ocr.api.models.table.OCRTableResponse;
 import com.google.gson.Gson;
 import okhttp3.MediaType;
-import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
 import org.junit.Before;
@@ -43,30 +43,27 @@ import org.junit.runners.Parameterized;
 import retrofit2.Call;
 import retrofit2.Response;
 
-import java.io.File;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
 
 import static java.lang.System.out;
 import static org.junit.Assert.*;
 
 @RunWith(Parameterized.class)
-public class RecognizeRegionsFromContentTest extends BaseTest {
+public class RecognizeTableFromUrlTest extends BaseTest {
 
-    private String fileName;
+    private String url;
     private OcrApiInvoker api;
-    private  List<OCRRegion> mImage5PngRegions;
+    private OCRTableRequestData ocrRequestData;
 
     //Constructor that takes test data.
-    public RecognizeRegionsFromContentTest(
-            String fileName,
-            List<OCRRegion> mImage5PngRegions
+    public RecognizeTableFromUrlTest(
+            String url,
+            OCRTableRequestData ocrRequestData
     ) throws Exception {
         super();
-        this.fileName = fileName;
-        this.mImage5PngRegions = mImage5PngRegions;
+        this.url = url;
+        this.ocrRequestData = ocrRequestData;
     }
 
     @Before
@@ -77,52 +74,36 @@ public class RecognizeRegionsFromContentTest extends BaseTest {
     @Parameterized.Parameters
     public static Collection testData() {
 
-        List<OCRRegion> mImage5PngRegions = new ArrayList<>();
-        mImage5PngRegions.add(new OCRRegion(new OCRRect(243, 308, 2095, 964), 0));
-        mImage5PngRegions.add(new OCRRegion(new OCRRect(240, 1045, 2108, 1826), 1));
-        mImage5PngRegions.add(new OCRRegion(new OCRRect(237, 1916, 2083, 3180), 2));
+
+        OCRTableRequestData ocrRequestData = new OCRTableRequestData(
+                false, Language.English
+        );
 
         return Arrays.asList(new Object[][]
                 {
-                        {"5.png",mImage5PngRegions}
+                        {"https://upload.wikimedia.org/wikipedia/commons/2/2f/Book_of_Abraham_FirstPage.png", ocrRequestData}
                 });
     }
 
     @Test
-    public void RecognizeRegionsFromContent() {
-        out.println("Test file: " + fileName);
+    public void RecognizeTableFromUrl() {
+        out.println("Test url " + url + " + lang 1 ");
         try {
 
-
-            File f = new File(Configuration.getTestSrcDir(), fileName);
-            if (!f.exists()) {
-                out.println("file not found");
-                fail();
-            }
-
-            OCRRequestData ocrRequestData = new OCRRequestData(
-                    mImage5PngRegions,
-                    com.aspose.ocr.api.Language.English,
-                    false, DsrConfidence.Default, DsrMode.NoDsrNoFilter, ResultType.Text
-            );
-
             Gson gson = new Gson();
+            String fileWebUrl = url;
             String ocrRequestDataJson = gson.toJson(ocrRequestData);
-
             RequestBody requestData = RequestBody.create(MediaType.parse("application/json"), ocrRequestDataJson);
-            RequestBody requestFile = RequestBody.create(f, MediaType.parse("application/octet-stream"));
+            RequestBody url = RequestBody.create(MediaType.parse("text/plain"), "\"" + fileWebUrl + "\"");
 
-            MultipartBody.Part bodyFile = MultipartBody.Part.createFormData("picture", f.getName(), requestFile);
+            Call<ResponseBody> call = api.RecognizeTableFromUrl(url, requestData);
 
-            api = new ApiClient().createService(OcrApiInvoker.class);
-            Call<ResponseBody> call = api.RecognizeRegionsFromContent(requestData, bodyFile);
             Response<ResponseBody> res = call.execute();
-
             assertTrue(res.isSuccessful());
-
             ResponseBody answer = res.body();
             assertNotNull("Answer is null, ", answer);
-            OCRResponse ocrResponse = OCRResponse.Deserialize(answer);
+
+            OCRTableResponse ocrResponse = OCRTableResponse.Deserialize(answer);
             String text = ocrResponse.text;
             assertNotNull("Answer is null, ", text);
             out.println("Deserialized to OCRResponse: " + text);

@@ -7,6 +7,10 @@ import java.io.Serializable;
 import okhttp3.ResponseBody;
 
 public class OCRResponse implements Serializable {
+
+    public int code;
+    public String text;
+
     public OCRResponse(int code, String text){
         this.code = code;
         this.text = text;
@@ -20,7 +24,4 @@ public class OCRResponse implements Serializable {
         Gson gson = new GsonBuilder().create();
         return gson.fromJson(jsonString, OCRResponse.class);
     }
-
-    public int code;
-    public String text;
 }

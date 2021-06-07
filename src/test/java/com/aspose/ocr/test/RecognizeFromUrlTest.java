@@ -88,8 +88,10 @@ public class RecognizeFromUrlTest extends BaseTest {
              ResponseBody answer = res.body();
              assertNotNull("Answer is null, ", answer);
 
-            OCRResponse ocrResp = OCRResponse.Deserialize(answer);
-            out.println("Deserialized to OCRResponse: " + ocrResp.text);
+            OCRResponse ocrResponse = OCRResponse.Deserialize(answer);
+            String text = ocrResponse.text;
+            assertNotNull("Text is empty" + res.toString(), text);
+            out.println("Deserialized to OCRResponse: " + ocrResponse.text);
 
         } catch (Exception e) {
             e.printStackTrace();

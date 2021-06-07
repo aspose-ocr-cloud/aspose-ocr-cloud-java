@@ -1,44 +1,69 @@
-![](https://img.shields.io/badge/api-v3.0-lightgrey)  [![GitHub license](https://img.shields.io/github/license/aspose-ocr-cloud/aspose-ocr-cloud-java)](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-java)
+<img src="sourceTest/heading.png">
 
-# Java Cloud REST API for OCR
-Aspose OCR Cloud Android SDK is a simple OCR technology, which you can use in your application to convert image to text.
+# Aspose OCR Cloud SDK for Java
+
+Aspose OCR Cloud Java SDK is a simple OCR technology, which you can use in your application to convert image to text.
+
 [Aspose.OCR Cloud](https://products.aspose.cloud/ocr/cloud) is a simple SDK used to add text recognition to your app with merely a few lines of code.
+
 In detail, it's a set of SDKs for optical character recognition and document scanning in our Cloud. It supports reading and recognizing text from most commonly used raster image formats. Just pass a specific image to the Aspose.OCR Cloud API, and it will return a response with recognized text.
 
 It is easy to get started with Aspose.OCR Cloud, and there is nothing to install. Create an account at Aspose Cloud and get your application information, then you are ready to use [SDKs](#asposeocr-cloud-sdks)
 
-## OCR Processing Features
-- Recognize and extract text from images via OCR.
-- Specify the area of the image from which you want to extract text.
-- Perform OCR to recognize text from the whole or partial image.
-- Fetch character and font information from raster images.
-- Return the response in the JSON or XML format.
-- Supports English text recognition.
+## Release 21.6:
 
-## Save OCR As
-TXT, PDF, HOCR
+22 Language support: English, German, French, Italian, Spanish, Portuguese, Polish, Slovene, Slovak , Netherlands, Lithuania, Latvian, Danish , Norwegian, Finnish, Serbian, Croatian, Czech, Swedish, Estonian, Romanian, Chinese
+Spell Correction.
+Receipt Recognition.
+Multipage PDF as input format.
 
-## Read OCR Formats
-BMP, JPG, GIF, PNG, TIFF
+
+New feature:
+
+Tables OCR: API for table image recognition. Supported outputs: Formatted TXT, Excel, CSV
+
+
+Option to select or disable the Document Structure Recognition algorithm.
+
+----
+Added Chinese language support
+New feature: Tables OCR: API for table image recognition. Supported outputs: Formatted TXT, Excel, CSV
+
+
+## Features:
+
+- Automatic skew correction
+- Automatic and manual document layout detection
+- Advanced automated image pre-processing
+- Extract and recognize text from images via OCR
+- Supports multiple international languages
+- High speed with no hardware resources
 
 ## How to use the SDK?
 
 Our API is completely independent of your operating system, database system, or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone, and time-consuming. Therefore, we have provided and support [SDKs](#asposeocr-cloud-sdks) in many development languages to make it easier to integrate with us.
 
-
-## OCR from URL in Java
+## Examples
 
 ```java
-	// Get your ClientId and ClientSecret from https://dashboard.aspose.cloud (free registration required).
-	Configuration.setAPP_SID("MY_CLIENT_ID");
-	Configuration.setAPI_KEY("MY_CLIENT_SECRET");
-	Configuration.setAuthPath("https://api.aspose.cloud/connect/token");
-	Configuration.setBasePath("https://api.aspose.cloud/v3.0");
-	Configuration.setUserAgent("WebKit");
-	
-	String urlToFile = "https://upload.wikimedia.org/wikipedia/commons/2/2f/Book_of_Abraham_FirstPage.png";
-	OCRResponse ocrResponse = OCRAPI.RecognizeFromUrl(urlToFile, Language.English);
-	return ocrResponse.text;
+import com.aspose.ocr.api.*;
+
+private static void setUpConfig() throws Exception {
+        Configuration.setAPP_SID("XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX");
+        Configuration.setAPI_KEY("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+    }
+
+public String RecognizeFromUrl(String url) {
+    String urlToFile = "https://upload.wikimedia.org/wikipedia/commons/2/2f/Book_of_Abraham_FirstPage.png";
+    OCRResponse ocrResponse = RecognizeFromUrl(urlToFile, Language.English);
+    return ocrResponse.text;
+}
+
+static String RecognizeFromContent(File f) {
+    File f = new File(Configuration.getTestSrcDir(), "de_1.jpg");
+    OCRResponse ocrResponse = RecognizeFromContent(f, Language.German);
+    return ocrResp.text;
+}
 ```
 _________________________
 
@@ -50,14 +75,14 @@ Make your solution using [SDK](#asposeocr-cloud-sdks), follow these steps:
 
 #### 1. Get API keys if you haven't
 
-Make a personal account on [Aspose Cloud Dashboard](https://dashboard.aspose.cloud/#/) and click _Get Keys_. These keys are useful for all Aspose Cloud products. If you have any trouble, look at this [detailed manual](https://docs.aspose.cloud/total/create-new-app-and-get-app-key-and-sid/).
+Make a personal account on [Aspose Cloud Dashboard](https://dashboard.aspose.cloud/#/) and click _Get Keys_. These keys are useful for all Aspose Cloud products. If you have any trouble, look at this [detailed manual](https://docs.aspose.cloud/display/totalcloud/Create+New+App+and+Get+App+Key+and+SID).
 
 #### 2. Run Demo
 
   * Checkout the SDK or get from [Maven](https://repository.aspose.cloud/webapp/#/artifacts/browse/tree/General/repo/com/aspose/aspose-ocr-cloud)
   * Set Your AppSid & AppKey
   * Run Java console [Demo](./src/main/java/com/aspose/Demo.java) or UnitTests
-
+ 
 
 <p align="center">
   <a title="Download ZIP" href="https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-java/archive/master.zip">
@@ -83,7 +108,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.aspose</groupId>
     <artifactId>aspose-ocr-cloud-java</artifactId>
-    <version>20.7.0</version>
+    <version>21.6.0</version>
     <scope>compile</scope>
 </dependency>
 <repositories>
@@ -95,16 +120,24 @@ Add this dependency to your project's POM:
 </repositories>            
 ```
 
+
+
 ### Dependencies
 [See build.gradle](./build.gradle#L27)
 _________________________
 
+## Aspose.OCR Cloud SDKs
 
-## Aspose.OCR Cloud SDKs in Popular Languages
+||||||||||
+|--------------|----------|-------|-------|-------|---------|---------|----------|-------|
+|[.NET & Core](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-dotnet)|[Java](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-java)|PHP|Ruby|Python|Node.js|[Android](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-android)|Objective-C|Perl|
 
-| .NET | Java | Python| Android | NodeJS |
-|---|---|---|---|---|
-| [GitHub](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-dotnet) |[GitHub](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-java) | [GitHub](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-python)|[GitHub](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-android)|[GitHub](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-nodejs)
-| [NuGet](https://www.nuget.org/packages/Aspose.ocr-Cloud/)| [Maven](https://repository.aspose.cloud/webapp/#/artifacts/browse/tree/General/repo/com/aspose/aspose-ocr-cloud) | [PIP](https://pypi.org/project/aspose-ocr-cloud/) | [Maven](https://repository.aspose.cloud/webapp/#/artifacts/browse/tree/General/repo/com/aspose/aspose-ocr-cloud) | [NPM](https://www.npmjs.com/package/@asposecloud/aspose-ocr-cloud)
+## Resources
 
-[Product Page](https://products.aspose.cloud/ocr/java) | [Documentation](https://docs.aspose.cloud/display/ocrcloud/Home) | [API Reference](https://apireference.aspose.cloud/ocr/) | [Code Samples](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-java) | [Blog](https://blog.aspose.cloud/category/ocr/) | [Free Support](https://forum.aspose.cloud/c/ocr) | [Free Trial](https://dashboard.aspose.cloud/#/apps)
+- **Website:** [https://www.aspose.cloud](https://www.aspose.cloud)
+- **Product Home:** [Aspose.OCR Cloud](https://products.aspose.cloud/ocr/family)
+- **Documentation:** [Aspose.OCR Cloud Documentation](https://docs.aspose.cloud/display/ocrcloud/Home)
+- **Forum:** [Aspose.OCR Cloud Forum](https://forum.aspose.cloud/c/ocr)
+- **Blog:** [Aspose.OCR Cloud Blog](https://blog.aspose.cloud/category/ocr/)
+- **Pricing:** [Aspose Cloud Pricing](https://purchase.aspose.cloud/pricing)
+- **Try out Aspose OCR online for free** [Aspose Image to Text](https://products.aspose.app/ocr/scan-image).

@@ -19,7 +19,7 @@
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-ocr-cloud</artifactId>
-            <version>20.7.0</version>
+            <version>21.6.0</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
