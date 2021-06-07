@@ -16,11 +16,13 @@ It is easy to get started with Aspose.OCR Cloud, and there is nothing to install
 
 
 New feature:
--Spell Correction.
--Receipt Recognition.
--Multipage PDF as input format.
--Tables OCR: API for table image recognition. Supported outputs: Formatted TXT, Excel, CSV.
--Option to select or disable the Document Structure Recognition algorithm.
+
+
+- Spell Correction.
+- Receipt Recognition.
+- Multipage PDF as input format.
+- Tables OCR: API for table image recognition. Supported outputs: Formatted TXT, Excel, CSV.
+- Option to select or disable the Document Structure Recognition algorithm.
 
 
 
