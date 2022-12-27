@@ -1,100 +1,35 @@
-<img src="sourceTest/heading.png">
+# aspose-ocr-cloud
 
-# Aspose OCR Cloud SDK for Java
+Aspose OCR Cloud 5.0 API
+- API version: 5.0
+  - Build date: 2022-12-26T18:15:47.000572Z[Etc/UTC]
 
-Aspose OCR Cloud Java SDK is a simple OCR technology, which you can use in your application to convert image to text.
+Aspose OCR Cloud 5.0 API
 
-[Aspose.OCR Cloud](https://products.aspose.cloud/ocr/cloud) is a simple SDK used to add text recognition to your app with merely a few lines of code.
-
-In detail, it's a set of SDKs for optical character recognition and document scanning in our Cloud. It supports reading and recognizing text from most commonly used raster image formats. Just pass a specific image to the Aspose.OCR Cloud API, and it will return a response with recognized text.
-
-It is easy to get started with Aspose.OCR Cloud, and there is nothing to install. Create an account at Aspose Cloud and get your application information, then you are ready to use [SDKs](#asposeocr-cloud-sdks)
-
-## Release 21.6:
-
-22 Language support: English, German, French, Italian, Spanish, Portuguese, Polish, Slovene, Slovak , Netherlands, Lithuania, Latvian, Danish , Norwegian, Finnish, Serbian, Croatian, Czech, Swedish, Estonian, Romanian, Chinese
+  For more information, please visit [https://about.aspose.cloud/contact](https://about.aspose.cloud/contact)
 
 
-New feature:
+## Requirements
 
+Building the API client library requires:
+1. Java 1.8+
+2. Maven (3.8.3+)/Gradle (7.2+)
 
-- Spell Correction.
-- Receipt Recognition.
-- Multipage PDF as input format.
-- Tables OCR: API for table image recognition. Supported outputs: Formatted TXT, Excel, CSV.
-- Option to select or disable the Document Structure Recognition algorithm.
+## Installation
 
+To install the API client library to your local Maven repository, simply execute:
 
-
-## Features:
-
-- Automatic skew correction
-- Automatic and manual document layout detection
-- Advanced automated image pre-processing
-- Extract and recognize text from images via OCR
-- Supports multiple international languages
-- High speed with no hardware resources
-
-## How to use the SDK?
-
-Our API is completely independent of your operating system, database system, or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone, and time-consuming. Therefore, we have provided and support [SDKs](#asposeocr-cloud-sdks) in many development languages to make it easier to integrate with us.
-
-## Examples
-
-```java
-import com.aspose.ocr.api.*;
-
-private static void setUpConfig() throws Exception {
-        Configuration.setAPP_SID("XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX");
-        Configuration.setAPI_KEY("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-    }
-
-public String RecognizeFromUrl(String url) {
-    String urlToFile = "https://upload.wikimedia.org/wikipedia/commons/2/2f/Book_of_Abraham_FirstPage.png";
-    OCRResponse ocrResponse = RecognizeFromUrl(urlToFile, Language.English);
-    return ocrResponse.text;
-}
-
-static String RecognizeFromContent(File f) {
-    File f = new File(Configuration.getTestSrcDir(), "de_1.jpg");
-    OCRResponse ocrResponse = RecognizeFromContent(f, Language.German);
-    return ocrResp.text;
-}
+```shell
+mvn clean install
 ```
-_________________________
 
+To deploy it to a remote Maven repository instead, configure the settings of the repository and execute:
 
+```shell
+mvn clean deploy
+```
 
-## Quickstart
-
-Make your solution using [SDK](#asposeocr-cloud-sdks), follow these steps:
-
-#### 1. Get API keys if you haven't
-
-Make a personal account on [Aspose Cloud Dashboard](https://dashboard.aspose.cloud/#/) and click _Get Keys_. These keys are useful for all Aspose Cloud products. If you have any trouble, look at this [detailed manual](https://docs.aspose.cloud/display/totalcloud/Create+New+App+and+Get+App+Key+and+SID).
-
-#### 2. Run Demo
-
-  * Checkout the SDK or get from [Maven](https://repository.aspose.cloud/webapp/#/artifacts/browse/tree/General/repo/com/aspose/aspose-ocr-cloud)
-  * Set Your AppSid & AppKey
-  * Run Java console [Demo](./src/main/java/com/aspose/Demo.java) or UnitTests
- 
-
-<p align="center">
-  <a title="Download ZIP" href="https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-java/archive/master.zip">
-     <img src="sourceTest/download.png" />
-  </a>
-</p>
-
-
-## SDK Detailes:   
-
-### Structure
-
-This project includes:   
-- Java console demo application - "./src/main/java/Main.java"
-- Module "ocr" - this is SDK located in "[./src/main/java/com/aspose/ocr](./src/main/java/com/aspose/ocr)". You can integrate it in your application.
-- Module "storage" - "[./src/main/java/com/aspose/storage](./src/main/java/com/aspose/storage)" is optional dependency, required if you plan to use [Aspose.Storage](https://github.com/aspose-storage-cloud/) features
+Refer to the [OSSRH Guide](http://central.sonatype.org/pages/ossrh-guide.html) for more information.
 
 ### Maven users
 
@@ -102,31 +37,182 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-    <groupId>com.aspose</groupId>
-    <artifactId>aspose-ocr-cloud-java</artifactId>
-    <version>21.6.0</version>
-    <scope>compile</scope>
+  <groupId>com.aspose</groupId>
+  <artifactId>aspose-ocr-cloud</artifactId>
+  <version>22.12.0</version>
+  <scope>compile</scope>
 </dependency>
-<repositories>
-   <repository>
-        <id>AsposeJavaAPI</id>
-        <name>Aspose Java API</name>
-        <url>http://repository.aspose.cloud/repo</url>
-    </repository>
-</repositories>            
 ```
 
+### Gradle users
+
+Add this dependency to your project's build file:
+
+```groovy
+  repositories {
+    mavenCentral()     // Needed if the 'aspose-ocr-cloud' jar has been published to maven central.
+    mavenLocal()       // Needed if the 'aspose-ocr-cloud' jar has been published to the local maven repo.
+  }
+
+  dependencies {
+     implementation "com.aspose:aspose-ocr-cloud:22.12.0"
+  }
+```
+
+### Others
+
+At first generate the JAR by executing:
+
+```shell
+mvn clean package
+```
+
+Then manually install the following JARs:
+
+* `target/aspose-ocr-cloud-22.12.0.jar`
+* `target/lib/*.jar`
+
+## Getting Started
+
+Please follow the [installation](#installation) instruction and execute the following Java code:
+
+```java
+
+// Import classes:
+import Aspose.OCR.Cloud.SDK.RecognizeImageApi;
+import Aspose.OCR.Cloud.SDK.model.*;
+
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 
-### Dependencies
-[See build.gradle](./build.gradle#L27)
-_________________________
+public class Example {
+  public static void main(String[] args) {
+    String clientId = "";
+    String clientSecret = "";
+    // Creating new API instance with your credentials
+    RecognizeImageApi api = new RecognizeImageApi(clientId, clientSecret);
 
-## Aspose.OCR Cloud SDKs in Popular Languages
+    // Creating recognition settings object
+    OCRSettingsRecognizeImage settings = new OCRSettingsRecognizeImage();
+    settings.setLanguage(Language.ENGLISH);
+    settings.setDsrConfidence(DsrConfidence.DEFAULT);
+    settings.setDsrMode(DsrMode.NODSRNOFILTER);
+    settings.setMakeBinarization(false);
+    settings.setMakeSkewCorrect(false);
+    settings.setMakeContrastCorrection(false);
+    settings.setMakeUpsampling(false);
+    settings.setResultType(ResultType.TEXT);
 
-| .NET | Java | Python| Android | NodeJS |
-|---|---|---|---|---|
-| [GitHub](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-dotnet) |[GitHub](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-java) | [GitHub](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-python)|[GitHub](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-android)|[GitHub](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-nodejs)
-| [NuGet](https://www.nuget.org/packages/Aspose.ocr-Cloud/)| [Maven](https://repository.aspose.cloud/webapp/#/artifacts/browse/tree/General/repo/com/aspose/aspose-ocr-cloud) | [PIP](https://pypi.org/project/aspose-ocr-cloud/) | [Maven](https://repository.aspose.cloud/webapp/#/artifacts/browse/tree/General/repo/com/aspose/aspose-ocr-cloud) | [NPM](https://www.npmjs.com/package/@asposecloud/aspose-ocr-cloud)
+    // Reading image file to array of bytes
+    String imageFileName = "samples\\latin.png";
+    byte[] imageData = Files.readAllBytes(Path.of(imageFileName));
 
-[Product Page](https://products.aspose.cloud/ocr/) | [Documentation](https://docs.aspose.cloud/display/ocrcloud/Home) | [API Reference](https://apireference.aspose.cloud/ocr/) | [Code Samples](https://github.com/aspose-ocr-cloud/aspose-ocr-cloud-nodejs) | [Blog](https://blog.aspose.cloud/category/ocr/) | [Free Support](https://forum.aspose.cloud/c/ocr) | [Free Trial](https://dashboard.aspose.cloud/#/apps)
+    // Combining settings and image to request body
+    OCRRecognizeImageBody requestBody = new OCRRecognizeImageBody();
+    requestBody.setImage(imageData);
+    requestBody.setSettings(settings);
+
+    // Sending request to cloud API and getting task ID
+    String taskId = api.postRecognizeImage(requestBody);
+
+    // Getting result data with second request
+    OCRResponse apiResponse = api.getRecognizeImage(taskId);
+
+    // Extracting result text from response
+    System.out.println(new String(apiResponse.getResults().get(0).getData(), StandardCharsets.UTF_8) + "\n\n");
+
+  }
+}
+```
+
+## Documentation for API Endpoints
+
+All URIs are relative to *http://localhost*
+
+| Class                 | Method                                                                             | HTTP request                                         | Description               |
+|-----------------------|------------------------------------------------------------------------------------|------------------------------------------------------|---------------------------|
+| *DetectRegionsApi*    | [**cancelDetectRegions**](docs/DetectRegionsApi.md#cancelDetectRegions)            | **DELETE** /v5/DetectRegions                         | CancelDetectRegions       |
+| *DetectRegionsApi*    | [**getDetectRegions**](docs/DetectRegionsApi.md#getDetectRegions)                  | **GET** /v5/DetectRegions                            | GetDetectRegions          |
+| *DetectRegionsApi*    | [**postDetectRegions**](docs/DetectRegionsApi.md#postDetectRegions)                | **POST** /v5/DetectRegions                           | PostDetectRegions         |
+| *ImageProcessingApi*  | [**getResultFile**](docs/ImageProcessingApi.md#getResultFile)                      | **GET** /v5/ImageProcessing/GetResultFile            | GetResultFile             |
+| *ImageProcessingApi*  | [**getResultTask**](docs/ImageProcessingApi.md#getResultTask)                      | **GET** /v5/ImageProcessing/GetResultTask            | GetResultTask             |
+| *ImageProcessingApi*  | [**postBinarizationFile**](docs/ImageProcessingApi.md#postBinarizationFile)        | **POST** /v5/ImageProcessing/PostBinarizationFile    | PostBinarizationFile      |
+| *ImageProcessingApi*  | [**postDewarpingFile**](docs/ImageProcessingApi.md#postDewarpingFile)              | **POST** /v5/ImageProcessing/PostDewarpingFile       | PostDewarpingFile         |
+| *ImageProcessingApi*  | [**postSkewCorrectionFile**](docs/ImageProcessingApi.md#postSkewCorrectionFile)    | **POST** /v5/ImageProcessing/PostSkewCorrectionFile  | PostSkewCorrectionFile    |
+| *ImageProcessingApi*  | [**postUpsamplingFile**](docs/ImageProcessingApi.md#postUpsamplingFile)            | **POST** /v5/ImageProcessing/PostUpsamplingImageFile | PostUpsamplingImageFile   |
+| *RecognizeImageApi*   | [**cancelRecognizeImage**](docs/RecognizeImageApi.md#cancelRecognizeImage)         | **DELETE** /v5/RecognizeImage                        | CancelRecognizeImage      |
+| *RecognizeImageApi*   | [**getRecognizeImage**](docs/RecognizeImageApi.md#getRecognizeImage)               | **GET** /v5/RecognizeImage                           | GetRecognizeImage         |
+| *RecognizeImageApi*   | [**postRecognizeImage**](docs/RecognizeImageApi.md#postRecognizeImage)             | **POST** /v5/RecognizeImage                          | PostRecognizeImage        |
+| *RecognizePdfApi*     | [**cancelRecognizePdf**](docs/RecognizePdfApi.md#cancelRecognizePdf)               | **DELETE** /v5/RecognizePdf                          | CancelRecognizePdf        |
+| *RecognizePdfApi*     | [**getRecognizePdf**](docs/RecognizePdfApi.md#getRecognizePdf)                     | **GET** /v5/RecognizePdf                             | GetRecognizePdf           |
+| *RecognizePdfApi*     | [**postRecognizePdf**](docs/RecognizePdfApi.md#postRecognizePdf)                   | **POST** /v5/RecognizePdf                            | PostRecognizePdf          |
+| *RecognizeReceiptApi* | [**cancelRecognizeReceipt**](docs/RecognizeReceiptApi.md#cancelRecognizeReceipt)   | **DELETE** /v5/RecognizeReceipt                      | CancelRecognizeReceipt    |
+| *RecognizeReceiptApi* | [**getRecognizeReceipt**](docs/RecognizeReceiptApi.md#getRecognizeReceipt)         | **GET** /v5/RecognizeReceipt                         | GetRecognizeReceipt       |
+| *RecognizeReceiptApi* | [**postRecognizeReceipt**](docs/RecognizeReceiptApi.md#postRecognizeReceipt)       | **POST** /v5/RecognizeReceipt                        | PostRecognizeReceipt      |
+| *RecognizeRegionsApi* | [**cancelRecognizeRegions**](docs/RecognizeRegionsApi.md#cancelRecognizeRegions)   | **DELETE** /v5/RecognizeRegions                      | CancelRecognizeRegions    |
+| *RecognizeRegionsApi* | [**getRecognizeRegions**](docs/RecognizeRegionsApi.md#getRecognizeRegions)         | **GET** /v5/RecognizeRegions                         | GetRecognizeRegions       |
+| *RecognizeRegionsApi* | [**postRecognizeRegions**](docs/RecognizeRegionsApi.md#postRecognizeRegions)       | **POST** /v5/RecognizeRegions                        | PostRecognizeRegions      |
+| *RecognizeTableApi*   | [**cancelRecognizeTable**](docs/RecognizeTableApi.md#cancelRecognizeTable)         | **DELETE** /v5/RecognizeTable                        | CancelRecognizeTable      |
+| *RecognizeTableApi*   | [**getRecognizeTable**](docs/RecognizeTableApi.md#getRecognizeTable)               | **GET** /v5/RecognizeTable                           | GetRecognizeTable         |
+| *RecognizeTableApi*   | [**postRecognizeTable**](docs/RecognizeTableApi.md#postRecognizeTable)             | **POST** /v5/RecognizeTable                          | PostRecognizeTable        |
+| *TextToSpeechApi*     | [**getTextToSpeechResult**](docs/TextToSpeechApi.md#getTextToSpeechResult)         | **GET** /v5/TextToSpeech/GetTextToSpeechResult       | GetTextToSpeechResult     |
+| *TextToSpeechApi*     | [**getTextToSpeechResultFile**](docs/TextToSpeechApi.md#getTextToSpeechResultFile) | **GET** /v5/TextToSpeech/GetTextToSpeechResultFile   | GetTextToSpeechResultFile |
+| *TextToSpeechApi*     | [**postTextToSpeech**](docs/TextToSpeechApi.md#postTextToSpeech)                   | **POST** /v5/TextToSpeech/PostTextToSpeech           | PostTextToSpeech          |
+
+## Documentation for Models
+
+ - [DsrConfidence](docs/DsrConfidence.md)
+ - [DsrMode](docs/DsrMode.md)
+ - [Language](docs/Language.md)
+ - [LanguageTTS](docs/LanguageTTS.md)
+ - [OCRDetectRegionsBody](docs/OCRDetectRegionsBody.md)
+ - [OCRError](docs/OCRError.md)
+ - [OCRRecognizeImageBody](docs/OCRRecognizeImageBody.md)
+ - [OCRRecognizePdfBody](docs/OCRRecognizePdfBody.md)
+ - [OCRRecognizeReceiptBody](docs/OCRRecognizeReceiptBody.md)
+ - [OCRRecognizeRegionsBody](docs/OCRRecognizeRegionsBody.md)
+ - [OCRRecognizeTableBody](docs/OCRRecognizeTableBody.md)
+ - [OCRRect](docs/OCRRect.md)
+ - [OCRRegion](docs/OCRRegion.md)
+ - [OCRResponse](docs/OCRResponse.md)
+ - [OCRResult](docs/OCRResult.md)
+ - [OCRSettingsDetectRegions](docs/OCRSettingsDetectRegions.md)
+ - [OCRSettingsRecognizeImage](docs/OCRSettingsRecognizeImage.md)
+ - [OCRSettingsRecognizePdf](docs/OCRSettingsRecognizePdf.md)
+ - [OCRSettingsRecognizeReceipt](docs/OCRSettingsRecognizeReceipt.md)
+ - [OCRSettingsRecognizeRegions](docs/OCRSettingsRecognizeRegions.md)
+ - [OCRSettingsRecognizeTable](docs/OCRSettingsRecognizeTable.md)
+ - [OCRTaskStatus](docs/OCRTaskStatus.md)
+ - [ProblemDetails](docs/ProblemDetails.md)
+ - [ResponseStatusCode](docs/ResponseStatusCode.md)
+ - [ResultType](docs/ResultType.md)
+ - [ResultTypeTTS](docs/ResultTypeTTS.md)
+ - [ResultTypeTable](docs/ResultTypeTable.md)
+ - [TTSBody](docs/TTSBody.md)
+ - [TTSError](docs/TTSError.md)
+ - [TTSResponse](docs/TTSResponse.md)
+ - [TTSResult](docs/TTSResult.md)
+ - [TTSTaskStatus](docs/TTSTaskStatus.md)
+
+
+## Documentation for Authorization
+
+Authentication schemes defined for the API:
+### JWT
+
+- **Type**: OAuth
+- **Flow**: application
+- **Authorization URL**: 
+- **Scopes**: N/A
+
+
+## Recommendation
+
+It's recommended to create an instance of `ApiClient` per thread in a multithreaded environment to avoid any potential issues.
+
+## Author
+
+
+
