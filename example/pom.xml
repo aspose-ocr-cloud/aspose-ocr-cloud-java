@@ -9,16 +9,10 @@
     <version>1.0-SNAPSHOT</version>
 
     <repositories>
-<!--        <repository>-->
-<!--            <id>project.local</id>-->
-<!--            <name>project</name>-->
-<!--            <url>file:F:\mavenLocal</url>-->
-<!--        </repository>-->
-
         <repository>
-            <id>AsposeCloudJavaQARepository</id>
+            <id>AsposeCloudJavaRepository</id>
             <name>Aspose Cloud Java QA Repository</name>
-            <url>https://releases-qa.aspose.cloud/java/repo/</url>
+            <url>https://releases.aspose.cloud/java/repo/</url>
         </repository>
     </repositories>
 
