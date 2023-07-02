@@ -46,7 +46,7 @@ import Aspose.OCR.Cloud.SDK.JSON;
 /**
  * Represents a rectangle: Left-Top (X1-Y1) to Right-Bottom (X2-Y2)
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-26T18:15:47.000572Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-02T10:37:00.547+03:00[GMT+03:00]")
 public class OCRRect {
   public static final String SERIALIZED_NAME_TOP_LEFT_X = "topLeftX";
   @SerializedName(SERIALIZED_NAME_TOP_LEFT_X)

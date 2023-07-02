@@ -29,6 +29,7 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -54,7 +55,7 @@ import Aspose.OCR.Cloud.SDK.JSON;
 /**
  * OCR Process setting for Table image recognition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-26T18:15:47.000572Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-02T10:37:00.547+03:00[GMT+03:00]")
 public class OCRSettingsRecognizeTable {
   public static final String SERIALIZED_NAME_LANGUAGE = "language";
   @SerializedName(SERIALIZED_NAME_LANGUAGE)
@@ -75,6 +76,10 @@ public class OCRSettingsRecognizeTable {
   public static final String SERIALIZED_NAME_RESULT_TYPE_TABLE = "resultTypeTable";
   @SerializedName(SERIALIZED_NAME_RESULT_TYPE_TABLE)
   private ResultTypeTable resultTypeTable;
+
+  public static final String SERIALIZED_NAME_ROTATE = "Rotate";
+  @SerializedName(SERIALIZED_NAME_ROTATE)
+  private Integer rotate;
 
   public static final String SERIALIZED_NAME_MAKE_BINARIZATION = "makeBinarization";
   @SerializedName(SERIALIZED_NAME_MAKE_BINARIZATION)
@@ -213,6 +218,28 @@ public class OCRSettingsRecognizeTable {
   }
 
 
+  public OCRSettingsRecognizeTable rotate(Integer rotate) {
+    
+    this.rotate = rotate;
+    return this;
+  }
+
+   /**
+   * Get rotate
+   * @return rotate
+  **/
+  @javax.annotation.Nullable
+
+  public Integer getRotate() {
+    return rotate;
+  }
+
+
+  public void setRotate(Integer rotate) {
+    this.rotate = rotate;
+  }
+
+
   public OCRSettingsRecognizeTable makeBinarization(Boolean makeBinarization) {
     
     this.makeBinarization = makeBinarization;
@@ -220,7 +247,7 @@ public class OCRSettingsRecognizeTable {
   }
 
    /**
-   * Option to enable image binarization algorithm. False by default
+   * Get makeBinarization
    * @return makeBinarization
   **/
   @javax.annotation.Nullable
@@ -331,7 +358,7 @@ public class OCRSettingsRecognizeTable {
 
   public OCRSettingsRecognizeTable addRegionsItem(OCRRegion regionsItem) {
     if (this.regions == null) {
-      this.regions = new ArrayList<>();
+      this.regions = new ArrayList<OCRRegion>();
     }
     this.regions.add(regionsItem);
     return this;
@@ -368,6 +395,7 @@ public class OCRSettingsRecognizeTable {
         Objects.equals(this.makeSpellCheck, ocRSettingsRecognizeTable.makeSpellCheck) &&
         Objects.equals(this.makeContrastCorrection, ocRSettingsRecognizeTable.makeContrastCorrection) &&
         Objects.equals(this.resultTypeTable, ocRSettingsRecognizeTable.resultTypeTable) &&
+        Objects.equals(this.rotate, ocRSettingsRecognizeTable.rotate) &&
         Objects.equals(this.makeBinarization, ocRSettingsRecognizeTable.makeBinarization) &&
         Objects.equals(this.makeUpsampling, ocRSettingsRecognizeTable.makeUpsampling) &&
         Objects.equals(this.dsrMode, ocRSettingsRecognizeTable.dsrMode) &&
@@ -376,9 +404,20 @@ public class OCRSettingsRecognizeTable {
         Objects.equals(this.regions, ocRSettingsRecognizeTable.regions);
   }
 
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
+
   @Override
   public int hashCode() {
-    return Objects.hash(language, makeSkewCorrect, makeSpellCheck, makeContrastCorrection, resultTypeTable, makeBinarization, makeUpsampling, dsrMode, dsrConfidence, resultType, regions);
+    return Objects.hash(language, makeSkewCorrect, makeSpellCheck, makeContrastCorrection, resultTypeTable, rotate, makeBinarization, makeUpsampling, dsrMode, dsrConfidence, resultType, regions);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -390,6 +429,7 @@ public class OCRSettingsRecognizeTable {
     sb.append("    makeSpellCheck: ").append(toIndentedString(makeSpellCheck)).append("\n");
     sb.append("    makeContrastCorrection: ").append(toIndentedString(makeContrastCorrection)).append("\n");
     sb.append("    resultTypeTable: ").append(toIndentedString(resultTypeTable)).append("\n");
+    sb.append("    rotate: ").append(toIndentedString(rotate)).append("\n");
     sb.append("    makeBinarization: ").append(toIndentedString(makeBinarization)).append("\n");
     sb.append("    makeUpsampling: ").append(toIndentedString(makeUpsampling)).append("\n");
     sb.append("    dsrMode: ").append(toIndentedString(dsrMode)).append("\n");
@@ -423,6 +463,7 @@ public class OCRSettingsRecognizeTable {
     openapiFields.add("makeSpellCheck");
     openapiFields.add("makeContrastCorrection");
     openapiFields.add("resultTypeTable");
+    openapiFields.add("Rotate");
     openapiFields.add("makeBinarization");
     openapiFields.add("makeUpsampling");
     openapiFields.add("dsrMode");

@@ -47,7 +47,7 @@ import Aspose.OCR.Cloud.SDK.JSON;
 /**
  * Represents information about strict regions to recognize text
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-26T18:15:47.000572Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-02T10:37:00.547+03:00[GMT+03:00]")
 public class OCRRegion {
   public static final String SERIALIZED_NAME_RECT = "rect";
   @SerializedName(SERIALIZED_NAME_RECT)

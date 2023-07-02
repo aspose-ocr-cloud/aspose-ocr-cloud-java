@@ -32,7 +32,7 @@ public class Example {
     String clientSecret = "";
     // Creating new API instance with your credentials
     TextToSpeechApi apiInstance = new TextToSpeechApi(clientId, clientSecret);
-    String id = "id_example"; // String | Task id to select the result
+    String id = "id_example"; // String | 
     try {
       TTSResponse result = apiInstance.getTextToSpeechResult(id);
       System.out.println(result);
@@ -51,7 +51,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Task id to select the result | |
+| **id** | **String**|  | |
 
 ### Return type
 
@@ -94,7 +94,7 @@ public class Example {
     String clientSecret = "";
     // Creating new API instance with your credentials
     TextToSpeechApi apiInstance = new TextToSpeechApi(clientId, clientSecret);
-    String id = "id_example"; // String | Task id to select the result
+    String id = "id_example"; // String | 
     try {
       Object result = apiInstance.getTextToSpeechResultFile(id);
       System.out.println(result);
@@ -113,7 +113,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Task id to select the result | |
+| **id** | **String**|  | |
 
 ### Return type
 
@@ -132,10 +132,11 @@ public class Example {
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **204** | Results expired |  -  |
 
 <a name="postTextToSpeech"></a>
 # **postTextToSpeech**
-> String postTextToSpeech(ttSBody)
+> String postTextToSpeech(ttSBodyDeprecated)
 
 PostTextToSpeech
 
@@ -156,9 +157,9 @@ public class Example {
     String clientSecret = "";
     // Creating new API instance with your credentials
     TextToSpeechApi apiInstance = new TextToSpeechApi(clientId, clientSecret);
-    TTSBody ttSBody = new TTSBody(); // TTSBody | 
+    TTSBodyDeprecated ttSBodyDeprecated = new TTSBodyDeprecated(); // TTSBodyDeprecated | 
     try {
-      String result = apiInstance.postTextToSpeech(ttSBody);
+      String result = apiInstance.postTextToSpeech(ttSBodyDeprecated);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling TextToSpeechApi#postTextToSpeech");
@@ -175,7 +176,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **ttSBody** | [**TTSBody**](TTSBody.md)|  | |
+| **ttSBodyDeprecated** | [**TTSBodyDeprecated**](TTSBodyDeprecated.md)|  | |
 
 ### Return type
 

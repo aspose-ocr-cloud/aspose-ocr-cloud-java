@@ -29,6 +29,7 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -52,9 +53,9 @@ import java.util.Set;
 import Aspose.OCR.Cloud.SDK.JSON;
 
 /**
- * OCR Process setting for Image recognition
+ * OCRSettingsDetectRegions
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-26T18:15:47.000572Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-02T10:37:00.547+03:00[GMT+03:00]")
 public class OCRSettingsDetectRegions {
   public static final String SERIALIZED_NAME_MAKE_SKEW_CORRECT = "makeSkewCorrect";
   @SerializedName(SERIALIZED_NAME_MAKE_SKEW_CORRECT)
@@ -75,6 +76,10 @@ public class OCRSettingsDetectRegions {
   public static final String SERIALIZED_NAME_LANGUAGE = "language";
   @SerializedName(SERIALIZED_NAME_LANGUAGE)
   private Language language;
+
+  public static final String SERIALIZED_NAME_ROTATE = "Rotate";
+  @SerializedName(SERIALIZED_NAME_ROTATE)
+  private Integer rotate;
 
   public static final String SERIALIZED_NAME_MAKE_SPELL_CHECK = "makeSpellCheck";
   @SerializedName(SERIALIZED_NAME_MAKE_SPELL_CHECK)
@@ -110,7 +115,7 @@ public class OCRSettingsDetectRegions {
   }
 
    /**
-   * Option to enable skew correction algorithm. True by default
+   * Get makeSkewCorrect
    * @return makeSkewCorrect
   **/
   @javax.annotation.Nullable
@@ -132,7 +137,7 @@ public class OCRSettingsDetectRegions {
   }
 
    /**
-   * Option to enable image contrast correction algorithm. True by default
+   * Get makeContrastCorrection
    * @return makeContrastCorrection
   **/
   @javax.annotation.Nullable
@@ -154,7 +159,7 @@ public class OCRSettingsDetectRegions {
   }
 
    /**
-   * Option to enable image up-sampling algorithm to improve quality. True by default
+   * Get makeUpsampling
    * @return makeUpsampling
   **/
   @javax.annotation.Nullable
@@ -213,6 +218,28 @@ public class OCRSettingsDetectRegions {
   }
 
 
+  public OCRSettingsDetectRegions rotate(Integer rotate) {
+    
+    this.rotate = rotate;
+    return this;
+  }
+
+   /**
+   * Get rotate
+   * @return rotate
+  **/
+  @javax.annotation.Nullable
+
+  public Integer getRotate() {
+    return rotate;
+  }
+
+
+  public void setRotate(Integer rotate) {
+    this.rotate = rotate;
+  }
+
+
   public OCRSettingsDetectRegions makeSpellCheck(Boolean makeSpellCheck) {
     
     this.makeSpellCheck = makeSpellCheck;
@@ -242,7 +269,7 @@ public class OCRSettingsDetectRegions {
   }
 
    /**
-   * Option to enable image binarization algorithm. False by default
+   * Get makeBinarization
    * @return makeBinarization
   **/
   @javax.annotation.Nullable
@@ -331,7 +358,7 @@ public class OCRSettingsDetectRegions {
 
   public OCRSettingsDetectRegions addRegionsItem(OCRRegion regionsItem) {
     if (this.regions == null) {
-      this.regions = new ArrayList<>();
+      this.regions = new ArrayList<OCRRegion>();
     }
     this.regions.add(regionsItem);
     return this;
@@ -368,6 +395,7 @@ public class OCRSettingsDetectRegions {
         Objects.equals(this.makeUpsampling, ocRSettingsDetectRegions.makeUpsampling) &&
         Objects.equals(this.dsrConfidence, ocRSettingsDetectRegions.dsrConfidence) &&
         Objects.equals(this.language, ocRSettingsDetectRegions.language) &&
+        Objects.equals(this.rotate, ocRSettingsDetectRegions.rotate) &&
         Objects.equals(this.makeSpellCheck, ocRSettingsDetectRegions.makeSpellCheck) &&
         Objects.equals(this.makeBinarization, ocRSettingsDetectRegions.makeBinarization) &&
         Objects.equals(this.dsrMode, ocRSettingsDetectRegions.dsrMode) &&
@@ -376,9 +404,20 @@ public class OCRSettingsDetectRegions {
         Objects.equals(this.regions, ocRSettingsDetectRegions.regions);
   }
 
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
+
   @Override
   public int hashCode() {
-    return Objects.hash(makeSkewCorrect, makeContrastCorrection, makeUpsampling, dsrConfidence, language, makeSpellCheck, makeBinarization, dsrMode, resultType, resultTypeTable, regions);
+    return Objects.hash(makeSkewCorrect, makeContrastCorrection, makeUpsampling, dsrConfidence, language, rotate, makeSpellCheck, makeBinarization, dsrMode, resultType, resultTypeTable, regions);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -390,6 +429,7 @@ public class OCRSettingsDetectRegions {
     sb.append("    makeUpsampling: ").append(toIndentedString(makeUpsampling)).append("\n");
     sb.append("    dsrConfidence: ").append(toIndentedString(dsrConfidence)).append("\n");
     sb.append("    language: ").append(toIndentedString(language)).append("\n");
+    sb.append("    rotate: ").append(toIndentedString(rotate)).append("\n");
     sb.append("    makeSpellCheck: ").append(toIndentedString(makeSpellCheck)).append("\n");
     sb.append("    makeBinarization: ").append(toIndentedString(makeBinarization)).append("\n");
     sb.append("    dsrMode: ").append(toIndentedString(dsrMode)).append("\n");
@@ -423,6 +463,7 @@ public class OCRSettingsDetectRegions {
     openapiFields.add("makeUpsampling");
     openapiFields.add("dsrConfidence");
     openapiFields.add("language");
+    openapiFields.add("Rotate");
     openapiFields.add("makeSpellCheck");
     openapiFields.add("makeBinarization");
     openapiFields.add("dsrMode");

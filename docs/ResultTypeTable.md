@@ -11,5 +11,7 @@
 
 * `CSV` (value: `"Csv"`)
 
+* `CSVANDEXCEL` (value: `"CsvAndExcel"`)
+
 
 

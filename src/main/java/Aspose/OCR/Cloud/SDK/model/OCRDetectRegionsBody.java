@@ -45,9 +45,9 @@ import java.util.Set;
 import Aspose.OCR.Cloud.SDK.JSON;
 
 /**
- * Combines Image data and OCR Recognition settings
+ * OCRDetectRegionsBody
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-26T18:15:47.000572Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-02T10:37:00.547+03:00[GMT+03:00]")
 public class OCRDetectRegionsBody {
   public static final String SERIALIZED_NAME_IMAGE = "image";
   @SerializedName(SERIALIZED_NAME_IMAGE)
@@ -67,7 +67,7 @@ public class OCRDetectRegionsBody {
   }
 
    /**
-   * Gets or Sets Image
+   * Get image
    * @return image
   **/
   @javax.annotation.Nonnull

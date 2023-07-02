@@ -29,6 +29,7 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -54,7 +55,7 @@ import Aspose.OCR.Cloud.SDK.JSON;
 /**
  * OCR Process setting for Image recognition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-26T18:15:47.000572Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-02T10:37:00.547+03:00[GMT+03:00]")
 public class OCRSettingsRecognizeImage {
   public static final String SERIALIZED_NAME_LANGUAGE = "language";
   @SerializedName(SERIALIZED_NAME_LANGUAGE)
@@ -91,6 +92,10 @@ public class OCRSettingsRecognizeImage {
   public static final String SERIALIZED_NAME_RESULT_TYPE = "resultType";
   @SerializedName(SERIALIZED_NAME_RESULT_TYPE)
   private ResultType resultType;
+
+  public static final String SERIALIZED_NAME_ROTATE = "Rotate";
+  @SerializedName(SERIALIZED_NAME_ROTATE)
+  private Integer rotate;
 
   public static final String SERIALIZED_NAME_RESULT_TYPE_TABLE = "resultTypeTable";
   @SerializedName(SERIALIZED_NAME_RESULT_TYPE_TABLE)
@@ -154,7 +159,7 @@ public class OCRSettingsRecognizeImage {
   }
 
    /**
-   * Option to enable binarization algorithm. False by default
+   * Get makeBinarization
    * @return makeBinarization
   **/
   @javax.annotation.Nullable
@@ -301,6 +306,28 @@ public class OCRSettingsRecognizeImage {
   }
 
 
+  public OCRSettingsRecognizeImage rotate(Integer rotate) {
+    
+    this.rotate = rotate;
+    return this;
+  }
+
+   /**
+   * Get rotate
+   * @return rotate
+  **/
+  @javax.annotation.Nullable
+
+  public Integer getRotate() {
+    return rotate;
+  }
+
+
+  public void setRotate(Integer rotate) {
+    this.rotate = rotate;
+  }
+
+
   public OCRSettingsRecognizeImage resultTypeTable(ResultTypeTable resultTypeTable) {
     
     this.resultTypeTable = resultTypeTable;
@@ -331,7 +358,7 @@ public class OCRSettingsRecognizeImage {
 
   public OCRSettingsRecognizeImage addRegionsItem(OCRRegion regionsItem) {
     if (this.regions == null) {
-      this.regions = new ArrayList<>();
+      this.regions = new ArrayList<OCRRegion>();
     }
     this.regions.add(regionsItem);
     return this;
@@ -372,13 +399,25 @@ public class OCRSettingsRecognizeImage {
         Objects.equals(this.dsrMode, ocRSettingsRecognizeImage.dsrMode) &&
         Objects.equals(this.dsrConfidence, ocRSettingsRecognizeImage.dsrConfidence) &&
         Objects.equals(this.resultType, ocRSettingsRecognizeImage.resultType) &&
+        Objects.equals(this.rotate, ocRSettingsRecognizeImage.rotate) &&
         Objects.equals(this.resultTypeTable, ocRSettingsRecognizeImage.resultTypeTable) &&
         Objects.equals(this.regions, ocRSettingsRecognizeImage.regions);
   }
 
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
+
   @Override
   public int hashCode() {
-    return Objects.hash(language, makeSkewCorrect, makeBinarization, makeSpellCheck, makeContrastCorrection, makeUpsampling, dsrMode, dsrConfidence, resultType, resultTypeTable, regions);
+    return Objects.hash(language, makeSkewCorrect, makeBinarization, makeSpellCheck, makeContrastCorrection, makeUpsampling, dsrMode, dsrConfidence, resultType, rotate, resultTypeTable, regions);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -394,6 +433,7 @@ public class OCRSettingsRecognizeImage {
     sb.append("    dsrMode: ").append(toIndentedString(dsrMode)).append("\n");
     sb.append("    dsrConfidence: ").append(toIndentedString(dsrConfidence)).append("\n");
     sb.append("    resultType: ").append(toIndentedString(resultType)).append("\n");
+    sb.append("    rotate: ").append(toIndentedString(rotate)).append("\n");
     sb.append("    resultTypeTable: ").append(toIndentedString(resultTypeTable)).append("\n");
     sb.append("    regions: ").append(toIndentedString(regions)).append("\n");
     sb.append("}");
@@ -427,6 +467,7 @@ public class OCRSettingsRecognizeImage {
     openapiFields.add("dsrMode");
     openapiFields.add("dsrConfidence");
     openapiFields.add("resultType");
+    openapiFields.add("Rotate");
     openapiFields.add("resultTypeTable");
     openapiFields.add("regions");
 

@@ -11,40 +11,26 @@ In detail, it's a set of SDKs for optical character recognition and document sca
 It is easy to get started with Aspose.OCR Cloud, and there is nothing to install. Create an account at Aspose Cloud and get your application information, then you are ready to use [SDKs](#asposeocr-cloud-sdks)
 
 
-## Release 22.12.0
+## What was changed in version 23.6.0
 
-What was changed
+A summary of recent changes, enhancements and bug fixes in **Aspose.OCR Cloud SDK for Java 1.8+ 23.6.0** release:
 
-This is the major release of Aspose.OCR Cloud which delivers significant new features, enhancements to existing features, performance improvements, and fixes. The list below contains the most important features that are supported in this release:
+Key | Summary | Category
+--- | ------- | --------
+OCR-2893 | Detecting fonts and styles in scans or photographs. | New feature
+OCR-3454 | Extracting text from photographed signboards, price tags, plates, food labels, and similar images. | New feature
+n/a | Conversion of DjVu files to searchable PDF documents. | New feature
+n/a | Image processing APIs were made easier and more consistent: <ul><li>[Skew correction](https://docs.aspose.cloud/ocr/deskew-image/);</li><li>[Dewarping](https://docs.aspose.cloud/ocr/dewarp-image/);</li><li>[Upsampling](https://docs.aspose.cloud/ocr/upsample-image/);</li><li>[Binarization](https://docs.aspose.cloud/ocr/binarize-image/).</li></ul> | Enhancement
+n/a | Reworked [text-to-speech conversion](https://docs.aspose.cloud/ocr/text-to-speech/) API. | Enhancement
 
-- Image to speech conversion
-  Convert almost any picture or photo with readable characters into a natural human voice that can be played in the background or downloaded.
-- Advanced image binarization
-  A specialized neural network for converting images to black and white for better text recognition.
-- Automatic skew correction
-  Detect image skew angle and automatically correct the tilt.
-- Dewrapping
-  Detect perspective distortions and automatically straighten the image.
-- Upscaling
-  Intelligently enhance image resolution without losing the content and quality.
+REST API changes:
 
-Public API changes and backwards compatibility
+- https://releases.aspose.cloud/ocr/release-notes/2023/aspose-ocr-cloud-23-5-0-release-notes/
+- https://releases.aspose.cloud/ocr/release-notes/2023/aspose-ocr-cloud-23-6-0-release-notes/
 
-BACKWARD INCOMPATIBILITY!
+### Deprecation warning
 
-This release is based on a completely new architecture (version 5.0) that is not backward compatible with previous (version 3.0) principles and workflows. Version 3.0 is also available at Deprecated directory.
-
-To maintain compatibility, please continue to use the previous version of the Aspose.OCR Cloud API.
-Added public APIs:
-
-See Aspose OCR Cloud 5.0 API Reference for the full list of new endpoints and request parameters.
-Updated public APIs:
-
-This is the first release based on the new (version 5.0) architecture. When updates, renames and improvements are introduced, they will be described in future Release Notes. Keep for updates.
-Removed public APIs:
-
-This is the first release based on the new (version 5.0) architecture. When some of the methods become deprecated, this will be announced in future Release Notes.
-
+Updated image processing and text-to-speech conversion APIs are not backward compatible. To make code updates easier, previous APIs remain fully functional. All of your existing code will continue to work and you can even make minor updates to it, but be aware that all deprecated endpoints are planned to be removed in upcoming releases in favor of the new API.
 
 ## Features
 - Automated skew correction
@@ -89,7 +75,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.aspose</groupId>
   <artifactId>aspose-ocr-cloud</artifactId>
-  <version>22.12.0</version>
+  <version>23.6.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -105,7 +91,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.aspose:aspose-ocr-cloud:22.12.0"
+     implementation "com.aspose:aspose-ocr-cloud:23.6.0"
   }
 ```
 
@@ -119,7 +105,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/aspose-ocr-cloud-22.12.0.jar`
+* `target/aspose-ocr-cloud-23.6.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -208,7 +194,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.aspose</groupId>
     <artifactId>aspose-ocr-cloud-java</artifactId>
-    <version>22.12.0</version>
+    <version>23.6.0</version>
     <scope>compile</scope>
 </dependency>
 <repositories>

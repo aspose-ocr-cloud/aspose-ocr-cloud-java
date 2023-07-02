@@ -53,9 +53,9 @@ import java.util.Set;
 import Aspose.OCR.Cloud.SDK.JSON;
 
 /**
- * OCR Process setting for Image recognition
+ * OCRSettingsRecognizeRegions
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-26T18:15:47.000572Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-02T10:37:00.547+03:00[GMT+03:00]")
 public class OCRSettingsRecognizeRegions {
   public static final String SERIALIZED_NAME_LANGUAGE = "language";
   @SerializedName(SERIALIZED_NAME_LANGUAGE)
@@ -84,6 +84,10 @@ public class OCRSettingsRecognizeRegions {
   public static final String SERIALIZED_NAME_RESULT_TYPE = "resultType";
   @SerializedName(SERIALIZED_NAME_RESULT_TYPE)
   private ResultType resultType;
+
+  public static final String SERIALIZED_NAME_ROTATE = "Rotate";
+  @SerializedName(SERIALIZED_NAME_ROTATE)
+  private Integer rotate;
 
   public static final String SERIALIZED_NAME_MAKE_BINARIZATION = "makeBinarization";
   @SerializedName(SERIALIZED_NAME_MAKE_BINARIZATION)
@@ -133,7 +137,7 @@ public class OCRSettingsRecognizeRegions {
   }
 
    /**
-   * Option to enable skew correction algorithm. True by default
+   * Get makeSkewCorrect
    * @return makeSkewCorrect
   **/
   @javax.annotation.Nullable
@@ -155,7 +159,7 @@ public class OCRSettingsRecognizeRegions {
   }
 
    /**
-   * Option to enable spell checking and correction algorithm. False by default
+   * Get makeSpellCheck
    * @return makeSpellCheck
   **/
   @javax.annotation.Nullable
@@ -177,7 +181,7 @@ public class OCRSettingsRecognizeRegions {
   }
 
    /**
-   * Option to enable image contrast correction algorithm. True by default
+   * Get makeContrastCorrection
    * @return makeContrastCorrection
   **/
   @javax.annotation.Nullable
@@ -199,7 +203,7 @@ public class OCRSettingsRecognizeRegions {
   }
 
    /**
-   * Option to enable image up-sampling algorithm to improve quality. True by default
+   * Get makeUpsampling
    * @return makeUpsampling
   **/
   @javax.annotation.Nullable
@@ -222,14 +226,14 @@ public class OCRSettingsRecognizeRegions {
 
   public OCRSettingsRecognizeRegions addRegionsItem(OCRRegion regionsItem) {
     if (this.regions == null) {
-      this.regions = new ArrayList<>();
+      this.regions = new ArrayList<OCRRegion>();
     }
     this.regions.add(regionsItem);
     return this;
   }
 
    /**
-   * Region on image to recognize in specific format. Aspose.Ocr.Cloud.Public.OCRRegion
+   * Get regions
    * @return regions
   **/
   @javax.annotation.Nullable
@@ -266,6 +270,28 @@ public class OCRSettingsRecognizeRegions {
   }
 
 
+  public OCRSettingsRecognizeRegions rotate(Integer rotate) {
+    
+    this.rotate = rotate;
+    return this;
+  }
+
+   /**
+   * Get rotate
+   * @return rotate
+  **/
+  @javax.annotation.Nullable
+
+  public Integer getRotate() {
+    return rotate;
+  }
+
+
+  public void setRotate(Integer rotate) {
+    this.rotate = rotate;
+  }
+
+
   public OCRSettingsRecognizeRegions makeBinarization(Boolean makeBinarization) {
     
     this.makeBinarization = makeBinarization;
@@ -273,7 +299,7 @@ public class OCRSettingsRecognizeRegions {
   }
 
    /**
-   * Option to enable image binarization algorithm. False by default
+   * Get makeBinarization
    * @return makeBinarization
   **/
   @javax.annotation.Nullable
@@ -371,6 +397,7 @@ public class OCRSettingsRecognizeRegions {
         Objects.equals(this.makeUpsampling, ocRSettingsRecognizeRegions.makeUpsampling) &&
         Objects.equals(this.regions, ocRSettingsRecognizeRegions.regions) &&
         Objects.equals(this.resultType, ocRSettingsRecognizeRegions.resultType) &&
+        Objects.equals(this.rotate, ocRSettingsRecognizeRegions.rotate) &&
         Objects.equals(this.makeBinarization, ocRSettingsRecognizeRegions.makeBinarization) &&
         Objects.equals(this.dsrMode, ocRSettingsRecognizeRegions.dsrMode) &&
         Objects.equals(this.dsrConfidence, ocRSettingsRecognizeRegions.dsrConfidence) &&
@@ -383,7 +410,7 @@ public class OCRSettingsRecognizeRegions {
 
   @Override
   public int hashCode() {
-    return Objects.hash(language, makeSkewCorrect, makeSpellCheck, makeContrastCorrection, makeUpsampling, regions, resultType, makeBinarization, dsrMode, dsrConfidence, resultTypeTable);
+    return Objects.hash(language, makeSkewCorrect, makeSpellCheck, makeContrastCorrection, makeUpsampling, regions, resultType, rotate, makeBinarization, dsrMode, dsrConfidence, resultTypeTable);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -404,6 +431,7 @@ public class OCRSettingsRecognizeRegions {
     sb.append("    makeUpsampling: ").append(toIndentedString(makeUpsampling)).append("\n");
     sb.append("    regions: ").append(toIndentedString(regions)).append("\n");
     sb.append("    resultType: ").append(toIndentedString(resultType)).append("\n");
+    sb.append("    rotate: ").append(toIndentedString(rotate)).append("\n");
     sb.append("    makeBinarization: ").append(toIndentedString(makeBinarization)).append("\n");
     sb.append("    dsrMode: ").append(toIndentedString(dsrMode)).append("\n");
     sb.append("    dsrConfidence: ").append(toIndentedString(dsrConfidence)).append("\n");
@@ -437,6 +465,7 @@ public class OCRSettingsRecognizeRegions {
     openapiFields.add("makeUpsampling");
     openapiFields.add("regions");
     openapiFields.add("resultType");
+    openapiFields.add("Rotate");
     openapiFields.add("makeBinarization");
     openapiFields.add("dsrMode");
     openapiFields.add("dsrConfidence");

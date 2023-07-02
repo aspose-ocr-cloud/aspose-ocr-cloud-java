@@ -15,8 +15,7 @@ package Aspose.OCR.Cloud.SDK.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import Aspose.OCR.Cloud.SDK.model.LanguageTTS;
-import Aspose.OCR.Cloud.SDK.model.ResultTypeTTS;
+import Aspose.OCR.Cloud.SDK.model.TTSSettings;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -46,21 +45,17 @@ import java.util.Set;
 import Aspose.OCR.Cloud.SDK.JSON;
 
 /**
- * Represents input text data with settings
+ * TTSBody
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-26T18:15:47.000572Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-02T10:37:00.547+03:00[GMT+03:00]")
 public class TTSBody {
   public static final String SERIALIZED_NAME_TEXT = "text";
   @SerializedName(SERIALIZED_NAME_TEXT)
   private String text;
 
-  public static final String SERIALIZED_NAME_LANGUAGE = "language";
-  @SerializedName(SERIALIZED_NAME_LANGUAGE)
-  private LanguageTTS language;
-
-  public static final String SERIALIZED_NAME_RESULT_TYPE = "resultType";
-  @SerializedName(SERIALIZED_NAME_RESULT_TYPE)
-  private ResultTypeTTS resultType;
+  public static final String SERIALIZED_NAME_SETTINGS = "settings";
+  @SerializedName(SERIALIZED_NAME_SETTINGS)
+  private TTSSettings settings;
 
   public TTSBody() {
   }
@@ -72,7 +67,7 @@ public class TTSBody {
   }
 
    /**
-   * Gets or Sets text
+   * Get text
    * @return text
   **/
   @javax.annotation.Nonnull
@@ -87,47 +82,25 @@ public class TTSBody {
   }
 
 
-  public TTSBody language(LanguageTTS language) {
+  public TTSBody settings(TTSSettings settings) {
     
-    this.language = language;
+    this.settings = settings;
     return this;
   }
 
    /**
-   * Get language
-   * @return language
+   * Get settings
+   * @return settings
   **/
   @javax.annotation.Nonnull
 
-  public LanguageTTS getLanguage() {
-    return language;
+  public TTSSettings getSettings() {
+    return settings;
   }
 
 
-  public void setLanguage(LanguageTTS language) {
-    this.language = language;
-  }
-
-
-  public TTSBody resultType(ResultTypeTTS resultType) {
-    
-    this.resultType = resultType;
-    return this;
-  }
-
-   /**
-   * Get resultType
-   * @return resultType
-  **/
-  @javax.annotation.Nonnull
-
-  public ResultTypeTTS getResultType() {
-    return resultType;
-  }
-
-
-  public void setResultType(ResultTypeTTS resultType) {
-    this.resultType = resultType;
+  public void setSettings(TTSSettings settings) {
+    this.settings = settings;
   }
 
 
@@ -142,13 +115,12 @@ public class TTSBody {
     }
     TTSBody ttSBody = (TTSBody) o;
     return Objects.equals(this.text, ttSBody.text) &&
-        Objects.equals(this.language, ttSBody.language) &&
-        Objects.equals(this.resultType, ttSBody.resultType);
+        Objects.equals(this.settings, ttSBody.settings);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(text, language, resultType);
+    return Objects.hash(text, settings);
   }
 
   @Override
@@ -156,8 +128,7 @@ public class TTSBody {
     StringBuilder sb = new StringBuilder();
     sb.append("class TTSBody {\n");
     sb.append("    text: ").append(toIndentedString(text)).append("\n");
-    sb.append("    language: ").append(toIndentedString(language)).append("\n");
-    sb.append("    resultType: ").append(toIndentedString(resultType)).append("\n");
+    sb.append("    settings: ").append(toIndentedString(settings)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -181,14 +152,12 @@ public class TTSBody {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("text");
-    openapiFields.add("language");
-    openapiFields.add("resultType");
+    openapiFields.add("settings");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("text");
-    openapiRequiredFields.add("language");
-    openapiRequiredFields.add("resultType");
+    openapiRequiredFields.add("settings");
   }
 
  /**
@@ -221,6 +190,8 @@ public class TTSBody {
       if (!jsonObj.get("text").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `text` to be a primitive type in the JSON string but got `%s`", jsonObj.get("text").toString()));
       }
+      // validate the required field `settings`
+      TTSSettings.validateJsonObject(jsonObj.getAsJsonObject("settings"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

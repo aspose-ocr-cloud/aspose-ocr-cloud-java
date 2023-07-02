@@ -12,6 +12,11 @@
       <option name="url" value="https://releases-qa.aspose.cloud/java/repo/" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="AsposeCloudJavaRepository" />
+      <option name="name" value="Aspose Cloud Java Repository" />
+      <option name="url" value="https://releases-qa.aspose.cloud/java/repo/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="project.local" />
       <option name="name" value="project" />
       <option name="url" value="file:F:\mavenLocal" />
@@ -25,6 +30,11 @@
       <option name="id" value="jboss.community" />
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="AsposeCloudJavaRepository" />
+      <option name="name" value="Aspose Cloud Java QA Repository" />
+      <option name="url" value="https://releases.aspose.cloud/java/repo/" />
     </remote-repository>
   </component>
 </project>

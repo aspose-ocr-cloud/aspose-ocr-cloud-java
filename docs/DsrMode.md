@@ -17,5 +17,7 @@
 
 * `DSRPLUSDETECTOR` (value: `"DsrPlusDetector"`)
 
+* `POLYGONALTEXTDETECTOR` (value: `"PolygonalTextDetector"`)
+
 
 

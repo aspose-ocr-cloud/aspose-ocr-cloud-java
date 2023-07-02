@@ -24,7 +24,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Text-to-speech output types
+ * Gets or Sets ResultTypeTTS
  */
 @JsonAdapter(ResultTypeTTS.Adapter.class)
 public enum ResultTypeTTS {

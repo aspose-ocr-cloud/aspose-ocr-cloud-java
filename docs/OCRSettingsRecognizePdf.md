@@ -15,7 +15,8 @@ OCR Process setting for Scanned multiple PDF document recognition
 |**dsrMode** | **DsrMode** |  |  [optional] |
 |**dsrConfidence** | **DsrConfidence** |  |  [optional] |
 |**resultType** | **ResultType** |  |  [optional] |
-|**makeBinarization** | **Boolean** | Option to enable image binarization algorithm. False by default |  [optional] |
+|**rotate** | **Integer** |  |  [optional] |
+|**makeBinarization** | **Boolean** |  |  [optional] |
 |**makeUpsampling** | **Boolean** | Option to enable image up-sampling algorithm to improve quality. True by default |  [optional] |
 |**resultTypeTable** | **ResultTypeTable** |  |  [optional] |
 |**regions** | [**List&lt;OCRRegion&gt;**](OCRRegion.md) |  |  [optional] |

@@ -28,7 +28,7 @@ import java.io.IOException;
 
 
 import Aspose.OCR.Cloud.SDK.model.ProblemDetails;
-import Aspose.OCR.Cloud.SDK.model.TTSBody;
+import Aspose.OCR.Cloud.SDK.model.TTSBodyDeprecated;
 import Aspose.OCR.Cloud.SDK.model.TTSResponse;
 
 import java.lang.reflect.Type;
@@ -82,7 +82,7 @@ public class TextToSpeechApi {
 
     /**
      * Build call for getTextToSpeechResult
-     * @param id Task id to select the result (required)
+     * @param id  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -91,7 +91,9 @@ public class TextToSpeechApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call getTextToSpeechResultCall(String id, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
@@ -140,6 +142,7 @@ public class TextToSpeechApi {
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
+    @Deprecated
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getTextToSpeechResultValidateBeforeCall(String id, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'id' is set
@@ -154,7 +157,7 @@ public class TextToSpeechApi {
     /**
      * GetTextToSpeechResult
      * 
-     * @param id Task id to select the result (required)
+     * @param id  (required)
      * @return TTSResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -162,7 +165,9 @@ public class TextToSpeechApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public TTSResponse getTextToSpeechResult(String id) throws ApiException {
         ApiResponse<TTSResponse> localVarResp = getTextToSpeechResultWithHttpInfo(id);
         return localVarResp.getData();
@@ -171,7 +176,7 @@ public class TextToSpeechApi {
     /**
      * GetTextToSpeechResult
      * 
-     * @param id Task id to select the result (required)
+     * @param id  (required)
      * @return ApiResponse&lt;TTSResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -179,7 +184,9 @@ public class TextToSpeechApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public ApiResponse<TTSResponse> getTextToSpeechResultWithHttpInfo(String id) throws ApiException {
         okhttp3.Call localVarCall = getTextToSpeechResultValidateBeforeCall(id, null);
         Type localVarReturnType = new TypeToken<TTSResponse>(){}.getType();
@@ -189,7 +196,7 @@ public class TextToSpeechApi {
     /**
      * GetTextToSpeechResult (asynchronously)
      * 
-     * @param id Task id to select the result (required)
+     * @param id  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -198,7 +205,9 @@ public class TextToSpeechApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call getTextToSpeechResultAsync(String id, final ApiCallback<TTSResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getTextToSpeechResultValidateBeforeCall(id, _callback);
@@ -208,7 +217,7 @@ public class TextToSpeechApi {
     }
     /**
      * Build call for getTextToSpeechResultFile
-     * @param id Task id to select the result (required)
+     * @param id  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -216,8 +225,11 @@ public class TextToSpeechApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 204 </td><td> Results expired </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call getTextToSpeechResultFileCall(String id, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
@@ -266,6 +278,7 @@ public class TextToSpeechApi {
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
+    @Deprecated
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getTextToSpeechResultFileValidateBeforeCall(String id, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'id' is set
@@ -280,15 +293,18 @@ public class TextToSpeechApi {
     /**
      * GetTextToSpeechResultFile
      * 
-     * @param id Task id to select the result (required)
+     * @param id  (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 204 </td><td> Results expired </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public Object getTextToSpeechResultFile(String id) throws ApiException {
         ApiResponse<Object> localVarResp = getTextToSpeechResultFileWithHttpInfo(id);
         return localVarResp.getData();
@@ -297,15 +313,18 @@ public class TextToSpeechApi {
     /**
      * GetTextToSpeechResultFile
      * 
-     * @param id Task id to select the result (required)
+     * @param id  (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 204 </td><td> Results expired </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public ApiResponse<Object> getTextToSpeechResultFileWithHttpInfo(String id) throws ApiException {
         okhttp3.Call localVarCall = getTextToSpeechResultFileValidateBeforeCall(id, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
@@ -315,7 +334,7 @@ public class TextToSpeechApi {
     /**
      * GetTextToSpeechResultFile (asynchronously)
      * 
-     * @param id Task id to select the result (required)
+     * @param id  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -323,8 +342,11 @@ public class TextToSpeechApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 204 </td><td> Results expired </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call getTextToSpeechResultFileAsync(String id, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getTextToSpeechResultFileValidateBeforeCall(id, _callback);
@@ -334,7 +356,7 @@ public class TextToSpeechApi {
     }
     /**
      * Build call for postTextToSpeech
-     * @param ttSBody  (required)
+     * @param ttSBodyDeprecated  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -344,8 +366,10 @@ public class TextToSpeechApi {
         <tr><td> 200 </td><td> Task unique ID </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
-    public okhttp3.Call postTextToSpeechCall(TTSBody ttSBody, final ApiCallback _callback) throws ApiException {
+    @Deprecated
+    public okhttp3.Call postTextToSpeechCall(TTSBodyDeprecated ttSBodyDeprecated, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -359,7 +383,7 @@ public class TextToSpeechApi {
             basePath = null;
         }
 
-        Object localVarPostBody = ttSBody;
+        Object localVarPostBody = ttSBodyDeprecated;
 
         // create path and map variables
         String localVarPath = getAdjustedPath("/v5/TextToSpeech/PostTextToSpeech");
@@ -390,21 +414,22 @@ public class TextToSpeechApi {
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
+    @Deprecated
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call postTextToSpeechValidateBeforeCall(TTSBody ttSBody, final ApiCallback _callback) throws ApiException {
-        // verify the required parameter 'ttSBody' is set
-        if (ttSBody == null) {
-            throw new ApiException("Missing the required parameter 'ttSBody' when calling postTextToSpeech(Async)");
+    private okhttp3.Call postTextToSpeechValidateBeforeCall(TTSBodyDeprecated ttSBodyDeprecated, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'ttSBodyDeprecated' is set
+        if (ttSBodyDeprecated == null) {
+            throw new ApiException("Missing the required parameter 'ttSBodyDeprecated' when calling postTextToSpeech(Async)");
         }
 
-        return postTextToSpeechCall(ttSBody, _callback);
+        return postTextToSpeechCall(ttSBodyDeprecated, _callback);
 
     }
 
     /**
      * PostTextToSpeech
      * 
-     * @param ttSBody  (required)
+     * @param ttSBodyDeprecated  (required)
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -413,16 +438,18 @@ public class TextToSpeechApi {
         <tr><td> 200 </td><td> Task unique ID </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
-    public String postTextToSpeech(TTSBody ttSBody) throws ApiException {
-        ApiResponse<String> localVarResp = postTextToSpeechWithHttpInfo(ttSBody);
+    @Deprecated
+    public String postTextToSpeech(TTSBodyDeprecated ttSBodyDeprecated) throws ApiException {
+        ApiResponse<String> localVarResp = postTextToSpeechWithHttpInfo(ttSBodyDeprecated);
         return localVarResp.getData();
     }
 
     /**
      * PostTextToSpeech
      * 
-     * @param ttSBody  (required)
+     * @param ttSBodyDeprecated  (required)
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -431,9 +458,11 @@ public class TextToSpeechApi {
         <tr><td> 200 </td><td> Task unique ID </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
-    public ApiResponse<String> postTextToSpeechWithHttpInfo(TTSBody ttSBody) throws ApiException {
-        okhttp3.Call localVarCall = postTextToSpeechValidateBeforeCall(ttSBody, null);
+    @Deprecated
+    public ApiResponse<String> postTextToSpeechWithHttpInfo(TTSBodyDeprecated ttSBodyDeprecated) throws ApiException {
+        okhttp3.Call localVarCall = postTextToSpeechValidateBeforeCall(ttSBodyDeprecated, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -441,7 +470,7 @@ public class TextToSpeechApi {
     /**
      * PostTextToSpeech (asynchronously)
      * 
-     * @param ttSBody  (required)
+     * @param ttSBodyDeprecated  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -451,10 +480,12 @@ public class TextToSpeechApi {
         <tr><td> 200 </td><td> Task unique ID </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
-    public okhttp3.Call postTextToSpeechAsync(TTSBody ttSBody, final ApiCallback<String> _callback) throws ApiException {
+    @Deprecated
+    public okhttp3.Call postTextToSpeechAsync(TTSBodyDeprecated ttSBodyDeprecated, final ApiCallback<String> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = postTextToSpeechValidateBeforeCall(ttSBody, _callback);
+        okhttp3.Call localVarCall = postTextToSpeechValidateBeforeCall(ttSBodyDeprecated, _callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

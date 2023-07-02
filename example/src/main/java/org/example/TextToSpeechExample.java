@@ -1,9 +1,10 @@
 package org.example;
 
-import Aspose.OCR.Cloud.SDK.TextToSpeechApi;
+import Aspose.OCR.Cloud.SDK.ConvertTextToSpeechApi;
 import Aspose.OCR.Cloud.SDK.model.LanguageTTS;
 import Aspose.OCR.Cloud.SDK.model.ResultTypeTTS;
 import Aspose.OCR.Cloud.SDK.model.TTSBody;
+import Aspose.OCR.Cloud.SDK.model.TTSSettings;
 import Aspose.OCR.Cloud.SDK.model.TTSResponse;
 
 import java.nio.file.Files;
@@ -20,18 +21,20 @@ public class TextToSpeechExample {
         char confirmation = scanner.next().charAt(0);
         if ( confirmation == 'y'){
             try {
-                TextToSpeechApi ttsApi = new TextToSpeechApi(clientId, clientSecret);
+                ConvertTextToSpeechApi ttsApi = new ConvertTextToSpeechApi(clientId, clientSecret);
                 TTSBody requestBody = new TTSBody();
-                requestBody.setLanguage(LanguageTTS.ENGLISH);
-                requestBody.setResultType(ResultTypeTTS.WAV);
+                TTSSettings settings = new TTSSettings();
+                settings.setLanguage(LanguageTTS.ENGLISH);
+                settings.setResultType(ResultTypeTTS.WAV);
                 requestBody.setText("Sample text");
+                requestBody.settings(settings);
 
                 System.out.println("Sending sample text (" + requestBody.getText() +") to TextToSpeechApi...");
-                String taskId = ttsApi.postTextToSpeech(requestBody);
+                String taskId = ttsApi.postConvertTextToSpeech(requestBody);
 
                 System.out.println("File successfully sent. Your credentials accepted. " +
                         "Your task ID is " + taskId + "\nGetting task results...");
-                TTSResponse apiResponse = ttsApi.getTextToSpeechResult(taskId);
+                TTSResponse apiResponse = ttsApi.getConvertTextToSpeech(taskId);
 
                 String fileExtension = "";
                 switch(apiResponse.getResults().get(0).getType()) {

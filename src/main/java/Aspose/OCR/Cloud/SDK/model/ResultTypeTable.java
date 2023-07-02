@@ -33,7 +33,9 @@ public enum ResultTypeTable {
   
   EXCEL("Excel"),
   
-  CSV("Csv");
+  CSV("Csv"),
+  
+  CSVANDEXCEL("CsvAndExcel");
 
   private String value;
 

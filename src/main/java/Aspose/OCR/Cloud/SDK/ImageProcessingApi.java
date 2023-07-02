@@ -82,7 +82,7 @@ public class ImageProcessingApi {
 
     /**
      * Build call for getResultFile
-     * @param id Task id to select the result (required)
+     * @param id  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -90,8 +90,11 @@ public class ImageProcessingApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 204 </td><td> Rsults expired </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call getResultFileCall(String id, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
@@ -140,6 +143,7 @@ public class ImageProcessingApi {
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
+    @Deprecated
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getResultFileValidateBeforeCall(String id, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'id' is set
@@ -154,15 +158,18 @@ public class ImageProcessingApi {
     /**
      * GetResultFile
      * 
-     * @param id Task id to select the result (required)
+     * @param id  (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 204 </td><td> Rsults expired </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public Object getResultFile(String id) throws ApiException {
         ApiResponse<Object> localVarResp = getResultFileWithHttpInfo(id);
         return localVarResp.getData();
@@ -171,15 +178,18 @@ public class ImageProcessingApi {
     /**
      * GetResultFile
      * 
-     * @param id Task id to select the result (required)
+     * @param id  (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 204 </td><td> Rsults expired </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public ApiResponse<Object> getResultFileWithHttpInfo(String id) throws ApiException {
         okhttp3.Call localVarCall = getResultFileValidateBeforeCall(id, null);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
@@ -189,7 +199,7 @@ public class ImageProcessingApi {
     /**
      * GetResultFile (asynchronously)
      * 
-     * @param id Task id to select the result (required)
+     * @param id  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -197,8 +207,11 @@ public class ImageProcessingApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
+        <tr><td> 204 </td><td> Rsults expired </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call getResultFileAsync(String id, final ApiCallback<Object> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getResultFileValidateBeforeCall(id, _callback);
@@ -208,7 +221,7 @@ public class ImageProcessingApi {
     }
     /**
      * Build call for getResultTask
-     * @param id Task id to select the result (required)
+     * @param id  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -217,7 +230,9 @@ public class ImageProcessingApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call getResultTaskCall(String id, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
@@ -266,6 +281,7 @@ public class ImageProcessingApi {
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
+    @Deprecated
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getResultTaskValidateBeforeCall(String id, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'id' is set
@@ -280,7 +296,7 @@ public class ImageProcessingApi {
     /**
      * GetResultTask
      * 
-     * @param id Task id to select the result (required)
+     * @param id  (required)
      * @return OCRResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -288,7 +304,9 @@ public class ImageProcessingApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public OCRResponse getResultTask(String id) throws ApiException {
         ApiResponse<OCRResponse> localVarResp = getResultTaskWithHttpInfo(id);
         return localVarResp.getData();
@@ -297,7 +315,7 @@ public class ImageProcessingApi {
     /**
      * GetResultTask
      * 
-     * @param id Task id to select the result (required)
+     * @param id  (required)
      * @return ApiResponse&lt;OCRResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -305,7 +323,9 @@ public class ImageProcessingApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public ApiResponse<OCRResponse> getResultTaskWithHttpInfo(String id) throws ApiException {
         okhttp3.Call localVarCall = getResultTaskValidateBeforeCall(id, null);
         Type localVarReturnType = new TypeToken<OCRResponse>(){}.getType();
@@ -315,7 +335,7 @@ public class ImageProcessingApi {
     /**
      * GetResultTask (asynchronously)
      * 
-     * @param id Task id to select the result (required)
+     * @param id  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -324,7 +344,9 @@ public class ImageProcessingApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call getResultTaskAsync(String id, final ApiCallback<OCRResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getResultTaskValidateBeforeCall(id, _callback);
@@ -344,7 +366,9 @@ public class ImageProcessingApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call postBinarizationFileCall(File _file, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
@@ -394,6 +418,7 @@ public class ImageProcessingApi {
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
+    @Deprecated
     @SuppressWarnings("rawtypes")
     private okhttp3.Call postBinarizationFileValidateBeforeCall(File _file, final ApiCallback _callback) throws ApiException {
         return postBinarizationFileCall(_file, _callback);
@@ -412,7 +437,9 @@ public class ImageProcessingApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public String postBinarizationFile(File _file) throws ApiException {
         ApiResponse<String> localVarResp = postBinarizationFileWithHttpInfo(_file);
         return localVarResp.getData();
@@ -430,7 +457,9 @@ public class ImageProcessingApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public ApiResponse<String> postBinarizationFileWithHttpInfo(File _file) throws ApiException {
         okhttp3.Call localVarCall = postBinarizationFileValidateBeforeCall(_file, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -450,7 +479,9 @@ public class ImageProcessingApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call postBinarizationFileAsync(File _file, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = postBinarizationFileValidateBeforeCall(_file, _callback);
@@ -470,7 +501,9 @@ public class ImageProcessingApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call postDewarpingFileCall(File _file, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
@@ -520,6 +553,7 @@ public class ImageProcessingApi {
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
+    @Deprecated
     @SuppressWarnings("rawtypes")
     private okhttp3.Call postDewarpingFileValidateBeforeCall(File _file, final ApiCallback _callback) throws ApiException {
         return postDewarpingFileCall(_file, _callback);
@@ -538,7 +572,9 @@ public class ImageProcessingApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public String postDewarpingFile(File _file) throws ApiException {
         ApiResponse<String> localVarResp = postDewarpingFileWithHttpInfo(_file);
         return localVarResp.getData();
@@ -556,7 +592,9 @@ public class ImageProcessingApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public ApiResponse<String> postDewarpingFileWithHttpInfo(File _file) throws ApiException {
         okhttp3.Call localVarCall = postDewarpingFileValidateBeforeCall(_file, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -576,7 +614,9 @@ public class ImageProcessingApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call postDewarpingFileAsync(File _file, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = postDewarpingFileValidateBeforeCall(_file, _callback);
@@ -596,7 +636,9 @@ public class ImageProcessingApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call postSkewCorrectionFileCall(File _file, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
@@ -646,6 +688,7 @@ public class ImageProcessingApi {
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
+    @Deprecated
     @SuppressWarnings("rawtypes")
     private okhttp3.Call postSkewCorrectionFileValidateBeforeCall(File _file, final ApiCallback _callback) throws ApiException {
         return postSkewCorrectionFileCall(_file, _callback);
@@ -664,7 +707,9 @@ public class ImageProcessingApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public String postSkewCorrectionFile(File _file) throws ApiException {
         ApiResponse<String> localVarResp = postSkewCorrectionFileWithHttpInfo(_file);
         return localVarResp.getData();
@@ -682,7 +727,9 @@ public class ImageProcessingApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public ApiResponse<String> postSkewCorrectionFileWithHttpInfo(File _file) throws ApiException {
         okhttp3.Call localVarCall = postSkewCorrectionFileValidateBeforeCall(_file, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -702,7 +749,9 @@ public class ImageProcessingApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call postSkewCorrectionFileAsync(File _file, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = postSkewCorrectionFileValidateBeforeCall(_file, _callback);
@@ -722,7 +771,9 @@ public class ImageProcessingApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call postUpsamplingFileCall(File _file, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
@@ -772,6 +823,7 @@ public class ImageProcessingApi {
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
+    @Deprecated
     @SuppressWarnings("rawtypes")
     private okhttp3.Call postUpsamplingFileValidateBeforeCall(File _file, final ApiCallback _callback) throws ApiException {
         return postUpsamplingFileCall(_file, _callback);
@@ -790,7 +842,9 @@ public class ImageProcessingApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public String postUpsamplingFile(File _file) throws ApiException {
         ApiResponse<String> localVarResp = postUpsamplingFileWithHttpInfo(_file);
         return localVarResp.getData();
@@ -808,7 +862,9 @@ public class ImageProcessingApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public ApiResponse<String> postUpsamplingFileWithHttpInfo(File _file) throws ApiException {
         okhttp3.Call localVarCall = postUpsamplingFileValidateBeforeCall(_file, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
@@ -828,7 +884,9 @@ public class ImageProcessingApi {
         <tr><td> 200 </td><td> Success </td><td>  -  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
      </table>
+     * @deprecated
      */
+    @Deprecated
     public okhttp3.Call postUpsamplingFileAsync(File _file, final ApiCallback<String> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = postUpsamplingFileValidateBeforeCall(_file, _callback);

@@ -39,7 +39,9 @@ public enum DsrMode {
   
   TEXTDETECTOR("TextDetector"),
   
-  DSRPLUSDETECTOR("DsrPlusDetector");
+  DSRPLUSDETECTOR("DsrPlusDetector"),
+  
+  POLYGONALTEXTDETECTOR("PolygonalTextDetector");
 
   private String value;
 
