@@ -1,15 +1,15 @@
 # Aspose.OCR Cloud for Java SDK 23.11.0
 
-[![License](https://img.shields.io/github/license/aspose-ocr-cloud/aspose-ocr-cloud-dotnet)](LICENSE)
+[![License](https://img.shields.io/github/license/aspose-ocr-cloud/aspose-ocr-cloud-java)](LICENSE)
 [![Nuget](https://img.shields.io/nuget/v/Aspose.OCR-Cloud)](https://www.nuget.org/packages/Aspose.OCR-Cloud/)
 
 [Aspose.OCR Cloud](https://products.aspose.cloud/ocr/) is an optical character recognition as a service. With it, you can easily add OCR functionality to almost any device or platform, including netbooks, mini PCs, or even entry-level smartphones.
 
 Our engine can read text from images, photos, screenshots and scanned PDFs in a wide variety of European, Cyrillic and Oriental fonts, returning results in the most popular document formats. Powerful built-in image processing filters based on neural networks automatically correct skewed and distorted images, automatically remove dirt, smudges, scratches, glare and other image defects that can affect recognition accuracy. To further improve the results, Aspose.OCR Cloud has a built-in spell checker that automatically replaces misspelled words and saves you the trouble of manually correcting the recognition results.
 
-Even the complex recognition tasks can be done with a couple of API calls. To make interacting with Aspose.OCR Cloud services from .NET applications even easier, we provide the software development kit (SDK) for .NET. It handles all the routine operations such as establishing connections, sending API requests, and parsing responses, wrapping all these tasks into a few simple classes.
+Even the complex recognition tasks can be done with a couple of API calls. To make interacting with Aspose.OCR Cloud services from Java applications even easier, we provide the software development kit (SDK) for Java. It handles all the routine operations such as establishing connections, sending API requests, and parsing responses, wrapping all these tasks into a few simple classes.
 
-Aspose.OCR Cloud SDK for .NET is open source under the MIT license. You can freely use it for any projects, including commercial and proprietary applications, as well as modify any part of its code.
+Aspose.OCR Cloud SDK for Java is open source under the MIT license. You can freely use it for any projects, including commercial and proprietary applications, as well as modify any part of its code.
 
 ## Try Online
 [Image to Text](https://products.aspose.app/ocr/scan-image) | [Image to Searchable PDF](https://products.aspose.app/ocr/ocr-to-pdf) | [PDF OCR](https://products.aspose.app/ocr/pdf-ocr)| [Receipt Scanner](https://products.aspose.app/ocr/scan-receipt)
@@ -18,7 +18,7 @@ Aspose.OCR Cloud SDK for .NET is open source under the MIT license. You can free
 
 ## What was changed in version 23.11.0
 
-A summary of recent changes, enhancements and bug fixes in **Aspose.OCR Cloud SDK for .NET 23.11.0** release:
+A summary of recent changes, enhancements and bug fixes in **Aspose.OCR Cloud SDK for Java 23.11.0** release:
 
 Key | Summary | Category
 --- | ------- | --------
@@ -30,7 +30,7 @@ REST API changes: https://releases.aspose.cloud/ocr/release-notes/2023/aspose-oc
 
 ### Public API changes and backwards compatibility
 
-This section lists all public API changes introduced in **Aspose.OCR Cloud SDK for .NET 23.11.0** that may affect the code of existing applications.
+This section lists all public API changes introduced in **Aspose.OCR Cloud SDK for Java 23.11.0** that may affect the code of existing applications.
 
 #### Added public APIs:
 
