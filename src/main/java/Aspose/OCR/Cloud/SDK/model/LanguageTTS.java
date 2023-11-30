@@ -24,7 +24,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets LanguageTTS
+ * Text-to-speech target language
  */
 @JsonAdapter(LanguageTTS.Adapter.class)
 public enum LanguageTTS {

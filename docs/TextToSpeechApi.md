@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**getTextToSpeechResult**](TextToSpeechApi.md#getTextToSpeechResult) | **GET** /v5/TextToSpeech/GetTextToSpeechResult | GetTextToSpeechResult |
-| [**getTextToSpeechResultFile**](TextToSpeechApi.md#getTextToSpeechResultFile) | **GET** /v5/TextToSpeech/GetTextToSpeechResultFile | GetTextToSpeechResultFile |
-| [**postTextToSpeech**](TextToSpeechApi.md#postTextToSpeech) | **POST** /v5/TextToSpeech/PostTextToSpeech | PostTextToSpeech |
+| [**getTextToSpeechResult**](TextToSpeechApi.md#getTextToSpeechResult) | **GET** /v5.0/ocr/TextToSpeech/GetTextToSpeechResult | GetTextToSpeechResult |
+| [**getTextToSpeechResultFile**](TextToSpeechApi.md#getTextToSpeechResultFile) | **GET** /v5.0/ocr/TextToSpeech/GetTextToSpeechResultFile | GetTextToSpeechResultFile |
+| [**postTextToSpeech**](TextToSpeechApi.md#postTextToSpeech) | **POST** /v5.0/ocr/TextToSpeech/PostTextToSpeech | PostTextToSpeech |
 
 
 <a name="getTextToSpeechResult"></a>
@@ -32,7 +32,7 @@ public class Example {
     String clientSecret = "";
     // Creating new API instance with your credentials
     TextToSpeechApi apiInstance = new TextToSpeechApi(clientId, clientSecret);
-    String id = "id_example"; // String | 
+    String id = "id_example"; // String | Task id to select the result
     try {
       TTSResponse result = apiInstance.getTextToSpeechResult(id);
       System.out.println(result);
@@ -51,7 +51,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**|  | |
+| **id** | **String**| Task id to select the result | |
 
 ### Return type
 
@@ -94,7 +94,7 @@ public class Example {
     String clientSecret = "";
     // Creating new API instance with your credentials
     TextToSpeechApi apiInstance = new TextToSpeechApi(clientId, clientSecret);
-    String id = "id_example"; // String | 
+    String id = "id_example"; // String | Task id to select the result
     try {
       Object result = apiInstance.getTextToSpeechResultFile(id);
       System.out.println(result);
@@ -113,7 +113,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**|  | |
+| **id** | **String**| Task id to select the result | |
 
 ### Return type
 

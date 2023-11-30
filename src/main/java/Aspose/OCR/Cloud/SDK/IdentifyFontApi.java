@@ -108,7 +108,7 @@ public class IdentifyFontApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = getAdjustedPath("/v5/IdentifyFont");
+        String localVarPath = getAdjustedPath("/v5.0/ocr/IdentifyFont");
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -202,7 +202,7 @@ public class IdentifyFontApi {
     }
     /**
      * Build call for getIdentifyFont
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -229,7 +229,7 @@ public class IdentifyFontApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = getAdjustedPath("/v5/IdentifyFont");
+        String localVarPath = getAdjustedPath("/v5.0/ocr/IdentifyFont");
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -274,7 +274,7 @@ public class IdentifyFontApi {
     /**
      * GetIdentifyFont
      * 
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @return OCRResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -291,7 +291,7 @@ public class IdentifyFontApi {
     /**
      * GetIdentifyFont
      * 
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @return ApiResponse&lt;OCRResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -309,7 +309,7 @@ public class IdentifyFontApi {
     /**
      * GetIdentifyFont (asynchronously)
      * 
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -355,7 +355,7 @@ public class IdentifyFontApi {
         Object localVarPostBody = ocRRecognizeFontBody;
 
         // create path and map variables
-        String localVarPath = getAdjustedPath("/v5/IdentifyFont");
+        String localVarPath = getAdjustedPath("/v5.0/ocr/IdentifyFont");
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -459,12 +459,12 @@ public class IdentifyFontApi {
   **/
   private String getAdjustedPath(String srcPath)
   {
-      if(Pattern.matches("^.*/v\\d{1,5}\\.?\\d{0,3}/.*", this.localVarApiClient.getBasePath())) {
-          Pattern pattern = Pattern.compile("/v\\d{1,5}\\.?\\d{0,3}/");
-          return pattern.matcher(srcPath).replaceAll("/");
-      } else {
-          return srcPath;
-      }
+    if ("https://api.aspose.cloud/v5.0/ocr".equals(this.localVarApiClient.getBasePath())) {
+            Pattern pattern = Pattern.compile("/v5.0/ocr");
+            return pattern.matcher(srcPath).replaceFirst("");
+        } else {
+            return srcPath;
+        }
   }
 
 }

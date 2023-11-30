@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**cancelDjVu2PDF**](DjVu2PdfApi.md#cancelDjVu2PDF) | **DELETE** /v5/DjVu2PDF | CancelDjVu2PDF |
-| [**getDjVu2PDF**](DjVu2PdfApi.md#getDjVu2PDF) | **GET** /v5/DjVu2PDF | GetDjVu2PDF |
-| [**postDjVu2PDF**](DjVu2PdfApi.md#postDjVu2PDF) | **POST** /v5/DjVu2PDF | PostDjVu2PDF |
+| [**cancelDjVu2PDF**](DjVu2PdfApi.md#cancelDjVu2PDF) | **DELETE** /v5.0/ocr/DjVu2PDF | CancelDjVu2PDF |
+| [**getDjVu2PDF**](DjVu2PdfApi.md#getDjVu2PDF) | **GET** /v5.0/ocr/DjVu2PDF | GetDjVu2PDF |
+| [**postDjVu2PDF**](DjVu2PdfApi.md#postDjVu2PDF) | **POST** /v5.0/ocr/DjVu2PDF | PostDjVu2PDF |
 
 
 <a name="cancelDjVu2PDF"></a>
@@ -93,7 +93,7 @@ public class Example {
     String clientSecret = "";
     // Creating new API instance with your credentials
     DjVu2PdfApi apiInstance = new DjVu2PdfApi(clientId, clientSecret);
-    String id = "id_example"; // String | 
+    String id = "id_example"; // String | Task id to select the result
     try {
       OCRResponse result = apiInstance.getDjVu2PDF(id);
       System.out.println(result);
@@ -112,7 +112,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**|  | |
+| **id** | **String**| Task id to select the result | |
 
 ### Return type
 

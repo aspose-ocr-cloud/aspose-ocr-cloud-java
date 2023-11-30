@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**cancelRecognizeLabel**](RecognizeLabelApi.md#cancelRecognizeLabel) | **DELETE** /v5/RecognizeLabel | CancelRecognizeLabel |
-| [**getRecognizeLabel**](RecognizeLabelApi.md#getRecognizeLabel) | **GET** /v5/RecognizeLabel | GetRecognizeLabel |
-| [**postRecognizeLabel**](RecognizeLabelApi.md#postRecognizeLabel) | **POST** /v5/RecognizeLabel | PostRecognizeLabel |
+| [**cancelRecognizeLabel**](RecognizeLabelApi.md#cancelRecognizeLabel) | **DELETE** /v5.0/ocr/RecognizeLabel | CancelRecognizeLabel |
+| [**getRecognizeLabel**](RecognizeLabelApi.md#getRecognizeLabel) | **GET** /v5.0/ocr/RecognizeLabel | GetRecognizeLabel |
+| [**postRecognizeLabel**](RecognizeLabelApi.md#postRecognizeLabel) | **POST** /v5.0/ocr/RecognizeLabel | PostRecognizeLabel |
 
 
 <a name="cancelRecognizeLabel"></a>
@@ -93,7 +93,7 @@ public class Example {
     String clientSecret = "";
     // Creating new API instance with your credentials
     RecognizeLabelApi apiInstance = new RecognizeLabelApi(clientId, clientSecret);
-    String id = "id_example"; // String | 
+    String id = "id_example"; // String | Task id to select the result
     try {
       OCRResponse result = apiInstance.getRecognizeLabel(id);
       System.out.println(result);
@@ -112,7 +112,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**|  | |
+| **id** | **String**| Task id to select the result | |
 
 ### Return type
 

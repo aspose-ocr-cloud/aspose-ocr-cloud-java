@@ -14,14 +14,15 @@ import Aspose.OCR.Cloud.SDK.model.*;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("This is Aspose OCR Cloud SDK for Java v23.6.0 example usage project\n" +
+        System.out.println("This is Aspose OCR Cloud SDK for Java v23.11.0 example usage project\n" +
                 "Please make sure you have entered the correct client id and secret in the appropriate variables");
 
         String clientId = "";
         String clientSecret = "";
 
+        TextToSpeechTrialExample.run();
         RecognizeImageExample.run(clientId, clientSecret);
-        TextToSpeechExample.run(clientId, clientSecret);
+        RecognizeAndParseInvoiceExample.run(clientId, clientSecret);
     }
 
 }

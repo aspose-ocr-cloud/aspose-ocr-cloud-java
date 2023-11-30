@@ -47,7 +47,7 @@ import Aspose.OCR.Cloud.SDK.JSON;
 /**
  * PostUpsamplingFileRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-02T10:37:00.547+03:00[GMT+03:00]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-27T04:31:36.101+03:00[GMT+03:00]")
 public class PostUpsamplingFileRequest {
   public static final String SERIALIZED_NAME_FILE = "file";
   @SerializedName(SERIALIZED_NAME_FILE)

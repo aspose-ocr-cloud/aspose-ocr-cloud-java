@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**cancelRecognizeRegions**](RecognizeRegionsApi.md#cancelRecognizeRegions) | **DELETE** /v5/RecognizeRegions | CancelRecognizeRegions |
-| [**getRecognizeRegions**](RecognizeRegionsApi.md#getRecognizeRegions) | **GET** /v5/RecognizeRegions | GetRecognizeRegions |
-| [**postRecognizeRegions**](RecognizeRegionsApi.md#postRecognizeRegions) | **POST** /v5/RecognizeRegions | PostRecognizeRegions |
+| [**cancelRecognizeRegions**](RecognizeRegionsApi.md#cancelRecognizeRegions) | **DELETE** /v5.0/ocr/RecognizeRegions | CancelRecognizeRegions |
+| [**getRecognizeRegions**](RecognizeRegionsApi.md#getRecognizeRegions) | **GET** /v5.0/ocr/RecognizeRegions | GetRecognizeRegions |
+| [**postRecognizeRegions**](RecognizeRegionsApi.md#postRecognizeRegions) | **POST** /v5.0/ocr/RecognizeRegions | PostRecognizeRegions |
 
 
 <a name="cancelRecognizeRegions"></a>
@@ -93,7 +93,7 @@ public class Example {
     String clientSecret = "";
     // Creating new API instance with your credentials
     RecognizeRegionsApi apiInstance = new RecognizeRegionsApi(clientId, clientSecret);
-    String id = "id_example"; // String | 
+    String id = "id_example"; // String | Task id to select the result
     try {
       OCRResponse result = apiInstance.getRecognizeRegions(id);
       System.out.println(result);
@@ -112,7 +112,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**|  | |
+| **id** | **String**| Task id to select the result | |
 
 ### Return type
 

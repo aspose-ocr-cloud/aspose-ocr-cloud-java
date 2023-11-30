@@ -99,6 +99,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new Aspose.OCR.Cloud.SDK.model.OCRDewarpImageBody.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new Aspose.OCR.Cloud.SDK.model.OCRDjVu2PDFBody.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new Aspose.OCR.Cloud.SDK.model.OCRError.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new Aspose.OCR.Cloud.SDK.model.OCRRecognizeAndParseInvoiceBody.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new Aspose.OCR.Cloud.SDK.model.OCRRecognizeFontBody.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new Aspose.OCR.Cloud.SDK.model.OCRRecognizeImageBody.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new Aspose.OCR.Cloud.SDK.model.OCRRecognizeLabelBody.CustomTypeAdapterFactory());
@@ -112,6 +113,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new Aspose.OCR.Cloud.SDK.model.OCRResult.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new Aspose.OCR.Cloud.SDK.model.OCRSettingsDetectRegions.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new Aspose.OCR.Cloud.SDK.model.OCRSettingsDjVu2PDF.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new Aspose.OCR.Cloud.SDK.model.OCRSettingsRecognizeAndParseInvoice.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new Aspose.OCR.Cloud.SDK.model.OCRSettingsRecognizeFont.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new Aspose.OCR.Cloud.SDK.model.OCRSettingsRecognizeImage.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new Aspose.OCR.Cloud.SDK.model.OCRSettingsRecognizeLabel.CustomTypeAdapterFactory());

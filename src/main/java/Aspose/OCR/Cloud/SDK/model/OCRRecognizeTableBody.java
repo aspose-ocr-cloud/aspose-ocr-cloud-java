@@ -47,7 +47,7 @@ import Aspose.OCR.Cloud.SDK.JSON;
 /**
  * Combines Image data and OCR Recognition settings for Table image
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-02T10:37:00.547+03:00[GMT+03:00]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-27T04:31:36.101+03:00[GMT+03:00]")
 public class OCRRecognizeTableBody {
   public static final String SERIALIZED_NAME_IMAGE = "image";
   @SerializedName(SERIALIZED_NAME_IMAGE)

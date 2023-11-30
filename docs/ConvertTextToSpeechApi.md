@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**cancelConvertTextToSpeech**](ConvertTextToSpeechApi.md#cancelConvertTextToSpeech) | **DELETE** /v5/ConvertTextToSpeech | CancelConvertTextToSpeech |
-| [**getConvertTextToSpeech**](ConvertTextToSpeechApi.md#getConvertTextToSpeech) | **GET** /v5/ConvertTextToSpeech | GetConvertTextToSpeech |
-| [**postConvertTextToSpeech**](ConvertTextToSpeechApi.md#postConvertTextToSpeech) | **POST** /v5/ConvertTextToSpeech | PostConvertTextToSpeech |
+| [**cancelConvertTextToSpeech**](ConvertTextToSpeechApi.md#cancelConvertTextToSpeech) | **DELETE** /v5.0/ocr/ConvertTextToSpeech | CancelConvertTextToSpeech |
+| [**getConvertTextToSpeech**](ConvertTextToSpeechApi.md#getConvertTextToSpeech) | **GET** /v5.0/ocr/ConvertTextToSpeech | GetConvertTextToSpeech |
+| [**postConvertTextToSpeech**](ConvertTextToSpeechApi.md#postConvertTextToSpeech) | **POST** /v5.0/ocr/ConvertTextToSpeech | PostConvertTextToSpeech |
 
 
 <a name="cancelConvertTextToSpeech"></a>
@@ -93,7 +93,7 @@ public class Example {
     String clientSecret = "";
     // Creating new API instance with your credentials
     ConvertTextToSpeechApi apiInstance = new ConvertTextToSpeechApi(clientId, clientSecret);
-    String id = "id_example"; // String | 
+    String id = "id_example"; // String | Task id to select the result
     try {
       TTSResponse result = apiInstance.getConvertTextToSpeech(id);
       System.out.println(result);
@@ -112,7 +112,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**|  | |
+| **id** | **String**| Task id to select the result | |
 
 ### Return type
 

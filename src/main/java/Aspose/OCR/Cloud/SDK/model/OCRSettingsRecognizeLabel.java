@@ -53,9 +53,9 @@ import java.util.Set;
 import Aspose.OCR.Cloud.SDK.JSON;
 
 /**
- * OCRSettingsRecognizeLabel
+ * OCR Process setting for Image recognition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-02T10:37:00.547+03:00[GMT+03:00]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-27T04:31:36.101+03:00[GMT+03:00]")
 public class OCRSettingsRecognizeLabel {
   public static final String SERIALIZED_NAME_LANGUAGE = "language";
   @SerializedName(SERIALIZED_NAME_LANGUAGE)
@@ -137,7 +137,7 @@ public class OCRSettingsRecognizeLabel {
   }
 
    /**
-   * Get makeSkewCorrect
+   * Option to enable skew correction algorithm. True by default
    * @return makeSkewCorrect
   **/
   @javax.annotation.Nullable
@@ -159,7 +159,7 @@ public class OCRSettingsRecognizeLabel {
   }
 
    /**
-   * Get makeBinarization
+   * Option to enable binarization algorithm. False by default
    * @return makeBinarization
   **/
   @javax.annotation.Nullable
@@ -181,7 +181,7 @@ public class OCRSettingsRecognizeLabel {
   }
 
    /**
-   * Get makeSpellCheck
+   * Option to enable spell checking and correction algorithm. False by default
    * @return makeSpellCheck
   **/
   @javax.annotation.Nullable
@@ -203,9 +203,11 @@ public class OCRSettingsRecognizeLabel {
   }
 
    /**
-   * Get makeContrastCorrection
+   * Option to enable image contrast correction algorithm. True by default
    * @return makeContrastCorrection
+   * @deprecated
   **/
+  @Deprecated
   @javax.annotation.Nullable
 
   public Boolean getMakeContrastCorrection() {
@@ -225,7 +227,7 @@ public class OCRSettingsRecognizeLabel {
   }
 
    /**
-   * Get makeUpsampling
+   * Option to enable image up-sampling algorithm to improve quality. True by default
    * @return makeUpsampling
   **/
   @javax.annotation.Nullable
@@ -313,7 +315,7 @@ public class OCRSettingsRecognizeLabel {
   }
 
    /**
-   * Get rotate
+   * Rotate image&gt;
    * @return rotate
   **/
   @javax.annotation.Nullable
@@ -365,7 +367,7 @@ public class OCRSettingsRecognizeLabel {
   }
 
    /**
-   * Get regions
+   * Region on image to recognize in specific format. Aspose.Ocr.Cloud.Public.OCRRegion
    * @return regions
   **/
   @javax.annotation.Nullable
@@ -560,4 +562,5 @@ public class OCRSettingsRecognizeLabel {
     return JSON.getGson().toJson(this);
   }
 }
+
 

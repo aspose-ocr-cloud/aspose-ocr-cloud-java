@@ -53,9 +53,9 @@ import java.util.Set;
 import Aspose.OCR.Cloud.SDK.JSON;
 
 /**
- * OCRSettingsRecognizeRegions
+ * OCR Process setting for Image recognition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-02T10:37:00.547+03:00[GMT+03:00]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-27T04:31:36.101+03:00[GMT+03:00]")
 public class OCRSettingsRecognizeRegions {
   public static final String SERIALIZED_NAME_LANGUAGE = "language";
   @SerializedName(SERIALIZED_NAME_LANGUAGE)
@@ -71,7 +71,7 @@ public class OCRSettingsRecognizeRegions {
 
   public static final String SERIALIZED_NAME_MAKE_CONTRAST_CORRECTION = "makeContrastCorrection";
   @SerializedName(SERIALIZED_NAME_MAKE_CONTRAST_CORRECTION)
-  private Boolean makeContrastCorrection = true;
+  private Boolean makeContrastCorrection = false;
 
   public static final String SERIALIZED_NAME_MAKE_UPSAMPLING = "makeUpsampling";
   @SerializedName(SERIALIZED_NAME_MAKE_UPSAMPLING)
@@ -137,7 +137,7 @@ public class OCRSettingsRecognizeRegions {
   }
 
    /**
-   * Get makeSkewCorrect
+   * Option to enable skew correction algorithm. True by default
    * @return makeSkewCorrect
   **/
   @javax.annotation.Nullable
@@ -159,7 +159,7 @@ public class OCRSettingsRecognizeRegions {
   }
 
    /**
-   * Get makeSpellCheck
+   * Option to enable spell checking and correction algorithm. False by default
    * @return makeSpellCheck
   **/
   @javax.annotation.Nullable
@@ -181,9 +181,11 @@ public class OCRSettingsRecognizeRegions {
   }
 
    /**
-   * Get makeContrastCorrection
+   * Option to enable image contrast correction algorithm. True by default
    * @return makeContrastCorrection
+   * @deprecated
   **/
+  @Deprecated
   @javax.annotation.Nullable
 
   public Boolean getMakeContrastCorrection() {
@@ -203,7 +205,7 @@ public class OCRSettingsRecognizeRegions {
   }
 
    /**
-   * Get makeUpsampling
+   * Option to enable image up-sampling algorithm to improve quality. True by default
    * @return makeUpsampling
   **/
   @javax.annotation.Nullable
@@ -233,7 +235,7 @@ public class OCRSettingsRecognizeRegions {
   }
 
    /**
-   * Get regions
+   * Region on image to recognize in specific format. Aspose.Ocr.Cloud.Public.OCRRegion
    * @return regions
   **/
   @javax.annotation.Nullable
@@ -277,7 +279,7 @@ public class OCRSettingsRecognizeRegions {
   }
 
    /**
-   * Get rotate
+   * Rotate image&gt;
    * @return rotate
   **/
   @javax.annotation.Nullable
@@ -299,7 +301,7 @@ public class OCRSettingsRecognizeRegions {
   }
 
    /**
-   * Get makeBinarization
+   * Option to enable image binarization algorithm. False by default
    * @return makeBinarization
   **/
   @javax.annotation.Nullable
@@ -560,4 +562,5 @@ public class OCRSettingsRecognizeRegions {
     return JSON.getGson().toJson(this);
   }
 }
+
 

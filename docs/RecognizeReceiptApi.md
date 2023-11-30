@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**cancelRecognizeReceipt**](RecognizeReceiptApi.md#cancelRecognizeReceipt) | **DELETE** /v5/RecognizeReceipt | CancelRecognizeReceipt |
-| [**getRecognizeReceipt**](RecognizeReceiptApi.md#getRecognizeReceipt) | **GET** /v5/RecognizeReceipt | GetRecognizeReceipt |
-| [**postRecognizeReceipt**](RecognizeReceiptApi.md#postRecognizeReceipt) | **POST** /v5/RecognizeReceipt | PostRecognizeReceipt |
+| [**cancelRecognizeReceipt**](RecognizeReceiptApi.md#cancelRecognizeReceipt) | **DELETE** /v5.0/ocr/RecognizeReceipt | CancelRecognizeReceipt |
+| [**getRecognizeReceipt**](RecognizeReceiptApi.md#getRecognizeReceipt) | **GET** /v5.0/ocr/RecognizeReceipt | GetRecognizeReceipt |
+| [**postRecognizeReceipt**](RecognizeReceiptApi.md#postRecognizeReceipt) | **POST** /v5.0/ocr/RecognizeReceipt | PostRecognizeReceipt |
 
 
 <a name="cancelRecognizeReceipt"></a>
@@ -93,7 +93,7 @@ public class Example {
     String clientSecret = "";
     // Creating new API instance with your credentials
     RecognizeReceiptApi apiInstance = new RecognizeReceiptApi(clientId, clientSecret);
-    String id = "id_example"; // String | 
+    String id = "id_example"; // String | Task id to select the result
     try {
       OCRResponse result = apiInstance.getRecognizeReceipt(id);
       System.out.println(result);
@@ -112,7 +112,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**|  | |
+| **id** | **String**| Task id to select the result | |
 
 ### Return type
 

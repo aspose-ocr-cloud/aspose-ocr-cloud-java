@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**cancelDetectRegions**](DetectRegionsApi.md#cancelDetectRegions) | **DELETE** /v5/DetectRegions | CancelDetectRegions |
-| [**getDetectRegions**](DetectRegionsApi.md#getDetectRegions) | **GET** /v5/DetectRegions | GetDetectRegions |
-| [**postDetectRegions**](DetectRegionsApi.md#postDetectRegions) | **POST** /v5/DetectRegions | PostDetectRegions |
+| [**cancelDetectRegions**](DetectRegionsApi.md#cancelDetectRegions) | **DELETE** /v5.0/ocr/DetectRegions | CancelDetectRegions |
+| [**getDetectRegions**](DetectRegionsApi.md#getDetectRegions) | **GET** /v5.0/ocr/DetectRegions | GetDetectRegions |
+| [**postDetectRegions**](DetectRegionsApi.md#postDetectRegions) | **POST** /v5.0/ocr/DetectRegions | PostDetectRegions |
 
 
 <a name="cancelDetectRegions"></a>
@@ -93,7 +93,7 @@ public class Example {
     String clientSecret = "";
     // Creating new API instance with your credentials
     DetectRegionsApi apiInstance = new DetectRegionsApi(clientId, clientSecret);
-    String id = "id_example"; // String | 
+    String id = "id_example"; // String | Task id to select the result
     try {
       OCRResponse result = apiInstance.getDetectRegions(id);
       System.out.println(result);
@@ -112,7 +112,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**|  | |
+| **id** | **String**| Task id to select the result | |
 
 ### Return type
 

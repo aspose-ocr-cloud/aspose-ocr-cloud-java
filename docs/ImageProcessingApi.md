@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**getResultFile**](ImageProcessingApi.md#getResultFile) | **GET** /v5/ImageProcessing/GetResultFile | GetResultFile |
-| [**getResultTask**](ImageProcessingApi.md#getResultTask) | **GET** /v5/ImageProcessing/GetResultTask | GetResultTask |
-| [**postBinarizationFile**](ImageProcessingApi.md#postBinarizationFile) | **POST** /v5/ImageProcessing/PostBinarizationFile | PostBinarizationFile |
-| [**postDewarpingFile**](ImageProcessingApi.md#postDewarpingFile) | **POST** /v5/ImageProcessing/PostDewarpingFile | PostDewarpingFile |
-| [**postSkewCorrectionFile**](ImageProcessingApi.md#postSkewCorrectionFile) | **POST** /v5/ImageProcessing/PostSkewCorrectionFile | PostSkewCorrectionFile |
-| [**postUpsamplingFile**](ImageProcessingApi.md#postUpsamplingFile) | **POST** /v5/ImageProcessing/PostUpsamplingImageFile | PostUpsamplingImageFile |
+| [**getResultFile**](ImageProcessingApi.md#getResultFile) | **GET** /v5.0/ocr/ImageProcessing/GetResultFile | GetResultFile |
+| [**getResultTask**](ImageProcessingApi.md#getResultTask) | **GET** /v5.0/ocr/ImageProcessing/GetResultTask | GetResultTask |
+| [**postBinarizationFile**](ImageProcessingApi.md#postBinarizationFile) | **POST** /v5.0/ocr/ImageProcessing/PostBinarizationFile | PostBinarizationFile |
+| [**postDewarpingFile**](ImageProcessingApi.md#postDewarpingFile) | **POST** /v5.0/ocr/ImageProcessing/PostDewarpingFile | PostDewarpingFile |
+| [**postSkewCorrectionFile**](ImageProcessingApi.md#postSkewCorrectionFile) | **POST** /v5.0/ocr/ImageProcessing/PostSkewCorrectionFile | PostSkewCorrectionFile |
+| [**postUpsamplingFile**](ImageProcessingApi.md#postUpsamplingFile) | **POST** /v5.0/ocr/ImageProcessing/PostUpsamplingImageFile | PostUpsamplingImageFile |
 
 
 <a name="getResultFile"></a>
@@ -35,7 +35,7 @@ public class Example {
     String clientSecret = "";
     // Creating new API instance with your credentials
     ImageProcessingApi apiInstance = new ImageProcessingApi(clientId, clientSecret);
-    String id = "id_example"; // String | 
+    String id = "id_example"; // String | Task id to select the result
     try {
       Object result = apiInstance.getResultFile(id);
       System.out.println(result);
@@ -54,7 +54,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**|  | |
+| **id** | **String**| Task id to select the result | |
 
 ### Return type
 
@@ -98,7 +98,7 @@ public class Example {
     String clientSecret = "";
     // Creating new API instance with your credentials
     ImageProcessingApi apiInstance = new ImageProcessingApi(clientId, clientSecret);
-    String id = "id_example"; // String | 
+    String id = "id_example"; // String | Task id to select the result
     try {
       OCRResponse result = apiInstance.getResultTask(id);
       System.out.println(result);
@@ -117,7 +117,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**|  | |
+| **id** | **String**| Task id to select the result | |
 
 ### Return type
 

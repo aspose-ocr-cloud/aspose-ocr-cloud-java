@@ -82,7 +82,7 @@ public class ImageProcessingApi {
 
     /**
      * Build call for getResultFile
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -112,7 +112,7 @@ public class ImageProcessingApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = getAdjustedPath("/v5/ImageProcessing/GetResultFile");
+        String localVarPath = getAdjustedPath("/v5.0/ocr/ImageProcessing/GetResultFile");
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -158,7 +158,7 @@ public class ImageProcessingApi {
     /**
      * GetResultFile
      * 
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -178,7 +178,7 @@ public class ImageProcessingApi {
     /**
      * GetResultFile
      * 
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -199,7 +199,7 @@ public class ImageProcessingApi {
     /**
      * GetResultFile (asynchronously)
      * 
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -221,7 +221,7 @@ public class ImageProcessingApi {
     }
     /**
      * Build call for getResultTask
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -250,7 +250,7 @@ public class ImageProcessingApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = getAdjustedPath("/v5/ImageProcessing/GetResultTask");
+        String localVarPath = getAdjustedPath("/v5.0/ocr/ImageProcessing/GetResultTask");
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -296,7 +296,7 @@ public class ImageProcessingApi {
     /**
      * GetResultTask
      * 
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @return OCRResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -315,7 +315,7 @@ public class ImageProcessingApi {
     /**
      * GetResultTask
      * 
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @return ApiResponse&lt;OCRResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -335,7 +335,7 @@ public class ImageProcessingApi {
     /**
      * GetResultTask (asynchronously)
      * 
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -386,7 +386,7 @@ public class ImageProcessingApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = getAdjustedPath("/v5/ImageProcessing/PostBinarizationFile");
+        String localVarPath = getAdjustedPath("/v5.0/ocr/ImageProcessing/PostBinarizationFile");
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -521,7 +521,7 @@ public class ImageProcessingApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = getAdjustedPath("/v5/ImageProcessing/PostDewarpingFile");
+        String localVarPath = getAdjustedPath("/v5.0/ocr/ImageProcessing/PostDewarpingFile");
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -656,7 +656,7 @@ public class ImageProcessingApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = getAdjustedPath("/v5/ImageProcessing/PostSkewCorrectionFile");
+        String localVarPath = getAdjustedPath("/v5.0/ocr/ImageProcessing/PostSkewCorrectionFile");
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -791,7 +791,7 @@ public class ImageProcessingApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = getAdjustedPath("/v5/ImageProcessing/PostUpsamplingImageFile");
+        String localVarPath = getAdjustedPath("/v5.0/ocr/ImageProcessing/PostUpsamplingImageFile");
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -904,12 +904,12 @@ public class ImageProcessingApi {
   **/
   private String getAdjustedPath(String srcPath)
   {
-      if(Pattern.matches("^.*/v\\d{1,5}\\.?\\d{0,3}/.*", this.localVarApiClient.getBasePath())) {
-          Pattern pattern = Pattern.compile("/v\\d{1,5}\\.?\\d{0,3}/");
-          return pattern.matcher(srcPath).replaceAll("/");
-      } else {
-          return srcPath;
-      }
+    if ("https://api.aspose.cloud/v5.0/ocr".equals(this.localVarApiClient.getBasePath())) {
+            Pattern pattern = Pattern.compile("/v5.0/ocr");
+            return pattern.matcher(srcPath).replaceFirst("");
+        } else {
+            return srcPath;
+        }
   }
 
 }

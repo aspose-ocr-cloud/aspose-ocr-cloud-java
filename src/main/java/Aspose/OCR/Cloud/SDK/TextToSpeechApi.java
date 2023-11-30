@@ -82,7 +82,7 @@ public class TextToSpeechApi {
 
     /**
      * Build call for getTextToSpeechResult
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -111,7 +111,7 @@ public class TextToSpeechApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = getAdjustedPath("/v5/TextToSpeech/GetTextToSpeechResult");
+        String localVarPath = getAdjustedPath("/v5.0/ocr/TextToSpeech/GetTextToSpeechResult");
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -157,7 +157,7 @@ public class TextToSpeechApi {
     /**
      * GetTextToSpeechResult
      * 
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @return TTSResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -176,7 +176,7 @@ public class TextToSpeechApi {
     /**
      * GetTextToSpeechResult
      * 
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @return ApiResponse&lt;TTSResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -196,7 +196,7 @@ public class TextToSpeechApi {
     /**
      * GetTextToSpeechResult (asynchronously)
      * 
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -217,7 +217,7 @@ public class TextToSpeechApi {
     }
     /**
      * Build call for getTextToSpeechResultFile
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -247,7 +247,7 @@ public class TextToSpeechApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = getAdjustedPath("/v5/TextToSpeech/GetTextToSpeechResultFile");
+        String localVarPath = getAdjustedPath("/v5.0/ocr/TextToSpeech/GetTextToSpeechResultFile");
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -293,7 +293,7 @@ public class TextToSpeechApi {
     /**
      * GetTextToSpeechResultFile
      * 
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -313,7 +313,7 @@ public class TextToSpeechApi {
     /**
      * GetTextToSpeechResultFile
      * 
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -334,7 +334,7 @@ public class TextToSpeechApi {
     /**
      * GetTextToSpeechResultFile (asynchronously)
      * 
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -386,7 +386,7 @@ public class TextToSpeechApi {
         Object localVarPostBody = ttSBodyDeprecated;
 
         // create path and map variables
-        String localVarPath = getAdjustedPath("/v5/TextToSpeech/PostTextToSpeech");
+        String localVarPath = getAdjustedPath("/v5.0/ocr/TextToSpeech/PostTextToSpeech");
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -500,12 +500,12 @@ public class TextToSpeechApi {
   **/
   private String getAdjustedPath(String srcPath)
   {
-      if(Pattern.matches("^.*/v\\d{1,5}\\.?\\d{0,3}/.*", this.localVarApiClient.getBasePath())) {
-          Pattern pattern = Pattern.compile("/v\\d{1,5}\\.?\\d{0,3}/");
-          return pattern.matcher(srcPath).replaceAll("/");
-      } else {
-          return srcPath;
-      }
+    if ("https://api.aspose.cloud/v5.0/ocr".equals(this.localVarApiClient.getBasePath())) {
+            Pattern pattern = Pattern.compile("/v5.0/ocr");
+            return pattern.matcher(srcPath).replaceFirst("");
+        } else {
+            return srcPath;
+        }
   }
 
 }

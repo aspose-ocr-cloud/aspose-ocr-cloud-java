@@ -55,7 +55,7 @@ import Aspose.OCR.Cloud.SDK.JSON;
 /**
  * OCR Process setting for Scanned multiple PDF document recognition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-02T10:37:00.547+03:00[GMT+03:00]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-27T04:31:36.101+03:00[GMT+03:00]")
 public class OCRSettingsRecognizePdf {
   public static final String SERIALIZED_NAME_LANGUAGE = "language";
   @SerializedName(SERIALIZED_NAME_LANGUAGE)
@@ -71,7 +71,7 @@ public class OCRSettingsRecognizePdf {
 
   public static final String SERIALIZED_NAME_MAKE_CONTRAST_CORRECTION = "makeContrastCorrection";
   @SerializedName(SERIALIZED_NAME_MAKE_CONTRAST_CORRECTION)
-  private Boolean makeContrastCorrection = true;
+  private Boolean makeContrastCorrection = false;
 
   public static final String SERIALIZED_NAME_DSR_MODE = "dsrMode";
   @SerializedName(SERIALIZED_NAME_DSR_MODE)
@@ -183,7 +183,9 @@ public class OCRSettingsRecognizePdf {
    /**
    * Option to enable image contrast correction algorithm. True by default
    * @return makeContrastCorrection
+   * @deprecated
   **/
+  @Deprecated
   @javax.annotation.Nullable
 
   public Boolean getMakeContrastCorrection() {
@@ -269,7 +271,7 @@ public class OCRSettingsRecognizePdf {
   }
 
    /**
-   * Get rotate
+   * Rotate image&gt;
    * @return rotate
   **/
   @javax.annotation.Nullable
@@ -291,7 +293,7 @@ public class OCRSettingsRecognizePdf {
   }
 
    /**
-   * Get makeBinarization
+   * Option to enable image binarization algorithm. False by default
    * @return makeBinarization
   **/
   @javax.annotation.Nullable
@@ -365,7 +367,7 @@ public class OCRSettingsRecognizePdf {
   }
 
    /**
-   * Get regions
+   * Region on image to recognize in specific format. Aspose.Ocr.Cloud.Public.OCRRegion
    * @return regions
   **/
   @javax.annotation.Nullable
@@ -560,4 +562,5 @@ public class OCRSettingsRecognizePdf {
     return JSON.getGson().toJson(this);
   }
 }
+
 

@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**cancelDewarpImage**](DewarpImageApi.md#cancelDewarpImage) | **DELETE** /v5/DewarpImage | CancelDewarpImage |
-| [**getDewarpImage**](DewarpImageApi.md#getDewarpImage) | **GET** /v5/DewarpImage | GetDewarpImage |
-| [**postDewarpImage**](DewarpImageApi.md#postDewarpImage) | **POST** /v5/DewarpImage | PostDewarpImage |
+| [**cancelDewarpImage**](DewarpImageApi.md#cancelDewarpImage) | **DELETE** /v5.0/ocr/DewarpImage | CancelDewarpImage |
+| [**getDewarpImage**](DewarpImageApi.md#getDewarpImage) | **GET** /v5.0/ocr/DewarpImage | GetDewarpImage |
+| [**postDewarpImage**](DewarpImageApi.md#postDewarpImage) | **POST** /v5.0/ocr/DewarpImage | PostDewarpImage |
 
 
 <a name="cancelDewarpImage"></a>
@@ -93,7 +93,7 @@ public class Example {
     String clientSecret = "";
     // Creating new API instance with your credentials
     DewarpImageApi apiInstance = new DewarpImageApi(clientId, clientSecret);
-    String id = "id_example"; // String | 
+    String id = "id_example"; // String | Task id to select the result
     try {
       OCRResponse result = apiInstance.getDewarpImage(id);
       System.out.println(result);
@@ -112,7 +112,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**|  | |
+| **id** | **String**| Task id to select the result | |
 
 ### Return type
 

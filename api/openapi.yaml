@@ -15,11 +15,12 @@ servers:
 security:
 - JWT: []
 paths:
-  /v5/BinarizeImage:
+  /v5.0/ocr/BinarizeImage:
     delete:
       operationId: CancelBinarizeImage
       parameters:
-      - explode: true
+      - description: ""
+        explode: true
         in: query
         name: id
         required: true
@@ -36,7 +37,8 @@ paths:
     get:
       operationId: GetBinarizeImage
       parameters:
-      - explode: true
+      - description: Task id to select the result
+        explode: true
         in: query
         name: id
         required: true
@@ -80,11 +82,12 @@ paths:
       - BinarizeImage
       x-content-type: application/json
       x-accepts: text/plain
-  /v5/ConvertTextToSpeech:
+  /v5.0/ocr/ConvertTextToSpeech:
     delete:
       operationId: CancelConvertTextToSpeech
       parameters:
-      - explode: true
+      - description: ""
+        explode: true
         in: query
         name: id
         required: true
@@ -101,7 +104,8 @@ paths:
     get:
       operationId: GetConvertTextToSpeech
       parameters:
-      - explode: true
+      - description: Task id to select the result
+        explode: true
         in: query
         name: id
         required: true
@@ -132,6 +136,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/TTSBody'
+        description: ""
         required: true
       responses:
         "200":
@@ -151,11 +156,74 @@ paths:
       - ConvertTextToSpeech
       x-content-type: application/json
       x-accepts: text/plain
-  /v5/DeskewImage:
+  /v5.0/ocr/ConvertTextToSpeechTrial:
+    delete:
+      operationId: CancelConvertTextToSpeechTrial
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: id
+        required: true
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      summary: CancelConvertTextToSpeechTrial
+      tags:
+      - ConvertTextToSpeechTrial
+      x-accepts: application/json
+    get:
+      operationId: GetConvertTextToSpeechTrial
+      parameters:
+      - description: Task id to select the result
+        explode: true
+        in: query
+        name: id
+        required: true
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TTSResponse'
+          description: Success
+      summary: GetConvertTextToSpeechTrial
+      tags:
+      - ConvertTextToSpeechTrial
+      x-accepts: application/json
+    post:
+      operationId: PostConvertTextToSpeechTrial
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TTSBody'
+        description: ""
+        required: true
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                type: string
+          description: Task unique ID
+      summary: PostConvertTextToSpeechTrial
+      tags:
+      - ConvertTextToSpeechTrial
+      x-content-type: application/json
+      x-accepts: text/plain
+  /v5.0/ocr/DeskewImage:
     delete:
       operationId: CancelDeskewImage
       parameters:
-      - explode: true
+      - description: ""
+        explode: true
         in: query
         name: id
         required: true
@@ -172,7 +240,8 @@ paths:
     get:
       operationId: GetDeskewImage
       parameters:
-      - explode: true
+      - description: Task id to select the result
+        explode: true
         in: query
         name: id
         required: true
@@ -216,11 +285,12 @@ paths:
       - DeskewImage
       x-content-type: application/json
       x-accepts: text/plain
-  /v5/DetectRegions:
+  /v5.0/ocr/DetectRegions:
     delete:
       operationId: CancelDetectRegions
       parameters:
-      - explode: true
+      - description: ""
+        explode: true
         in: query
         name: id
         required: true
@@ -237,7 +307,8 @@ paths:
     get:
       operationId: GetDetectRegions
       parameters:
-      - explode: true
+      - description: Task id to select the result
+        explode: true
         in: query
         name: id
         required: true
@@ -281,11 +352,12 @@ paths:
       - DetectRegions
       x-content-type: application/json
       x-accepts: text/plain
-  /v5/DewarpImage:
+  /v5.0/ocr/DewarpImage:
     delete:
       operationId: CancelDewarpImage
       parameters:
-      - explode: true
+      - description: ""
+        explode: true
         in: query
         name: id
         required: true
@@ -302,7 +374,8 @@ paths:
     get:
       operationId: GetDewarpImage
       parameters:
-      - explode: true
+      - description: Task id to select the result
+        explode: true
         in: query
         name: id
         required: true
@@ -346,11 +419,12 @@ paths:
       - DewarpImage
       x-content-type: application/json
       x-accepts: text/plain
-  /v5/DjVu2PDF:
+  /v5.0/ocr/DjVu2PDF:
     delete:
       operationId: CancelDjVu2PDF
       parameters:
-      - explode: true
+      - description: ""
+        explode: true
         in: query
         name: id
         required: true
@@ -367,7 +441,8 @@ paths:
     get:
       operationId: GetDjVu2PDF
       parameters:
-      - explode: true
+      - description: Task id to select the result
+        explode: true
         in: query
         name: id
         required: true
@@ -411,11 +486,12 @@ paths:
       - DjVu2PDF
       x-content-type: application/json
       x-accepts: text/plain
-  /v5/IdentifyFont:
+  /v5.0/ocr/IdentifyFont:
     delete:
       operationId: CancelIdentifyFont
       parameters:
-      - explode: true
+      - description: ""
+        explode: true
         in: query
         name: id
         required: true
@@ -432,7 +508,8 @@ paths:
     get:
       operationId: GetIdentifyFont
       parameters:
-      - explode: true
+      - description: Task id to select the result
+        explode: true
         in: query
         name: id
         required: true
@@ -470,7 +547,7 @@ paths:
       - IdentifyFont
       x-content-type: application/json
       x-accepts: text/plain
-  /v5/ImageProcessing/PostUpsamplingImageFile:
+  /v5.0/ocr/ImageProcessing/PostUpsamplingImageFile:
     post:
       deprecated: true
       operationId: PostUpsamplingFile
@@ -500,7 +577,7 @@ paths:
       - ImageProcessing
       x-content-type: multipart/form-data
       x-accepts: text/plain
-  /v5/ImageProcessing/PostBinarizationFile:
+  /v5.0/ocr/ImageProcessing/PostBinarizationFile:
     post:
       deprecated: true
       operationId: PostBinarizationFile
@@ -530,7 +607,7 @@ paths:
       - ImageProcessing
       x-content-type: multipart/form-data
       x-accepts: text/plain
-  /v5/ImageProcessing/PostSkewCorrectionFile:
+  /v5.0/ocr/ImageProcessing/PostSkewCorrectionFile:
     post:
       deprecated: true
       operationId: PostSkewCorrectionFile
@@ -560,7 +637,7 @@ paths:
       - ImageProcessing
       x-content-type: multipart/form-data
       x-accepts: text/plain
-  /v5/ImageProcessing/PostDewarpingFile:
+  /v5.0/ocr/ImageProcessing/PostDewarpingFile:
     post:
       deprecated: true
       operationId: PostDewarpingFile
@@ -590,12 +667,13 @@ paths:
       - ImageProcessing
       x-content-type: multipart/form-data
       x-accepts: text/plain
-  /v5/ImageProcessing/GetResultTask:
+  /v5.0/ocr/ImageProcessing/GetResultTask:
     get:
       deprecated: true
       operationId: GetResultTask
       parameters:
-      - explode: true
+      - description: Task id to select the result
+        explode: true
         in: query
         name: id
         required: true
@@ -613,12 +691,13 @@ paths:
       tags:
       - ImageProcessing
       x-accepts: application/json
-  /v5/ImageProcessing/GetResultFile:
+  /v5.0/ocr/ImageProcessing/GetResultFile:
     get:
       deprecated: true
       operationId: GetResultFile
       parameters:
-      - explode: true
+      - description: Task id to select the result
+        explode: true
         in: query
         name: id
         required: true
@@ -642,11 +721,79 @@ paths:
       tags:
       - ImageProcessing
       x-accepts: image/png
-  /v5/RecognizeImage:
+  /v5.0/ocr/RecognizeAndParseInvoice:
+    delete:
+      operationId: CancelRecognizeAndParseInvoice
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: id
+        required: true
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          description: Success
+      summary: CancelRecognizeAndParseInvoice
+      tags:
+      - RecognizeAndParseInvoice
+      x-accepts: application/json
+    get:
+      operationId: GetRecognizeAndParseInvoice
+      parameters:
+      - description: Task id to select the result
+        explode: true
+        in: query
+        name: id
+        required: true
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OCRResponse'
+          description: Success
+      summary: GetRecognizeAndParseInvoice
+      tags:
+      - RecognizeAndParseInvoice
+      x-accepts: application/json
+    post:
+      operationId: PostRecognizeAndParseInvoice
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OCRRecognizeAndParseInvoiceBody'
+        required: true
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                type: string
+          description: Task unique ID
+        "401":
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+          description: Unauthorized
+      summary: PostRecognizeAndParseInvoice
+      tags:
+      - RecognizeAndParseInvoice
+      x-content-type: application/json
+      x-accepts: text/plain
+  /v5.0/ocr/RecognizeImage:
     delete:
       operationId: CancelRecognizeImage
       parameters:
-      - explode: true
+      - description: ""
+        explode: true
         in: query
         name: id
         required: true
@@ -663,7 +810,8 @@ paths:
     get:
       operationId: GetRecognizeImage
       parameters:
-      - explode: true
+      - description: Task id to select the result
+        explode: true
         in: query
         name: id
         required: true
@@ -707,11 +855,12 @@ paths:
       - RecognizeImage
       x-content-type: application/json
       x-accepts: text/plain
-  /v5/RecognizeLabel:
+  /v5.0/ocr/RecognizeLabel:
     delete:
       operationId: CancelRecognizeLabel
       parameters:
-      - explode: true
+      - description: ""
+        explode: true
         in: query
         name: id
         required: true
@@ -728,7 +877,8 @@ paths:
     get:
       operationId: GetRecognizeLabel
       parameters:
-      - explode: true
+      - description: Task id to select the result
+        explode: true
         in: query
         name: id
         required: true
@@ -772,11 +922,12 @@ paths:
       - RecognizeLabel
       x-content-type: application/json
       x-accepts: text/plain
-  /v5/RecognizePdf:
+  /v5.0/ocr/RecognizePdf:
     delete:
       operationId: CancelRecognizePdf
       parameters:
-      - explode: true
+      - description: ""
+        explode: true
         in: query
         name: id
         required: true
@@ -793,7 +944,8 @@ paths:
     get:
       operationId: GetRecognizePdf
       parameters:
-      - explode: true
+      - description: Task id to select the result
+        explode: true
         in: query
         name: id
         required: true
@@ -837,11 +989,12 @@ paths:
       - RecognizePdf
       x-content-type: application/json
       x-accepts: text/plain
-  /v5/RecognizeReceipt:
+  /v5.0/ocr/RecognizeReceipt:
     delete:
       operationId: CancelRecognizeReceipt
       parameters:
-      - explode: true
+      - description: ""
+        explode: true
         in: query
         name: id
         required: true
@@ -858,7 +1011,8 @@ paths:
     get:
       operationId: GetRecognizeReceipt
       parameters:
-      - explode: true
+      - description: Task id to select the result
+        explode: true
         in: query
         name: id
         required: true
@@ -902,11 +1056,12 @@ paths:
       - RecognizeReceipt
       x-content-type: application/json
       x-accepts: text/plain
-  /v5/RecognizeRegions:
+  /v5.0/ocr/RecognizeRegions:
     delete:
       operationId: CancelRecognizeRegions
       parameters:
-      - explode: true
+      - description: ""
+        explode: true
         in: query
         name: id
         required: true
@@ -923,7 +1078,8 @@ paths:
     get:
       operationId: GetRecognizeRegions
       parameters:
-      - explode: true
+      - description: Task id to select the result
+        explode: true
         in: query
         name: id
         required: true
@@ -967,11 +1123,12 @@ paths:
       - RecognizeRegions
       x-content-type: application/json
       x-accepts: text/plain
-  /v5/RecognizeTable:
+  /v5.0/ocr/RecognizeTable:
     delete:
       operationId: CancelRecognizeTable
       parameters:
-      - explode: true
+      - description: ""
+        explode: true
         in: query
         name: id
         required: true
@@ -988,7 +1145,8 @@ paths:
     get:
       operationId: GetRecognizeTable
       parameters:
-      - explode: true
+      - description: Task id to select the result
+        explode: true
         in: query
         name: id
         required: true
@@ -1032,7 +1190,7 @@ paths:
       - RecognizeTable
       x-content-type: application/json
       x-accepts: text/plain
-  /v5/TextToSpeech/PostTextToSpeech:
+  /v5.0/ocr/TextToSpeech/PostTextToSpeech:
     post:
       deprecated: true
       operationId: PostTextToSpeech
@@ -1041,6 +1199,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/TTSBodyDeprecated'
+        description: ""
         required: true
       responses:
         "200":
@@ -1060,12 +1219,13 @@ paths:
       - TextToSpeech
       x-content-type: application/json
       x-accepts: text/plain
-  /v5/TextToSpeech/GetTextToSpeechResult:
+  /v5.0/ocr/TextToSpeech/GetTextToSpeechResult:
     get:
       deprecated: true
       operationId: GetTextToSpeechResult
       parameters:
-      - explode: true
+      - description: Task id to select the result
+        explode: true
         in: query
         name: id
         required: true
@@ -1083,12 +1243,13 @@ paths:
       tags:
       - TextToSpeech
       x-accepts: application/json
-  /v5/TextToSpeech/GetTextToSpeechResultFile:
+  /v5.0/ocr/TextToSpeech/GetTextToSpeechResultFile:
     get:
       deprecated: true
       operationId: GetTextToSpeechResultFile
       parameters:
-      - explode: true
+      - description: Task id to select the result
+        explode: true
         in: query
         name: id
         required: true
@@ -1112,11 +1273,12 @@ paths:
       tags:
       - TextToSpeech
       x-accepts: application/octet-stream
-  /v5/UpscaleImage:
+  /v5.0/ocr/UpscaleImage:
     delete:
       operationId: CancelUpscaleImage
       parameters:
-      - explode: true
+      - description: ""
+        explode: true
         in: query
         name: id
         required: true
@@ -1133,7 +1295,8 @@ paths:
     get:
       operationId: GetUpscaleImage
       parameters:
-      - explode: true
+      - description: Task id to select the result
+        explode: true
         in: query
         name: id
         required: true
@@ -1177,6 +1340,35 @@ paths:
       - UpscaleImage
       x-content-type: application/json
       x-accepts: text/plain
+  /v5.0/ocr/Utilities/GetTaskStatus:
+    get:
+      operationId: GetTaskStatus
+      parameters:
+      - description: Task id to select the result
+        explode: true
+        in: query
+        name: id
+        required: true
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/OCRResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OCRResponse'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/OCRResponse'
+          description: Success
+      summary: GetTaskStatus
+      tags:
+      - Utilities
+      x-accepts: application/json
 components:
   schemas:
     ActionResult:
@@ -1261,15 +1453,18 @@ components:
       - HWT_eng
       type: string
     LanguageTTS:
+      description: Text-to-speech target language
       enum:
       - English
       type: string
     OCRBinarizeImageBody:
       additionalProperties: false
+      description: Combines Image data and OCR processing settings
       example:
         image: image
       properties:
         image:
+          description: Gets or Sets Image
           format: byte
           type: string
       required:
@@ -1277,10 +1472,12 @@ components:
       type: object
     OCRDeskewImageBody:
       additionalProperties: false
+      description: Combines Image data and OCR processing settings
       example:
         image: image
       properties:
         image:
+          description: Gets or Sets Image
           format: byte
           type: string
       required:
@@ -1288,13 +1485,14 @@ components:
       type: object
     OCRDetectRegionsBody:
       additionalProperties: false
+      description: Combines Image data and OCR Recognition settings
       example:
         image: image
         settings:
           makeBinarization: true
           dsrMode: null
           makeUpsampling: false
-          makeContrastCorrection: true
+          makeContrastCorrection: false
           regions:
           - rect:
               topLeftY: 1
@@ -1317,6 +1515,7 @@ components:
           resultTypeTable: null
       properties:
         image:
+          description: Gets or Sets Image
           format: byte
           type: string
         settings:
@@ -1327,10 +1526,12 @@ components:
       type: object
     OCRDewarpImageBody:
       additionalProperties: false
+      description: Combines Image data and OCR processing settings
       example:
         image: image
       properties:
         image:
+          description: Gets or Sets Image
           format: byte
           type: string
       required:
@@ -1338,13 +1539,14 @@ components:
       type: object
     OCRDjVu2PDFBody:
       additionalProperties: false
+      description: Combines Image data and OCR Recognition settings
       example:
         image: image
         settings:
           makeBinarization: true
           dsrMode: null
           makeUpsampling: false
-          makeContrastCorrection: true
+          makeContrastCorrection: false
           regions:
           - rect:
               topLeftY: 1
@@ -1367,6 +1569,7 @@ components:
           resultTypeTable: null
       properties:
         image:
+          description: Gets or Sets Image
           format: byte
           type: string
         settings:
@@ -1402,15 +1605,57 @@ components:
           readOnly: true
           type: array
       type: object
+    OCRRecognizeAndParseInvoiceBody:
+      additionalProperties: false
+      description: Combines Image data and OCR Recognition settings
+      example:
+        image: image
+        settings:
+          makeBinarization: false
+          dsrMode: null
+          makeUpsampling: false
+          makeContrastCorrection: false
+          regions:
+          - rect:
+              topLeftY: 1
+              bottomRightX: 5
+              topLeftX: 6
+              bottomRightY: 5
+            order: 2
+          - rect:
+              topLeftY: 1
+              bottomRightX: 5
+              topLeftX: 6
+              bottomRightY: 5
+            order: 2
+          Rotate: 0
+          makeSkewCorrect: false
+          language: null
+          resultType: null
+          makeSpellCheck: false
+          dsrConfidence: null
+          resultTypeTable: null
+      properties:
+        image:
+          description: Gets or Sets Image
+          format: byte
+          type: string
+        settings:
+          $ref: '#/components/schemas/OCRSettingsRecognizeAndParseInvoice'
+      required:
+      - image
+      - settings
+      type: object
     OCRRecognizeFontBody:
       additionalProperties: false
+      description: Combines Image data and OCR Recognition settings for Font image
       example:
         image: image
         settings:
           makeBinarization: true
           dsrMode: null
           makeUpsampling: false
-          makeContrastCorrection: true
+          makeContrastCorrection: false
           regions:
           - rect:
               topLeftY: 1
@@ -1433,6 +1678,7 @@ components:
           resultTypeTable: null
       properties:
         image:
+          description: Gets or Sets Image
           format: byte
           type: string
         settings:
@@ -1450,7 +1696,7 @@ components:
           makeBinarization: false
           dsrMode: null
           makeUpsampling: false
-          makeContrastCorrection: true
+          makeContrastCorrection: false
           regions:
           - rect:
               topLeftY: 1
@@ -1484,6 +1730,7 @@ components:
       type: object
     OCRRecognizeLabelBody:
       additionalProperties: false
+      description: Combines Image data and OCR Recognition settings
       example:
         image: image
         settings:
@@ -1513,6 +1760,7 @@ components:
           resultTypeTable: null
       properties:
         image:
+          description: Gets or Sets Image
           format: byte
           type: string
         settings:
@@ -1530,7 +1778,7 @@ components:
           makeBinarization: true
           dsrMode: null
           makeUpsampling: false
-          makeContrastCorrection: true
+          makeContrastCorrection: false
           regions:
           - rect:
               topLeftY: 1
@@ -1571,7 +1819,7 @@ components:
           makeBinarization: true
           dsrMode: null
           makeUpsampling: false
-          makeContrastCorrection: true
+          makeContrastCorrection: false
           regions:
           - rect:
               topLeftY: 1
@@ -1605,13 +1853,14 @@ components:
       type: object
     OCRRecognizeRegionsBody:
       additionalProperties: false
+      description: Combines Image data and OCR Recognition settings
       example:
         image: image
         settings:
           makeBinarization: true
           dsrMode: null
           makeUpsampling: false
-          makeContrastCorrection: true
+          makeContrastCorrection: false
           regions:
           - rect:
               topLeftY: 1
@@ -1634,6 +1883,7 @@ components:
           resultTypeTable: null
       properties:
         image:
+          description: Gets or Sets Image
           format: byte
           type: string
         settings:
@@ -1651,7 +1901,7 @@ components:
           makeBinarization: true
           dsrMode: null
           makeUpsampling: false
-          makeContrastCorrection: true
+          makeContrastCorrection: false
           regions:
           - rect:
               topLeftY: 1
@@ -1784,11 +2034,12 @@ components:
       type: object
     OCRSettingsDetectRegions:
       additionalProperties: false
+      description: OCR Process setting for Image recognition
       example:
         makeBinarization: true
         dsrMode: null
         makeUpsampling: false
-        makeContrastCorrection: true
+        makeContrastCorrection: false
         regions:
         - rect:
             topLeftY: 1
@@ -1812,18 +2063,24 @@ components:
       properties:
         makeSkewCorrect:
           default: true
+          description: Option to enable skew correction algorithm. True by default
           type: boolean
         makeContrastCorrection:
-          default: true
+          default: false
+          description: Option to enable image contrast correction algorithm. True
+            by default
           type: boolean
         makeUpsampling:
           default: false
+          description: Option to enable image up-sampling algorithm to improve quality.
+            True by default
           type: boolean
         dsrConfidence:
           $ref: '#/components/schemas/DsrConfidence'
         language:
           $ref: '#/components/schemas/Language'
         Rotate:
+          description: Rotate image>
           format: int32
           type: integer
         makeSpellCheck:
@@ -1833,6 +2090,7 @@ components:
           type: boolean
         makeBinarization:
           default: true
+          description: Option to enable image binarization algorithm. False by default
           type: boolean
         dsrMode:
           $ref: '#/components/schemas/DsrMode'
@@ -1841,6 +2099,7 @@ components:
         resultTypeTable:
           $ref: '#/components/schemas/ResultTypeTable'
         regions:
+          description: Region on image to recognize in specific format. Aspose.Ocr.Cloud.Public.OCRRegion
           items:
             $ref: '#/components/schemas/OCRRegion'
           nullable: true
@@ -1848,11 +2107,12 @@ components:
       type: object
     OCRSettingsDjVu2PDF:
       additionalProperties: false
+      description: OCR Process setting for Image recognition
       example:
         makeBinarization: true
         dsrMode: null
         makeUpsampling: false
-        makeContrastCorrection: true
+        makeContrastCorrection: false
         regions:
         - rect:
             topLeftY: 1
@@ -1877,6 +2137,7 @@ components:
         language:
           $ref: '#/components/schemas/Language'
         Rotate:
+          description: Rotate image>
           format: int32
           type: integer
         makeSkewCorrect:
@@ -1889,12 +2150,14 @@ components:
             by default
           type: boolean
         makeContrastCorrection:
-          default: true
+          default: false
+          deprecated: true
           description: Option to enable image contrast correction algorithm. True
             by default
           type: boolean
         makeBinarization:
           default: true
+          description: Option to enable image binarization algorithm. False by default
           type: boolean
         makeUpsampling:
           default: false
@@ -1910,6 +2173,81 @@ components:
         resultTypeTable:
           $ref: '#/components/schemas/ResultTypeTable'
         regions:
+          description: Region on image to recognize in specific format. Aspose.Ocr.Cloud.Public.OCRRegion
+          items:
+            $ref: '#/components/schemas/OCRRegion'
+          nullable: true
+          type: array
+      type: object
+    OCRSettingsRecognizeAndParseInvoice:
+      additionalProperties: false
+      description: OCR Process setting for Image recognition
+      example:
+        makeBinarization: false
+        dsrMode: null
+        makeUpsampling: false
+        makeContrastCorrection: false
+        regions:
+        - rect:
+            topLeftY: 1
+            bottomRightX: 5
+            topLeftX: 6
+            bottomRightY: 5
+          order: 2
+        - rect:
+            topLeftY: 1
+            bottomRightX: 5
+            topLeftX: 6
+            bottomRightY: 5
+          order: 2
+        Rotate: 0
+        makeSkewCorrect: false
+        language: null
+        resultType: null
+        makeSpellCheck: false
+        dsrConfidence: null
+        resultTypeTable: null
+      properties:
+        makeSkewCorrect:
+          default: false
+          description: Option to enable skew correction algorithm. True by default
+          type: boolean
+        makeBinarization:
+          default: false
+          description: Option to enable binarization algorithm. False by default
+          type: boolean
+        makeUpsampling:
+          default: false
+          description: Option to enable image up-sampling algorithm to improve quality.
+            True by default
+          type: boolean
+        resultType:
+          $ref: '#/components/schemas/ResultType'
+        language:
+          $ref: '#/components/schemas/Language'
+        Rotate:
+          description: Rotate image>
+          format: int32
+          type: integer
+        makeSpellCheck:
+          default: false
+          description: Option to enable spell checking and correction algorithm. False
+            by default
+          type: boolean
+        makeContrastCorrection:
+          default: false
+          deprecated: true
+          description: Option to enable image contrast correction algorithm. True
+            by default
+          type: boolean
+        dsrMode:
+          $ref: '#/components/schemas/DsrMode'
+        dsrConfidence:
+          $ref: '#/components/schemas/DsrConfidence'
+        resultTypeTable:
+          $ref: '#/components/schemas/ResultTypeTable'
+        regions:
+          description: Region on image to recognize in specific format. Aspose.Ocr.Cloud.Public.OCRRegion
           items:
             $ref: '#/components/schemas/OCRRegion'
           nullable: true
@@ -1917,11 +2255,12 @@ components:
       type: object
     OCRSettingsRecognizeFont:
       additionalProperties: false
+      description: OCR Process setting for Font image recognition
       example:
         makeBinarization: true
         dsrMode: null
         makeUpsampling: false
-        makeContrastCorrection: true
+        makeContrastCorrection: false
         regions:
         - rect:
             topLeftY: 1
@@ -1947,20 +2286,28 @@ components:
           $ref: '#/components/schemas/Language'
         makeSkewCorrect:
           default: true
+          description: Option to enable skew correction algorithm. True by default
           type: boolean
         makeSpellCheck:
           default: false
+          description: Option to enable spell checking and correction algorithm. False
+            by default
           type: boolean
         makeContrastCorrection:
-          default: true
+          default: false
+          deprecated: true
+          description: Option to enable image contrast correction algorithm. True
+            by default
           type: boolean
         resultType:
           $ref: '#/components/schemas/ResultType'
         Rotate:
+          description: Rotate image>
           format: int32
           type: integer
         makeBinarization:
           default: true
+          description: Option to enable image binarization algorithm. False by default
           type: boolean
         makeUpsampling:
           default: false
@@ -1974,6 +2321,7 @@ components:
         resultTypeTable:
           $ref: '#/components/schemas/ResultTypeTable'
         regions:
+          description: Region on image to recognize in specific format. Aspose.Ocr.Cloud.Public.OCRRegion
           items:
             $ref: '#/components/schemas/OCRRegion'
           nullable: true
@@ -1986,7 +2334,7 @@ components:
         makeBinarization: false
         dsrMode: null
         makeUpsampling: false
-        makeContrastCorrection: true
+        makeContrastCorrection: false
         regions:
         - rect:
             topLeftY: 1
@@ -2016,6 +2364,7 @@ components:
           type: boolean
         makeBinarization:
           default: false
+          description: Option to enable binarization algorithm. False by default
           type: boolean
         makeSpellCheck:
           default: false
@@ -2023,7 +2372,7 @@ components:
             by default
           type: boolean
         makeContrastCorrection:
-          default: true
+          default: false
           description: Option to enable image contrast correction algorithm. True
             by default
           type: boolean
@@ -2039,11 +2388,13 @@ components:
         resultType:
           $ref: '#/components/schemas/ResultType'
         Rotate:
+          description: Rotate image>
           format: int32
           type: integer
         resultTypeTable:
           $ref: '#/components/schemas/ResultTypeTable'
         regions:
+          description: Region on image to recognize in specific format. Aspose.Ocr.Cloud.Public.OCRRegion
           items:
             $ref: '#/components/schemas/OCRRegion'
           nullable: true
@@ -2051,6 +2402,7 @@ components:
       type: object
     OCRSettingsRecognizeLabel:
       additionalProperties: false
+      description: OCR Process setting for Image recognition
       example:
         makeBinarization: false
         dsrMode: null
@@ -2081,18 +2433,27 @@ components:
           $ref: '#/components/schemas/Language'
         makeSkewCorrect:
           default: false
+          description: Option to enable skew correction algorithm. True by default
           type: boolean
         makeBinarization:
           default: false
+          description: Option to enable binarization algorithm. False by default
           type: boolean
         makeSpellCheck:
           default: false
+          description: Option to enable spell checking and correction algorithm. False
+            by default
           type: boolean
         makeContrastCorrection:
           default: false
+          deprecated: true
+          description: Option to enable image contrast correction algorithm. True
+            by default
           type: boolean
         makeUpsampling:
           default: false
+          description: Option to enable image up-sampling algorithm to improve quality.
+            True by default
           type: boolean
         dsrMode:
           $ref: '#/components/schemas/DsrMode'
@@ -2101,11 +2462,13 @@ components:
         resultType:
           $ref: '#/components/schemas/ResultType'
         Rotate:
+          description: Rotate image>
           format: int32
           type: integer
         resultTypeTable:
           $ref: '#/components/schemas/ResultTypeTable'
         regions:
+          description: Region on image to recognize in specific format. Aspose.Ocr.Cloud.Public.OCRRegion
           items:
             $ref: '#/components/schemas/OCRRegion'
           nullable: true
@@ -2118,7 +2481,7 @@ components:
         makeBinarization: true
         dsrMode: null
         makeUpsampling: false
-        makeContrastCorrection: true
+        makeContrastCorrection: false
         regions:
         - rect:
             topLeftY: 1
@@ -2152,7 +2515,8 @@ components:
             by default
           type: boolean
         makeContrastCorrection:
-          default: true
+          default: false
+          deprecated: true
           description: Option to enable image contrast correction algorithm. True
             by default
           type: boolean
@@ -2163,10 +2527,12 @@ components:
         resultType:
           $ref: '#/components/schemas/ResultType'
         Rotate:
+          description: Rotate image>
           format: int32
           type: integer
         makeBinarization:
           default: true
+          description: Option to enable image binarization algorithm. False by default
           type: boolean
         makeUpsampling:
           default: false
@@ -2176,6 +2542,7 @@ components:
         resultTypeTable:
           $ref: '#/components/schemas/ResultTypeTable'
         regions:
+          description: Region on image to recognize in specific format. Aspose.Ocr.Cloud.Public.OCRRegion
           items:
             $ref: '#/components/schemas/OCRRegion'
           nullable: true
@@ -2188,7 +2555,7 @@ components:
         makeBinarization: true
         dsrMode: null
         makeUpsampling: false
-        makeContrastCorrection: true
+        makeContrastCorrection: false
         regions:
         - rect:
             topLeftY: 1
@@ -2222,15 +2589,18 @@ components:
             by default
           type: boolean
         makeContrastCorrection:
-          default: true
+          default: false
+          deprecated: true
           description: Option to enable image contrast correction algorithm. True
             by default
           type: boolean
         Rotate:
+          description: Rotate image>
           format: int32
           type: integer
         makeBinarization:
           default: true
+          description: Option to enable image binarization algorithm. False by default
           type: boolean
         makeUpsampling:
           default: false
@@ -2246,6 +2616,7 @@ components:
         resultTypeTable:
           $ref: '#/components/schemas/ResultTypeTable'
         regions:
+          description: Region on image to recognize in specific format. Aspose.Ocr.Cloud.Public.OCRRegion
           items:
             $ref: '#/components/schemas/OCRRegion'
           nullable: true
@@ -2253,11 +2624,12 @@ components:
       type: object
     OCRSettingsRecognizeRegions:
       additionalProperties: false
+      description: OCR Process setting for Image recognition
       example:
         makeBinarization: true
         dsrMode: null
         makeUpsampling: false
-        makeContrastCorrection: true
+        makeContrastCorrection: false
         regions:
         - rect:
             topLeftY: 1
@@ -2283,17 +2655,26 @@ components:
           $ref: '#/components/schemas/Language'
         makeSkewCorrect:
           default: true
+          description: Option to enable skew correction algorithm. True by default
           type: boolean
         makeSpellCheck:
           default: false
+          description: Option to enable spell checking and correction algorithm. False
+            by default
           type: boolean
         makeContrastCorrection:
-          default: true
+          default: false
+          deprecated: true
+          description: Option to enable image contrast correction algorithm. True
+            by default
           type: boolean
         makeUpsampling:
           default: false
+          description: Option to enable image up-sampling algorithm to improve quality.
+            True by default
           type: boolean
         regions:
+          description: Region on image to recognize in specific format. Aspose.Ocr.Cloud.Public.OCRRegion
           items:
             $ref: '#/components/schemas/OCRRegion'
           nullable: true
@@ -2301,10 +2682,12 @@ components:
         resultType:
           $ref: '#/components/schemas/ResultType'
         Rotate:
+          description: Rotate image>
           format: int32
           type: integer
         makeBinarization:
           default: true
+          description: Option to enable image binarization algorithm. False by default
           type: boolean
         dsrMode:
           $ref: '#/components/schemas/DsrMode'
@@ -2320,7 +2703,7 @@ components:
         makeBinarization: true
         dsrMode: null
         makeUpsampling: false
-        makeContrastCorrection: true
+        makeContrastCorrection: false
         regions:
         - rect:
             topLeftY: 1
@@ -2354,17 +2737,20 @@ components:
             by default
           type: boolean
         makeContrastCorrection:
-          default: true
+          default: false
+          deprecated: true
           description: Option to enable image contrast correction algorithm. True
             by default
           type: boolean
         resultTypeTable:
           $ref: '#/components/schemas/ResultTypeTable'
         Rotate:
+          description: Rotate image>
           format: int32
           type: integer
         makeBinarization:
           default: true
+          description: Option to enable image binarization algorithm. False by default
           type: boolean
         makeUpsampling:
           default: false
@@ -2378,6 +2764,7 @@ components:
         resultType:
           $ref: '#/components/schemas/ResultType'
         regions:
+          description: Region on image to recognize in specific format. Aspose.Ocr.Cloud.Public.OCRRegion
           items:
             $ref: '#/components/schemas/OCRRegion'
           nullable: true
@@ -2394,10 +2781,12 @@ components:
       type: string
     OCRUpscaleImageBody:
       additionalProperties: false
+      description: Combines Image data and OCR processing settings
       example:
         image: image
       properties:
         image:
+          description: Gets or Sets Image
           format: byte
           type: string
       required:
@@ -2448,6 +2837,7 @@ components:
       - ImagePNG
       type: string
     ResultTypeTTS:
+      description: Text-to-speech output types
       enum:
       - Wav
       type: string
@@ -2461,6 +2851,7 @@ components:
       type: string
     TTSBody:
       additionalProperties: false
+      description: Represents input text data with settings
       example:
         settings:
           language: null
@@ -2468,6 +2859,7 @@ components:
         text: text
       properties:
         text:
+          description: Gets or Sets text
           minLength: 1
           type: string
         settings:
@@ -2478,12 +2870,14 @@ components:
       type: object
     TTSBodyDeprecated:
       additionalProperties: false
+      description: Represents input text data with settings
       example:
         language: null
         text: text
         resultType: null
       properties:
         text:
+          description: Gets or Sets text
           minLength: 1
           type: string
         language:
@@ -2497,6 +2891,7 @@ components:
       type: object
     TTSError:
       additionalProperties: false
+      description: Error to return to SDK client
       example:
         warnings:
         - warnings
@@ -2507,12 +2902,14 @@ components:
       nullable: true
       properties:
         messages:
+          description: A list of various clear descriptions of the errors
           items:
             type: string
           nullable: true
           readOnly: true
           type: array
         warnings:
+          description: "Warning messages - non critical errors: e.g. some data lost"
           items:
             type: string
           nullable: true
@@ -2521,6 +2918,7 @@ components:
       type: object
     TTSResponse:
       additionalProperties: false
+      description: Response with Recognition result for specific task ID
       example:
         responseStatusCode: null
         id: id
@@ -2539,6 +2937,7 @@ components:
         taskStatus: null
       properties:
         id:
+          description: The specific Task ID that result was made for
           nullable: true
           type: string
         responseStatusCode:
@@ -2546,6 +2945,7 @@ components:
         taskStatus:
           $ref: '#/components/schemas/TTSTaskStatus'
         results:
+          description: List of results - Especially Text or PDF files
           items:
             $ref: '#/components/schemas/TTSResult'
           nullable: true
@@ -2556,20 +2956,24 @@ components:
       type: object
     TTSResult:
       additionalProperties: false
+      description: Represents information about response after TTS.
       example:
         data: data
         type: type
       properties:
         type:
+          description: File data type (extension)
           nullable: true
           type: string
         data:
+          description: File binary data
           format: byte
           nullable: true
           type: string
       type: object
     TTSSettings:
       additionalProperties: false
+      description: TTS setting
       example:
         language: null
         resultType: null
@@ -2583,6 +2987,7 @@ components:
       - resultType
       type: object
     TTSTaskStatus:
+      description: TTS Task status
       enum:
       - Pending
       - Processing

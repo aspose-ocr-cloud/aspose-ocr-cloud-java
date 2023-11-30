@@ -53,9 +53,9 @@ import java.util.Set;
 import Aspose.OCR.Cloud.SDK.JSON;
 
 /**
- * OCRSettingsRecognizeFont
+ * OCR Process setting for Font image recognition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-02T10:37:00.547+03:00[GMT+03:00]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-27T04:31:36.101+03:00[GMT+03:00]")
 public class OCRSettingsRecognizeFont {
   public static final String SERIALIZED_NAME_LANGUAGE = "language";
   @SerializedName(SERIALIZED_NAME_LANGUAGE)
@@ -71,7 +71,7 @@ public class OCRSettingsRecognizeFont {
 
   public static final String SERIALIZED_NAME_MAKE_CONTRAST_CORRECTION = "makeContrastCorrection";
   @SerializedName(SERIALIZED_NAME_MAKE_CONTRAST_CORRECTION)
-  private Boolean makeContrastCorrection = true;
+  private Boolean makeContrastCorrection = false;
 
   public static final String SERIALIZED_NAME_RESULT_TYPE = "resultType";
   @SerializedName(SERIALIZED_NAME_RESULT_TYPE)
@@ -137,7 +137,7 @@ public class OCRSettingsRecognizeFont {
   }
 
    /**
-   * Get makeSkewCorrect
+   * Option to enable skew correction algorithm. True by default
    * @return makeSkewCorrect
   **/
   @javax.annotation.Nullable
@@ -159,7 +159,7 @@ public class OCRSettingsRecognizeFont {
   }
 
    /**
-   * Get makeSpellCheck
+   * Option to enable spell checking and correction algorithm. False by default
    * @return makeSpellCheck
   **/
   @javax.annotation.Nullable
@@ -181,9 +181,11 @@ public class OCRSettingsRecognizeFont {
   }
 
    /**
-   * Get makeContrastCorrection
+   * Option to enable image contrast correction algorithm. True by default
    * @return makeContrastCorrection
+   * @deprecated
   **/
+  @Deprecated
   @javax.annotation.Nullable
 
   public Boolean getMakeContrastCorrection() {
@@ -225,7 +227,7 @@ public class OCRSettingsRecognizeFont {
   }
 
    /**
-   * Get rotate
+   * Rotate image&gt;
    * @return rotate
   **/
   @javax.annotation.Nullable
@@ -247,7 +249,7 @@ public class OCRSettingsRecognizeFont {
   }
 
    /**
-   * Get makeBinarization
+   * Option to enable image binarization algorithm. False by default
    * @return makeBinarization
   **/
   @javax.annotation.Nullable
@@ -365,7 +367,7 @@ public class OCRSettingsRecognizeFont {
   }
 
    /**
-   * Get regions
+   * Region on image to recognize in specific format. Aspose.Ocr.Cloud.Public.OCRRegion
    * @return regions
   **/
   @javax.annotation.Nullable
@@ -560,4 +562,5 @@ public class OCRSettingsRecognizeFont {
     return JSON.getGson().toJson(this);
   }
 }
+
 

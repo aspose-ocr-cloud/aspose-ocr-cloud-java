@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**cancelUpscaleImage**](UpscaleImageApi.md#cancelUpscaleImage) | **DELETE** /v5/UpscaleImage | CancelUpscaleImage |
-| [**getUpscaleImage**](UpscaleImageApi.md#getUpscaleImage) | **GET** /v5/UpscaleImage | GetUpscaleImage |
-| [**postUpscaleImage**](UpscaleImageApi.md#postUpscaleImage) | **POST** /v5/UpscaleImage | PostUpscaleImage |
+| [**cancelUpscaleImage**](UpscaleImageApi.md#cancelUpscaleImage) | **DELETE** /v5.0/ocr/UpscaleImage | CancelUpscaleImage |
+| [**getUpscaleImage**](UpscaleImageApi.md#getUpscaleImage) | **GET** /v5.0/ocr/UpscaleImage | GetUpscaleImage |
+| [**postUpscaleImage**](UpscaleImageApi.md#postUpscaleImage) | **POST** /v5.0/ocr/UpscaleImage | PostUpscaleImage |
 
 
 <a name="cancelUpscaleImage"></a>
@@ -93,7 +93,7 @@ public class Example {
     String clientSecret = "";
     // Creating new API instance with your credentials
     UpscaleImageApi apiInstance = new UpscaleImageApi(clientId, clientSecret);
-    String id = "id_example"; // String | 
+    String id = "id_example"; // String | Task id to select the result
     try {
       OCRResponse result = apiInstance.getUpscaleImage(id);
       System.out.println(result);
@@ -112,7 +112,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**|  | |
+| **id** | **String**| Task id to select the result | |
 
 ### Return type
 

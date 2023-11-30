@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**cancelRecognizeImage**](RecognizeImageApi.md#cancelRecognizeImage) | **DELETE** /v5/RecognizeImage | CancelRecognizeImage |
-| [**getRecognizeImage**](RecognizeImageApi.md#getRecognizeImage) | **GET** /v5/RecognizeImage | GetRecognizeImage |
-| [**postRecognizeImage**](RecognizeImageApi.md#postRecognizeImage) | **POST** /v5/RecognizeImage | PostRecognizeImage |
+| [**cancelRecognizeImage**](RecognizeImageApi.md#cancelRecognizeImage) | **DELETE** /v5.0/ocr/RecognizeImage | CancelRecognizeImage |
+| [**getRecognizeImage**](RecognizeImageApi.md#getRecognizeImage) | **GET** /v5.0/ocr/RecognizeImage | GetRecognizeImage |
+| [**postRecognizeImage**](RecognizeImageApi.md#postRecognizeImage) | **POST** /v5.0/ocr/RecognizeImage | PostRecognizeImage |
 
 
 <a name="cancelRecognizeImage"></a>
@@ -93,7 +93,7 @@ public class Example {
     String clientSecret = "";
     // Creating new API instance with your credentials
     RecognizeImageApi apiInstance = new RecognizeImageApi(clientId, clientSecret);
-    String id = "id_example"; // String | 
+    String id = "id_example"; // String | Task id to select the result
     try {
       OCRResponse result = apiInstance.getRecognizeImage(id);
       System.out.println(result);
@@ -112,7 +112,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**|  | |
+| **id** | **String**| Task id to select the result | |
 
 ### Return type
 

@@ -97,7 +97,7 @@ public class ApiClient {
         // Setup authentications (key: authentication name, value: authentication).
         authentications.put("JWT", new OAuth());
         // Prevent the authentications from being modified.
-        authentications = Collections.unmodifiableMap(authentications);
+        // authentications = Collections.unmodifiableMap(authentications);
     }
 
     /**
@@ -206,7 +206,7 @@ public class ApiClient {
         json = new JSON();
 
         // Set default User-Agent.
-        setUserAgent("OpenAPI-Generator/23.6.0/java");
+        setUserAgent("Aspose.OCR Cloud SDK for Java 23.11.0");
 
         authentications = new HashMap<String, Authentication>();
     }

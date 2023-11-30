@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**cancelRecognizePdf**](RecognizePdfApi.md#cancelRecognizePdf) | **DELETE** /v5/RecognizePdf | CancelRecognizePdf |
-| [**getRecognizePdf**](RecognizePdfApi.md#getRecognizePdf) | **GET** /v5/RecognizePdf | GetRecognizePdf |
-| [**postRecognizePdf**](RecognizePdfApi.md#postRecognizePdf) | **POST** /v5/RecognizePdf | PostRecognizePdf |
+| [**cancelRecognizePdf**](RecognizePdfApi.md#cancelRecognizePdf) | **DELETE** /v5.0/ocr/RecognizePdf | CancelRecognizePdf |
+| [**getRecognizePdf**](RecognizePdfApi.md#getRecognizePdf) | **GET** /v5.0/ocr/RecognizePdf | GetRecognizePdf |
+| [**postRecognizePdf**](RecognizePdfApi.md#postRecognizePdf) | **POST** /v5.0/ocr/RecognizePdf | PostRecognizePdf |
 
 
 <a name="cancelRecognizePdf"></a>
@@ -93,7 +93,7 @@ public class Example {
     String clientSecret = "";
     // Creating new API instance with your credentials
     RecognizePdfApi apiInstance = new RecognizePdfApi(clientId, clientSecret);
-    String id = "id_example"; // String | 
+    String id = "id_example"; // String | Task id to select the result
     try {
       OCRResponse result = apiInstance.getRecognizePdf(id);
       System.out.println(result);
@@ -112,7 +112,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**|  | |
+| **id** | **String**| Task id to select the result | |
 
 ### Return type
 
