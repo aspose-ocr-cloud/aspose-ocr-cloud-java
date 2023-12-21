@@ -1,78 +1,44 @@
-# Aspose.OCR Cloud for Java SDK 23.11.0
+# Aspose.OCR Cloud for Java SDK 23.12.0
 
-[![License](https://img.shields.io/github/license/aspose-ocr-cloud/aspose-ocr-cloud-java)](LICENSE)
+[![License](https://img.shields.io/github/license/aspose-ocr-cloud/aspose-ocr-cloud-dotnet)](LICENSE)
 [![Nuget](https://img.shields.io/nuget/v/Aspose.OCR-Cloud)](https://www.nuget.org/packages/Aspose.OCR-Cloud/)
 
 [Aspose.OCR Cloud](https://products.aspose.cloud/ocr/) is an optical character recognition as a service. With it, you can easily add OCR functionality to almost any device or platform, including netbooks, mini PCs, or even entry-level smartphones.
 
 Our engine can read text from images, photos, screenshots and scanned PDFs in a wide variety of European, Cyrillic and Oriental fonts, returning results in the most popular document formats. Powerful built-in image processing filters based on neural networks automatically correct skewed and distorted images, automatically remove dirt, smudges, scratches, glare and other image defects that can affect recognition accuracy. To further improve the results, Aspose.OCR Cloud has a built-in spell checker that automatically replaces misspelled words and saves you the trouble of manually correcting the recognition results.
 
-Even the complex recognition tasks can be done with a couple of API calls. To make interacting with Aspose.OCR Cloud services from Java applications even easier, we provide the software development kit (SDK) for Java. It handles all the routine operations such as establishing connections, sending API requests, and parsing responses, wrapping all these tasks into a few simple classes.
+Even the complex recognition tasks can be done with a couple of API calls. To make interacting with Aspose.OCR Cloud services from .NET applications even easier, we provide the software development kit (SDK) for .NET. It handles all the routine operations such as establishing connections, sending API requests, and parsing responses, wrapping all these tasks into a few simple classes.
 
-Aspose.OCR Cloud SDK for Java is open source under the MIT license. You can freely use it for any projects, including commercial and proprietary applications, as well as modify any part of its code.
+Aspose.OCR Cloud SDK for .NET is open source under the MIT license. You can freely use it for any projects, including commercial and proprietary applications, as well as modify any part of its code.
 
 ## Try Online
 [Image to Text](https://products.aspose.app/ocr/scan-image) | [Image to Searchable PDF](https://products.aspose.app/ocr/ocr-to-pdf) | [PDF OCR](https://products.aspose.app/ocr/pdf-ocr)| [Receipt Scanner](https://products.aspose.app/ocr/scan-receipt)
 :---: | :---: | :---:| :---:
 [![Scan Image](https://products.aspose.app/ocr/scan-image/img/ocr-recognize-48.png)](https://products.aspose.app/ocr/scan-image) | [![Image to Searchable PDF](https://products.aspose.app/ocr/scan-image/img/ocr-to-pdf-4-48.png)](https://products.aspose.app/ocr/ocr-to-pdf) | [![PDF OCR](https://products.aspose.app/ocr/scan-image/img/ocr-to-pdf-2-48.png)](https://products.aspose.app/ocr/pdf-ocr) | [![Receipt Scanner](https://products.aspose.app/ocr/scan-image/img/aspose-scan-receipt-48.png)](https://products.aspose.app/ocr/scan-receipt) 
 
-## What was changed in version 23.11.0
+## What was changed in version 23.12.0
 
-A summary of recent changes, enhancements and bug fixes in **Aspose.OCR Cloud SDK for Java 23.11.0** release:
+A summary of recent changes, enhancements and bug fixes in **Aspose.OCR Cloud SDK for Java 23.12.0** release:
 
 Key | Summary | Category
 --- | ------- | --------
-OCR&#8209;3560 | Added an API for extracting structured information from scanned invoices. | New feature
-OCR&#8209;3722 | Added a free API for evaluating text-to-speech conversion that works without [authorization](/ocr/authorization/).<br />Some restrictions apply. See below for details. | New feature
-OCR&#8209;3171 | Added an API for getting [task status](/ocr/recognition-workflow/#3-fetch-the-recognition-result) without downloading a full recognition result. | Enhancement
-
-REST API changes: https://releases.aspose.cloud/ocr/release-notes/2023/aspose-ocr-cloud-23-11-0-release-notes/
-
-### Public API changes and backwards compatibility
-
-This section lists all public API changes introduced in **Aspose.OCR Cloud SDK for Java 23.11.0** that may affect the code of existing applications.
+OCR&#8209;3737 | Added a free API for evaluating image recognition without [authorization](/ocr/authorization/).<br />Some restrictions apply. See below for details. | New feature
 
 #### Added public APIs:
 
 The following public APIs have been introduced in this release:
 
-##### Extracting structured information from invoice
-
-The following new classes have been added for extracting structured information in JSON format from scanned or photographed invoices:
-
-Class | Description
------ | -----------
-`RecognizeAndParseInvoiceApi` | Invoice processing API.
-`OCRSettingsRecognizeAndParseInvoice` | Invoice processing settings.
-`OCRRecognizeAndParseInvoiceBody` | Invoice processing request body.
-
-[Learn more...](https://docs.aspose.cloud/ocr/recognize-parse-invoice/)
-
-##### Text-to-speech evaluation
+##### Image recognition evaluation
 
 The following new classes have been added:
 
 Class | Description
 ----- | -----------
-`ConvertTextToSpeechTrialApi` | Evaluation text-to-speech conversion API (without authorization).
+`RecognizeImageTrialApi` | Image recognition API that works without authorization.
 
-The evaluation mode has some limitations:
+**Important:** In recognition results, 10% of the words are substituted with asterisks (`*`). The sequence of masked words remains unchanged upon re-submitting the identical image for recognition.
 
-- **10** requests per day from a single IP address.
-- The text size must not exceed **500** characters, including spaces and punctuation.
-- The phrase _"Please authenticate to the API to remove this message"_ is inserted at a random position within the generated audio.
-
-[Learn more...](https://docs.aspose.cloud/ocr/text-to-speech/)
-
-##### Quickly fetch processing status
-
-The following new classes have been added:
-
-Class | Description
------ | -----------
-`UtilitiesApi` | Universal API for various management and monitoring purposes.
-
-[Learn more...](https://docs.aspose.cloud/ocr/subscription/)
+[Learn more...](https://docs.aspose.cloud/ocr/recognize-image/)
 
 #### Updated public APIs:
 
@@ -113,7 +79,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.aspose</groupId>
   <artifactId>aspose-ocr-cloud</artifactId>
-  <version>23.11.0</version>
+  <version>23.12.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -129,7 +95,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.aspose:aspose-ocr-cloud:23.11.0"
+     implementation "com.aspose:aspose-ocr-cloud:23.12.0"
   }
 ```
 
@@ -143,7 +109,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/aspose-ocr-cloud-23.11.0.jar`
+* `target/aspose-ocr-cloud-23.12.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -152,53 +118,70 @@ Please follow the [installation](#installation) instruction and execute the foll
 
 ```java
 
-// Import classes:
-import Aspose.OCR.Cloud.SDK.RecognizeImageApi;
+package org.example;
+
+import Aspose.OCR.Cloud.SDK.RecognizeImageTrialApi;
 import Aspose.OCR.Cloud.SDK.model.*;
 
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Scanner;
 
+public class RecognizeImageTrialExample {
 
-public class Example {
-  public static void main(String[] args) {
-    String clientId = "";
-    String clientSecret = "";
-    // Creating new API instance with your credentials
-    RecognizeImageApi api = new RecognizeImageApi(clientId, clientSecret);
+    public static void run() {
+        try {
+            RecognizeImageTrialApi api = new RecognizeImageTrialApi();
+            OCRSettingsRecognizeImage settings = new OCRSettingsRecognizeImage();
+            settings.setLanguage(Language.ENGLISH);
+            settings.setDsrConfidence(DsrConfidence.DEFAULT);
+            settings.setDsrMode(DsrMode.NODSRNOFILTER);
+            settings.setMakeBinarization(false);
+            settings.setMakeSkewCorrect(false);
+            settings.setMakeContrastCorrection(false);
+            settings.setMakeUpsampling(false);
+            settings.setResultType(ResultType.TEXT);
 
-    // Creating recognition settings object
-    OCRSettingsRecognizeImage settings = new OCRSettingsRecognizeImage();
-    settings.setLanguage(Language.ENGLISH);
-    settings.setDsrConfidence(DsrConfidence.DEFAULT);
-    settings.setDsrMode(DsrMode.NODSRNOFILTER);
-    settings.setMakeBinarization(false);
-    settings.setMakeSkewCorrect(false);
-    settings.setMakeContrastCorrection(false);
-    settings.setMakeUpsampling(false);
-    settings.setResultType(ResultType.TEXT);
+            String imageFileName = "samples\\latin.png";
+            byte[] imageData = Files.readAllBytes(Path.of(imageFileName));
 
-    // Reading image file to array of bytes
-    String imageFileName = "samples\\latin.png";
-    byte[] imageData = Files.readAllBytes(Path.of(imageFileName));
+            OCRRecognizeImageBody requestBody = new OCRRecognizeImageBody();
+            requestBody.setImage(imageData);
+            requestBody.setSettings(settings);
 
-    // Combining settings and image to request body
-    OCRRecognizeImageBody requestBody = new OCRRecognizeImageBody();
-    requestBody.setImage(imageData);
-    requestBody.setSettings(settings);
+            System.out.println("Sending sample image (" + imageFileName +") to RecognizeImageTrialApi...");
+            String taskId = api.postRecognizeImageTrial(requestBody);
 
-    // Sending request to cloud API and getting task ID
-    String taskId = api.postRecognizeImage(requestBody);
+            System.out.println("File successfully sent. " +
+                    "Your task ID is " + taskId + "\nGetting task results...");
+            OCRResponse apiResponse = api.getRecognizeImageTrial(taskId);
 
-    // Getting result data with second request
-    OCRResponse apiResponse = api.getRecognizeImage(taskId);
+            String fileExtension = "";
+            switch(apiResponse.getResults().get(0).getType()) {
+                case "Text":
+                    fileExtension = "txt";
+                    break;
+                default:
+                    fileExtension = "txt";
+            };
+            String resultFileName = "results\\" + apiResponse.getId() + "." + fileExtension;
+            Files.createDirectories(Paths.get("results"));
+            Files.write(Path.of(resultFileName), apiResponse.getResults().get(0).getData());
 
-    // Extracting result text from response
-    System.out.println(new String(apiResponse.getResults().get(0).getData(), StandardCharsets.UTF_8) + "\n\n");
+            System.out.println(new String(apiResponse.getResults().get(0).getData(), StandardCharsets.UTF_8) + "\n\n");
+            System.out.println("Respose received with status " + apiResponse.getTaskStatus().getValue() +"\n\n" +
+                    "Your results saved to " + resultFileName + "\n\n" +
+                    "Press any key to continue\n");
 
-  }
+            System.in.read();
+        } catch (Exception ex) {
+            System.out.println(ex.toString());
+        }
+    }
 }
+
 ```
 
 ### Running demo
@@ -269,6 +252,9 @@ Class | Method | HTTP request | Description
 *RecognizeImageApi* | [**cancelRecognizeImage**](docs/RecognizeImageApi.md#cancelRecognizeImage) | **DELETE** /v5.0/ocr/RecognizeImage | CancelRecognizeImage
 *RecognizeImageApi* | [**getRecognizeImage**](docs/RecognizeImageApi.md#getRecognizeImage) | **GET** /v5.0/ocr/RecognizeImage | GetRecognizeImage
 *RecognizeImageApi* | [**postRecognizeImage**](docs/RecognizeImageApi.md#postRecognizeImage) | **POST** /v5.0/ocr/RecognizeImage | PostRecognizeImage
+*RecognizeImageTrialApi* | [**cancelRecognizeImageTrial**](docs/RecognizeImageTrialApi.md#cancelRecognizeImageTrial) | **DELETE** /v5.0/ocr/RecognizeImageTrial | CancelRecognizeImageTrial
+*RecognizeImageTrialApi* | [**getRecognizeImageTrial**](docs/RecognizeImageTrialApi.md#getRecognizeImageTrial) | **GET** /v5.0/ocr/RecognizeImageTrial | GetRecognizeImageTrial
+*RecognizeImageTrialApi* | [**postRecognizeImageTrial**](docs/RecognizeImageTrialApi.md#postRecognizeImageTrial) | **POST** /v5.0/ocr/RecognizeImageTrial | PostRecognizeImageTrial
 *RecognizeLabelApi* | [**cancelRecognizeLabel**](docs/RecognizeLabelApi.md#cancelRecognizeLabel) | **DELETE** /v5.0/ocr/RecognizeLabel | CancelRecognizeLabel
 *RecognizeLabelApi* | [**getRecognizeLabel**](docs/RecognizeLabelApi.md#getRecognizeLabel) | **GET** /v5.0/ocr/RecognizeLabel | GetRecognizeLabel
 *RecognizeLabelApi* | [**postRecognizeLabel**](docs/RecognizeLabelApi.md#postRecognizeLabel) | **POST** /v5.0/ocr/RecognizeLabel | PostRecognizeLabel
@@ -342,6 +328,18 @@ Class | Method | HTTP request | Description
  - [TTSResult](docs/TTSResult.md)
  - [TTSSettings](docs/TTSSettings.md)
  - [TTSTaskStatus](docs/TTSTaskStatus.md)
+
+
+## Documentation for Authorization
+
+Authentication schemes defined for the API:
+### JWT
+
+- **Type**: OAuth
+- **Flow**: application
+- **Authorization URL**: 
+- **Scopes**: N/A
+
 
 ## Recommendation
 

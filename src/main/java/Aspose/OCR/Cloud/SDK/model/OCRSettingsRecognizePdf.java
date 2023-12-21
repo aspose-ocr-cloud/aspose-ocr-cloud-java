@@ -55,7 +55,7 @@ import Aspose.OCR.Cloud.SDK.JSON;
 /**
  * OCR Process setting for Scanned multiple PDF document recognition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-27T04:31:36.101+03:00[GMT+03:00]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-22T01:04:00.512+03:00[GMT+03:00]")
 public class OCRSettingsRecognizePdf {
   public static final String SERIALIZED_NAME_LANGUAGE = "language";
   @SerializedName(SERIALIZED_NAME_LANGUAGE)
@@ -271,7 +271,7 @@ public class OCRSettingsRecognizePdf {
   }
 
    /**
-   * Rotate image&gt;
+   * Get rotate
    * @return rotate
   **/
   @javax.annotation.Nullable
@@ -293,7 +293,7 @@ public class OCRSettingsRecognizePdf {
   }
 
    /**
-   * Option to enable image binarization algorithm. False by default
+   * Get makeBinarization
    * @return makeBinarization
   **/
   @javax.annotation.Nullable
@@ -367,7 +367,7 @@ public class OCRSettingsRecognizePdf {
   }
 
    /**
-   * Region on image to recognize in specific format. Aspose.Ocr.Cloud.Public.OCRRegion
+   * Get regions
    * @return regions
   **/
   @javax.annotation.Nullable

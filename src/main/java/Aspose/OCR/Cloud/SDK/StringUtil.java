@@ -16,7 +16,7 @@ package Aspose.OCR.Cloud.SDK;
 import java.util.Collection;
 import java.util.Iterator;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-27T04:31:36.101+03:00[GMT+03:00]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-22T01:04:00.512+03:00[GMT+03:00]")
 public class StringUtil {
   /**
    * Check if the given array contains the given value (with case-insensitive comparison).

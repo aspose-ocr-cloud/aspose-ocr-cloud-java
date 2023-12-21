@@ -202,7 +202,7 @@ public class ConvertTextToSpeechTrialApi {
     }
     /**
      * Build call for getConvertTextToSpeechTrial
-     * @param id Task id to select the result (required)
+     * @param id  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -274,7 +274,7 @@ public class ConvertTextToSpeechTrialApi {
     /**
      * GetConvertTextToSpeechTrial
      * 
-     * @param id Task id to select the result (required)
+     * @param id  (required)
      * @return TTSResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -291,7 +291,7 @@ public class ConvertTextToSpeechTrialApi {
     /**
      * GetConvertTextToSpeechTrial
      * 
-     * @param id Task id to select the result (required)
+     * @param id  (required)
      * @return ApiResponse&lt;TTSResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -309,7 +309,7 @@ public class ConvertTextToSpeechTrialApi {
     /**
      * GetConvertTextToSpeechTrial (asynchronously)
      * 
-     * @param id Task id to select the result (required)
+     * @param id  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

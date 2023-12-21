@@ -45,9 +45,9 @@ import java.util.Set;
 import Aspose.OCR.Cloud.SDK.JSON;
 
 /**
- * Represents information about response after TTS.
+ * TTSResult
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-27T04:31:36.101+03:00[GMT+03:00]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-22T01:04:00.512+03:00[GMT+03:00]")
 public class TTSResult {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -67,7 +67,7 @@ public class TTSResult {
   }
 
    /**
-   * File data type (extension)
+   * Get type
    * @return type
   **/
   @javax.annotation.Nullable
@@ -89,7 +89,7 @@ public class TTSResult {
   }
 
    /**
-   * File binary data
+   * Get data
    * @return data
   **/
   @javax.annotation.Nullable

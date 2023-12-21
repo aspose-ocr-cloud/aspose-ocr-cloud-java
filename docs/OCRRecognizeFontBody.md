@@ -2,13 +2,12 @@
 
 # OCRRecognizeFontBody
 
-Combines Image data and OCR Recognition settings for Font image
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**image** | **byte[]** | Gets or Sets Image |  |
+|**image** | **byte[]** |  |  |
 |**settings** | [**OCRSettingsRecognizeFont**](OCRSettingsRecognizeFont.md) |  |  |
 
 

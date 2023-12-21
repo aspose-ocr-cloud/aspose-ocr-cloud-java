@@ -47,9 +47,9 @@ import java.util.Set;
 import Aspose.OCR.Cloud.SDK.JSON;
 
 /**
- * Error to return to SDK client
+ * TTSError
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-27T04:31:36.101+03:00[GMT+03:00]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-22T01:04:00.512+03:00[GMT+03:00]")
 public class TTSError {
   public static final String SERIALIZED_NAME_MESSAGES = "messages";
   @SerializedName(SERIALIZED_NAME_MESSAGES)
@@ -73,7 +73,7 @@ public class TTSError {
   }
 
    /**
-   * A list of various clear descriptions of the errors
+   * Get messages
    * @return messages
   **/
   @javax.annotation.Nullable
@@ -86,7 +86,7 @@ public class TTSError {
 
 
    /**
-   * Warning messages - non critical errors: e.g. some data lost
+   * Get warnings
    * @return warnings
   **/
   @javax.annotation.Nullable

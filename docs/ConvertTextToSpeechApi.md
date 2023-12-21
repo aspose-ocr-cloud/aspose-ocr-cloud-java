@@ -93,7 +93,7 @@ public class Example {
     String clientSecret = "";
     // Creating new API instance with your credentials
     ConvertTextToSpeechApi apiInstance = new ConvertTextToSpeechApi(clientId, clientSecret);
-    String id = "id_example"; // String | Task id to select the result
+    String id = "id_example"; // String | 
     try {
       TTSResponse result = apiInstance.getConvertTextToSpeech(id);
       System.out.println(result);
@@ -112,7 +112,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Task id to select the result | |
+| **id** | **String**|  | |
 
 ### Return type
 

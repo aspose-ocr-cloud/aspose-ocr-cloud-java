@@ -51,9 +51,9 @@ import java.util.Set;
 import Aspose.OCR.Cloud.SDK.JSON;
 
 /**
- * Response with Recognition result for specific task ID
+ * TTSResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-27T04:31:36.101+03:00[GMT+03:00]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-22T01:04:00.512+03:00[GMT+03:00]")
 public class TTSResponse {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -93,7 +93,7 @@ public class TTSResponse {
   }
 
    /**
-   * The specific Task ID that result was made for
+   * Get id
    * @return id
   **/
   @javax.annotation.Nullable
@@ -153,7 +153,7 @@ public class TTSResponse {
 
 
    /**
-   * List of results - Especially Text or PDF files
+   * Get results
    * @return results
   **/
   @javax.annotation.Nullable

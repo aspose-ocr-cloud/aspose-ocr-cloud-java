@@ -53,9 +53,9 @@ import java.util.Set;
 import Aspose.OCR.Cloud.SDK.JSON;
 
 /**
- * OCR Process setting for Image recognition
+ * OCRSettingsRecognizeRegions
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-27T04:31:36.101+03:00[GMT+03:00]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-22T01:04:00.512+03:00[GMT+03:00]")
 public class OCRSettingsRecognizeRegions {
   public static final String SERIALIZED_NAME_LANGUAGE = "language";
   @SerializedName(SERIALIZED_NAME_LANGUAGE)
@@ -137,7 +137,7 @@ public class OCRSettingsRecognizeRegions {
   }
 
    /**
-   * Option to enable skew correction algorithm. True by default
+   * Get makeSkewCorrect
    * @return makeSkewCorrect
   **/
   @javax.annotation.Nullable
@@ -159,7 +159,7 @@ public class OCRSettingsRecognizeRegions {
   }
 
    /**
-   * Option to enable spell checking and correction algorithm. False by default
+   * Get makeSpellCheck
    * @return makeSpellCheck
   **/
   @javax.annotation.Nullable
@@ -181,7 +181,7 @@ public class OCRSettingsRecognizeRegions {
   }
 
    /**
-   * Option to enable image contrast correction algorithm. True by default
+   * Get makeContrastCorrection
    * @return makeContrastCorrection
    * @deprecated
   **/
@@ -205,7 +205,7 @@ public class OCRSettingsRecognizeRegions {
   }
 
    /**
-   * Option to enable image up-sampling algorithm to improve quality. True by default
+   * Get makeUpsampling
    * @return makeUpsampling
   **/
   @javax.annotation.Nullable
@@ -235,7 +235,7 @@ public class OCRSettingsRecognizeRegions {
   }
 
    /**
-   * Region on image to recognize in specific format. Aspose.Ocr.Cloud.Public.OCRRegion
+   * Get regions
    * @return regions
   **/
   @javax.annotation.Nullable
@@ -279,7 +279,7 @@ public class OCRSettingsRecognizeRegions {
   }
 
    /**
-   * Rotate image&gt;
+   * Get rotate
    * @return rotate
   **/
   @javax.annotation.Nullable
@@ -301,7 +301,7 @@ public class OCRSettingsRecognizeRegions {
   }
 
    /**
-   * Option to enable image binarization algorithm. False by default
+   * Get makeBinarization
    * @return makeBinarization
   **/
   @javax.annotation.Nullable

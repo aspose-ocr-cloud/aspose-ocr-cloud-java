@@ -2,7 +2,6 @@
 
 # TTSSettings
 
-TTS setting
 
 ## Properties
 

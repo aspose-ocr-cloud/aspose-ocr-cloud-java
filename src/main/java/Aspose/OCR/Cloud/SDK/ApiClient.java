@@ -206,7 +206,7 @@ public class ApiClient {
         json = new JSON();
 
         // Set default User-Agent.
-        setUserAgent("Aspose.OCR Cloud SDK for Java 23.11.0");
+        setUserAgent("Aspose.OCR Cloud SDK for Java 23.12.0");
 
         authentications = new HashMap<String, Authentication>();
     }
