@@ -19,5 +19,7 @@
 
 * `POLYGONALTEXTDETECTOR` (value: `"PolygonalTextDetector"`)
 
+* `LINEDETECTOR` (value: `"LineDetector"`)
+
 
 

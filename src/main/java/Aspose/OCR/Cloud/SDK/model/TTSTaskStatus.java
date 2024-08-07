@@ -24,7 +24,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Gets or Sets TTSTaskStatus
+ * TTS Task status
  */
 @JsonAdapter(TTSTaskStatus.Adapter.class)
 public enum TTSTaskStatus {

@@ -30,7 +30,7 @@ public class Example {
     String clientSecret = "";
     // Creating new API instance with your credentials
     UtilitiesApi apiInstance = new UtilitiesApi(clientId, clientSecret);
-    String id = "id_example"; // String | 
+    String id = "id_example"; // String | Task id to select the result
     try {
       OCRResponse result = apiInstance.getTaskStatus(id);
       System.out.println(result);
@@ -49,7 +49,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**|  | |
+| **id** | **String**| Task id to select the result | |
 
 ### Return type
 

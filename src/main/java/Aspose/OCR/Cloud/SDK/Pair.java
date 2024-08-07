@@ -13,7 +13,7 @@
 
 package Aspose.OCR.Cloud.SDK;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-22T01:04:00.512+03:00[GMT+03:00]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-08-06T10:43:51.724963500+03:00[GMT+03:00]")
 public class Pair {
     private String name = "";
     private String value = "";

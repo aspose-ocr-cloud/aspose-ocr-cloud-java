@@ -35,7 +35,7 @@ public class Example {
     String clientSecret = "";
     // Creating new API instance with your credentials
     ImageProcessingApi apiInstance = new ImageProcessingApi(clientId, clientSecret);
-    String id = "id_example"; // String | 
+    String id = "id_example"; // String | Task id to select the result
     try {
       Object result = apiInstance.getResultFile(id);
       System.out.println(result);
@@ -54,7 +54,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**|  | |
+| **id** | **String**| Task id to select the result | |
 
 ### Return type
 
@@ -98,7 +98,7 @@ public class Example {
     String clientSecret = "";
     // Creating new API instance with your credentials
     ImageProcessingApi apiInstance = new ImageProcessingApi(clientId, clientSecret);
-    String id = "id_example"; // String | 
+    String id = "id_example"; // String | Task id to select the result
     try {
       OCRResponse result = apiInstance.getResultTask(id);
       System.out.println(result);
@@ -117,7 +117,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**|  | |
+| **id** | **String**| Task id to select the result | |
 
 ### Return type
 

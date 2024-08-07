@@ -43,7 +43,9 @@ public enum ResultType {
   
   TEXTANDPDFANDHOCR("TextAndPdfAndHocr"),
   
-  IMAGEPNG("ImagePNG");
+  IMAGEPNG("ImagePNG"),
+  
+  JSON("JSON");
 
   private String value;
 

@@ -53,9 +53,9 @@ import java.util.Set;
 import Aspose.OCR.Cloud.SDK.JSON;
 
 /**
- * OCRSettingsDetectRegions
+ * OCR Process setting for Image recognition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-22T01:04:00.512+03:00[GMT+03:00]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-08-06T10:43:51.724963500+03:00[GMT+03:00]")
 public class OCRSettingsDetectRegions {
   public static final String SERIALIZED_NAME_MAKE_SKEW_CORRECT = "makeSkewCorrect";
   @SerializedName(SERIALIZED_NAME_MAKE_SKEW_CORRECT)
@@ -115,7 +115,7 @@ public class OCRSettingsDetectRegions {
   }
 
    /**
-   * Get makeSkewCorrect
+   * Option to enable skew correction algorithm. True by default
    * @return makeSkewCorrect
   **/
   @javax.annotation.Nullable
@@ -137,7 +137,7 @@ public class OCRSettingsDetectRegions {
   }
 
    /**
-   * Get makeContrastCorrection
+   * Option to enable image contrast correction algorithm. True by default
    * @return makeContrastCorrection
   **/
   @javax.annotation.Nullable
@@ -159,7 +159,7 @@ public class OCRSettingsDetectRegions {
   }
 
    /**
-   * Get makeUpsampling
+   * Option to enable image up-sampling algorithm to improve quality. True by default
    * @return makeUpsampling
   **/
   @javax.annotation.Nullable
@@ -225,7 +225,7 @@ public class OCRSettingsDetectRegions {
   }
 
    /**
-   * Get rotate
+   * Rotate image&gt;
    * @return rotate
   **/
   @javax.annotation.Nullable
@@ -269,7 +269,7 @@ public class OCRSettingsDetectRegions {
   }
 
    /**
-   * Get makeBinarization
+   * Option to enable image binarization algorithm. False by default
    * @return makeBinarization
   **/
   @javax.annotation.Nullable
@@ -365,7 +365,7 @@ public class OCRSettingsDetectRegions {
   }
 
    /**
-   * Get regions
+   * Region on image to recognize in specific format. Aspose.Ocr.Cloud.Public.OCRRegion
    * @return regions
   **/
   @javax.annotation.Nullable

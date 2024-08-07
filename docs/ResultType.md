@@ -21,5 +21,7 @@
 
 * `IMAGEPNG` (value: `"ImagePNG"`)
 
+* `JSON` (value: `"JSON"`)
+
 
 

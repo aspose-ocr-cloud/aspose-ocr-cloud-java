@@ -46,9 +46,9 @@ import java.util.Set;
 import Aspose.OCR.Cloud.SDK.JSON;
 
 /**
- * TTSBodyDeprecated
+ * Represents input text data with settings
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-22T01:04:00.512+03:00[GMT+03:00]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-08-06T10:43:51.724963500+03:00[GMT+03:00]")
 public class TTSBodyDeprecated {
   public static final String SERIALIZED_NAME_TEXT = "text";
   @SerializedName(SERIALIZED_NAME_TEXT)
@@ -72,7 +72,7 @@ public class TTSBodyDeprecated {
   }
 
    /**
-   * Get text
+   * Gets or Sets text
    * @return text
   **/
   @javax.annotation.Nonnull

@@ -82,7 +82,7 @@ public class ImageProcessingApi {
 
     /**
      * Build call for getResultFile
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -158,7 +158,7 @@ public class ImageProcessingApi {
     /**
      * GetResultFile
      * 
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -178,7 +178,7 @@ public class ImageProcessingApi {
     /**
      * GetResultFile
      * 
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -199,7 +199,7 @@ public class ImageProcessingApi {
     /**
      * GetResultFile (asynchronously)
      * 
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -221,7 +221,7 @@ public class ImageProcessingApi {
     }
     /**
      * Build call for getResultTask
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -296,7 +296,7 @@ public class ImageProcessingApi {
     /**
      * GetResultTask
      * 
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @return OCRResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -315,7 +315,7 @@ public class ImageProcessingApi {
     /**
      * GetResultTask
      * 
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @return ApiResponse&lt;OCRResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -335,7 +335,7 @@ public class ImageProcessingApi {
     /**
      * GetResultTask (asynchronously)
      * 
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

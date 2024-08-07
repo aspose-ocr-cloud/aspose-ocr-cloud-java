@@ -55,7 +55,7 @@ import Aspose.OCR.Cloud.SDK.JSON;
 /**
  * OCR Process setting for Receipt scan image recognition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-22T01:04:00.512+03:00[GMT+03:00]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-08-06T10:43:51.724963500+03:00[GMT+03:00]")
 public class OCRSettingsRecognizeReceipt {
   public static final String SERIALIZED_NAME_LANGUAGE = "language";
   @SerializedName(SERIALIZED_NAME_LANGUAGE)
@@ -205,7 +205,7 @@ public class OCRSettingsRecognizeReceipt {
   }
 
    /**
-   * Get rotate
+   * Rotate image&gt;
    * @return rotate
   **/
   @javax.annotation.Nullable
@@ -227,7 +227,7 @@ public class OCRSettingsRecognizeReceipt {
   }
 
    /**
-   * Get makeBinarization
+   * Option to enable image binarization algorithm. False by default
    * @return makeBinarization
   **/
   @javax.annotation.Nullable
@@ -367,7 +367,7 @@ public class OCRSettingsRecognizeReceipt {
   }
 
    /**
-   * Get regions
+   * Region on image to recognize in specific format. Aspose.Ocr.Cloud.Public.OCRRegion
    * @return regions
   **/
   @javax.annotation.Nullable

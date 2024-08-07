@@ -45,9 +45,9 @@ import java.util.Set;
 import Aspose.OCR.Cloud.SDK.JSON;
 
 /**
- * OCRRecognizeLabelBody
+ * Combines Image data and OCR Recognition settings
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-22T01:04:00.512+03:00[GMT+03:00]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-08-06T10:43:51.724963500+03:00[GMT+03:00]")
 public class OCRRecognizeLabelBody {
   public static final String SERIALIZED_NAME_IMAGE = "image";
   @SerializedName(SERIALIZED_NAME_IMAGE)
@@ -67,7 +67,7 @@ public class OCRRecognizeLabelBody {
   }
 
    /**
-   * Get image
+   * Gets or Sets Image
    * @return image
   **/
   @javax.annotation.Nonnull

@@ -24,7 +24,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Option that sets the recognition result type or combination of some types: Text, Searchable PDF, HOCR
+ * Option that sets the text detection mode
  */
 @JsonAdapter(DsrMode.Adapter.class)
 public enum DsrMode {
@@ -41,7 +41,9 @@ public enum DsrMode {
   
   DSRPLUSDETECTOR("DsrPlusDetector"),
   
-  POLYGONALTEXTDETECTOR("PolygonalTextDetector");
+  POLYGONALTEXTDETECTOR("PolygonalTextDetector"),
+  
+  LINEDETECTOR("LineDetector");
 
   private String value;
 

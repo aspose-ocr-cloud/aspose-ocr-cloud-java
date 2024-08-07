@@ -2,7 +2,7 @@ lazy val root = (project in file(".")).
   settings(
     organization := "com.aspose",
     name := "aspose-ocr-cloud",
-    version := "23.12.0",
+    version := "24.8.0",
     scalaVersion := "2.11.4",
     scalacOptions ++= Seq("-feature"),
     javacOptions in compile ++= Seq("-Xlint:deprecation"),

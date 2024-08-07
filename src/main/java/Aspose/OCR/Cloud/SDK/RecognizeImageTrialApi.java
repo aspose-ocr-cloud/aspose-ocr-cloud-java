@@ -202,7 +202,7 @@ public class RecognizeImageTrialApi {
     }
     /**
      * Build call for getRecognizeImageTrial
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -274,7 +274,7 @@ public class RecognizeImageTrialApi {
     /**
      * GetRecognizeImageTrial
      * 
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @return OCRResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -291,7 +291,7 @@ public class RecognizeImageTrialApi {
     /**
      * GetRecognizeImageTrial
      * 
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @return ApiResponse&lt;OCRResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -309,7 +309,7 @@ public class RecognizeImageTrialApi {
     /**
      * GetRecognizeImageTrial (asynchronously)
      * 
-     * @param id  (required)
+     * @param id Task id to select the result (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -468,6 +468,4 @@ public class RecognizeImageTrialApi {
   }
 
 }
-
-
 
