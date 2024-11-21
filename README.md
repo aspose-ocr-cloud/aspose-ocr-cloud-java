@@ -20,6 +20,46 @@ Aspose.OCR Cloud SDK for .NET is open source under the MIT license. You can free
 
 A summary of recent changes, enhancements and bug fixes in **Aspose.OCR Cloud SDK for Java 24.11.0** release:
 
+Key | Summary | Category
+--- | ------- | --------
+OCR-3977 | Added recognition of the Uyghur language, including mixed Uyghur/English texts. | New feature
+OCR-3978 | Added recognition of the Telugu language, including mixed Telugu/English texts. | New feature
+OCR-3979 | Added recognition of the Kannada language, including mixed Kannada/English texts. | New feature
+OCR-3980 | Added recognition of the Tamil language, including mixed Tamil/English texts. | New feature
+OCR-3985 | Added recognition of the Devanagari-based scripts, including mixed Devanagari/English texts. | New feature
+OCR-3986 | Added support for mixed Arabic/English texts. | Enhancement
+OCR-3984 | Added support for mixed Japanese/English texts. | Enhancement
+OCR-3983 | Added support for mixed Korean/English texts. | Enhancement
+OCR-3982 | Added support for mixed Chinese/English texts. | Enhancement
+OCR-3987 | Added support for mixed Persian/English texts. | Enhancement
+
+REST API changes: https://releases.aspose.cloud/ocr/release-notes/2024/aspose-ocr-cloud-24-11-0-release-notes/
+
+#### New recognition languages
+
+The following recognition languages have been added:
+
+Script     | REST API
+---------- | --------
+Uyghur     | `Language.Uyghur`
+Telugu     | `Language.Telugu`
+Kannada    | `Language.Kannada`
+Tamil      | `Language.Tamil`
+Devanagari-based languages | `Language.Devanagari`
+
+
+All of the OCR languages mentioned above also support the recognition of mixed texts, including those with Latin characters.
+
+### Mixed language support
+
+Aspose.OCR Cloud now supports the recognition of texts which include both native and Latin characters for the following languages:
+
+- Arabic (`Language.Arabic`)
+- Chinese (`Language.Chinese`)
+- Japanese (`Language.Japanese`)
+- Korean (`Language.Korean`)
+- Persian (`Language.Persian`)
+
 
 #### Updated public APIs:
 
