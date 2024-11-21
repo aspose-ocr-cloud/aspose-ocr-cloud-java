@@ -13,7 +13,7 @@
 
 * `ERROR` (value: `"Error"`)
 
-* `NOTEXIST` (value: `"NotExist"`)
+* `NOT_EXIST` (value: `"NotExist"`)
 
 
 

@@ -303,5 +303,15 @@
 
 * `MEWARI` (value: `"Mewari"`)
 
+* `UYGHUR` (value: `"Uyghur"`)
+
+* `TELUGU` (value: `"Telugu"`)
+
+* `KANNADA` (value: `"Kannada"`)
+
+* `TAMIL` (value: `"Tamil"`)
+
+* `DEVANAGARI` (value: `"Devanagari"`)
+
 
 

@@ -37,7 +37,7 @@ public enum TTSTaskStatus {
   
   ERROR("Error"),
   
-  NOTEXIST("NotExist");
+  NOT_EXIST("NotExist");
 
   private String value;
 

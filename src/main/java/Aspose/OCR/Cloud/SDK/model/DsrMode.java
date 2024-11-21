@@ -31,19 +31,19 @@ public enum DsrMode {
   
   REGIONS("Regions"),
   
-  DSRNOFILTER("DsrNoFilter"),
+  DSR_NO_FILTER("DsrNoFilter"),
   
-  DSRANDFILTER("DsrAndFilter"),
+  DSR_AND_FILTER("DsrAndFilter"),
   
-  NODSRNOFILTER("NoDsrNoFilter"),
+  NO_DSR_NO_FILTER("NoDsrNoFilter"),
   
-  TEXTDETECTOR("TextDetector"),
+  TEXT_DETECTOR("TextDetector"),
   
-  DSRPLUSDETECTOR("DsrPlusDetector"),
+  DSR_PLUS_DETECTOR("DsrPlusDetector"),
   
-  POLYGONALTEXTDETECTOR("PolygonalTextDetector"),
+  POLYGONAL_TEXT_DETECTOR("PolygonalTextDetector"),
   
-  LINEDETECTOR("LineDetector");
+  LINE_DETECTOR("LineDetector");
 
   private String value;
 

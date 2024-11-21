@@ -9,11 +9,11 @@
 
 * `LOW` (value: `"Low"`)
 
-* `LOWMID` (value: `"LowMid"`)
+* `LOW_MID` (value: `"LowMid"`)
 
 * `MID` (value: `"Mid"`)
 
-* `MIDHIGH` (value: `"MidHigh"`)
+* `MID_HIGH` (value: `"MidHigh"`)
 
 * `HIGH` (value: `"High"`)
 

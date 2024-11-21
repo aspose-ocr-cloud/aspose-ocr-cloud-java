@@ -9,17 +9,17 @@
 
 * `PDF` (value: `"Pdf"`)
 
-* `TEXTANDPDF` (value: `"TextAndPdf"`)
+* `TEXT_AND_PDF` (value: `"TextAndPdf"`)
 
 * `HOCR` (value: `"Hocr"`)
 
-* `TEXTANDHOCR` (value: `"TextAndHocr"`)
+* `TEXT_AND_HOCR` (value: `"TextAndHocr"`)
 
-* `PDFANDHOCR` (value: `"PdfAndHocr"`)
+* `PDF_AND_HOCR` (value: `"PdfAndHocr"`)
 
-* `TEXTANDPDFANDHOCR` (value: `"TextAndPdfAndHocr"`)
+* `TEXT_AND_PDF_AND_HOCR` (value: `"TextAndPdfAndHocr"`)
 
-* `IMAGEPNG` (value: `"ImagePNG"`)
+* `IMAGE_PNG` (value: `"ImagePNG"`)
 
 * `JSON` (value: `"JSON"`)
 

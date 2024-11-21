@@ -33,11 +33,11 @@ public enum DsrConfidence {
   
   LOW("Low"),
   
-  LOWMID("LowMid"),
+  LOW_MID("LowMid"),
   
   MID("Mid"),
   
-  MIDHIGH("MidHigh"),
+  MID_HIGH("MidHigh"),
   
   HIGH("High"),
   

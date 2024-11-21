@@ -33,17 +33,17 @@ public enum ResultType {
   
   PDF("Pdf"),
   
-  TEXTANDPDF("TextAndPdf"),
+  TEXT_AND_PDF("TextAndPdf"),
   
   HOCR("Hocr"),
   
-  TEXTANDHOCR("TextAndHocr"),
+  TEXT_AND_HOCR("TextAndHocr"),
   
-  PDFANDHOCR("PdfAndHocr"),
+  PDF_AND_HOCR("PdfAndHocr"),
   
-  TEXTANDPDFANDHOCR("TextAndPdfAndHocr"),
+  TEXT_AND_PDF_AND_HOCR("TextAndPdfAndHocr"),
   
-  IMAGEPNG("ImagePNG"),
+  IMAGE_PNG("ImagePNG"),
   
   JSON("JSON");
 

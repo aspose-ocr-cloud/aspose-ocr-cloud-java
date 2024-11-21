@@ -33,7 +33,8 @@ paths:
       summary: CancelBinarizeImage
       tags:
       - BinarizeImage
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     get:
       operationId: GetBinarizeImage
       parameters:
@@ -55,7 +56,8 @@ paths:
       summary: GetBinarizeImage
       tags:
       - BinarizeImage
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     post:
       operationId: PostBinarizeImage
       requestBody:
@@ -81,7 +83,8 @@ paths:
       tags:
       - BinarizeImage
       x-content-type: application/json
-      x-accepts: text/plain
+      x-accepts:
+      - text/plain
   /v5.0/ocr/ConvertTextToSpeech:
     delete:
       operationId: CancelConvertTextToSpeech
@@ -100,7 +103,8 @@ paths:
       summary: CancelConvertTextToSpeech
       tags:
       - ConvertTextToSpeech
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     get:
       operationId: GetConvertTextToSpeech
       parameters:
@@ -128,7 +132,8 @@ paths:
       summary: GetConvertTextToSpeech
       tags:
       - ConvertTextToSpeech
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     post:
       operationId: PostConvertTextToSpeech
       requestBody:
@@ -155,7 +160,8 @@ paths:
       tags:
       - ConvertTextToSpeech
       x-content-type: application/json
-      x-accepts: text/plain
+      x-accepts:
+      - text/plain
   /v5.0/ocr/ConvertTextToSpeechTrial:
     delete:
       operationId: CancelConvertTextToSpeechTrial
@@ -174,7 +180,8 @@ paths:
       summary: CancelConvertTextToSpeechTrial
       tags:
       - ConvertTextToSpeechTrial
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     get:
       operationId: GetConvertTextToSpeechTrial
       parameters:
@@ -196,7 +203,8 @@ paths:
       summary: GetConvertTextToSpeechTrial
       tags:
       - ConvertTextToSpeechTrial
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     post:
       operationId: PostConvertTextToSpeechTrial
       requestBody:
@@ -217,7 +225,8 @@ paths:
       tags:
       - ConvertTextToSpeechTrial
       x-content-type: application/json
-      x-accepts: text/plain
+      x-accepts:
+      - text/plain
   /v5.0/ocr/DeskewImage:
     delete:
       operationId: CancelDeskewImage
@@ -236,7 +245,8 @@ paths:
       summary: CancelDeskewImage
       tags:
       - DeskewImage
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     get:
       operationId: GetDeskewImage
       parameters:
@@ -258,7 +268,8 @@ paths:
       summary: GetDeskewImage
       tags:
       - DeskewImage
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     post:
       operationId: PostDeskewImage
       requestBody:
@@ -284,7 +295,8 @@ paths:
       tags:
       - DeskewImage
       x-content-type: application/json
-      x-accepts: text/plain
+      x-accepts:
+      - text/plain
   /v5.0/ocr/DetectRegions:
     delete:
       operationId: CancelDetectRegions
@@ -303,7 +315,8 @@ paths:
       summary: CancelDetectRegions
       tags:
       - DetectRegions
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     get:
       operationId: GetDetectRegions
       parameters:
@@ -325,7 +338,8 @@ paths:
       summary: GetDetectRegions
       tags:
       - DetectRegions
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     post:
       operationId: PostDetectRegions
       requestBody:
@@ -351,7 +365,8 @@ paths:
       tags:
       - DetectRegions
       x-content-type: application/json
-      x-accepts: text/plain
+      x-accepts:
+      - text/plain
   /v5.0/ocr/DewarpImage:
     delete:
       operationId: CancelDewarpImage
@@ -370,7 +385,8 @@ paths:
       summary: CancelDewarpImage
       tags:
       - DewarpImage
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     get:
       operationId: GetDewarpImage
       parameters:
@@ -392,7 +408,8 @@ paths:
       summary: GetDewarpImage
       tags:
       - DewarpImage
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     post:
       operationId: PostDewarpImage
       requestBody:
@@ -418,7 +435,8 @@ paths:
       tags:
       - DewarpImage
       x-content-type: application/json
-      x-accepts: text/plain
+      x-accepts:
+      - text/plain
   /v5.0/ocr/DjVu2PDF:
     delete:
       operationId: CancelDjVu2PDF
@@ -437,7 +455,8 @@ paths:
       summary: CancelDjVu2PDF
       tags:
       - DjVu2PDF
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     get:
       operationId: GetDjVu2PDF
       parameters:
@@ -459,7 +478,8 @@ paths:
       summary: GetDjVu2PDF
       tags:
       - DjVu2PDF
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     post:
       operationId: PostDjVu2PDF
       requestBody:
@@ -485,7 +505,8 @@ paths:
       tags:
       - DjVu2PDF
       x-content-type: application/json
-      x-accepts: text/plain
+      x-accepts:
+      - text/plain
   /v5.0/ocr/IdentifyFont:
     delete:
       operationId: CancelIdentifyFont
@@ -504,7 +525,8 @@ paths:
       summary: CancelIdentifyFont
       tags:
       - IdentifyFont
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     get:
       operationId: GetIdentifyFont
       parameters:
@@ -526,7 +548,8 @@ paths:
       summary: GetIdentifyFont
       tags:
       - IdentifyFont
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     post:
       operationId: PostIdentifyFont
       requestBody:
@@ -546,7 +569,8 @@ paths:
       tags:
       - IdentifyFont
       x-content-type: application/json
-      x-accepts: text/plain
+      x-accepts:
+      - text/plain
   /v5.0/ocr/ImageProcessing/PostUpsamplingImageFile:
     post:
       deprecated: true
@@ -576,7 +600,8 @@ paths:
       tags:
       - ImageProcessing
       x-content-type: multipart/form-data
-      x-accepts: text/plain
+      x-accepts:
+      - text/plain
   /v5.0/ocr/ImageProcessing/PostBinarizationFile:
     post:
       deprecated: true
@@ -606,7 +631,8 @@ paths:
       tags:
       - ImageProcessing
       x-content-type: multipart/form-data
-      x-accepts: text/plain
+      x-accepts:
+      - text/plain
   /v5.0/ocr/ImageProcessing/PostSkewCorrectionFile:
     post:
       deprecated: true
@@ -636,7 +662,8 @@ paths:
       tags:
       - ImageProcessing
       x-content-type: multipart/form-data
-      x-accepts: text/plain
+      x-accepts:
+      - text/plain
   /v5.0/ocr/ImageProcessing/PostDewarpingFile:
     post:
       deprecated: true
@@ -666,7 +693,8 @@ paths:
       tags:
       - ImageProcessing
       x-content-type: multipart/form-data
-      x-accepts: text/plain
+      x-accepts:
+      - text/plain
   /v5.0/ocr/ImageProcessing/GetResultTask:
     get:
       deprecated: true
@@ -690,7 +718,8 @@ paths:
       summary: GetResultTask
       tags:
       - ImageProcessing
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /v5.0/ocr/ImageProcessing/GetResultFile:
     get:
       deprecated: true
@@ -720,7 +749,8 @@ paths:
       summary: GetResultFile
       tags:
       - ImageProcessing
-      x-accepts: image/png
+      x-accepts:
+      - image/png
   /v5.0/ocr/RecognizeAndParseInvoice:
     delete:
       operationId: CancelRecognizeAndParseInvoice
@@ -739,7 +769,8 @@ paths:
       summary: CancelRecognizeAndParseInvoice
       tags:
       - RecognizeAndParseInvoice
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     get:
       operationId: GetRecognizeAndParseInvoice
       parameters:
@@ -761,7 +792,8 @@ paths:
       summary: GetRecognizeAndParseInvoice
       tags:
       - RecognizeAndParseInvoice
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     post:
       operationId: PostRecognizeAndParseInvoice
       requestBody:
@@ -787,7 +819,8 @@ paths:
       tags:
       - RecognizeAndParseInvoice
       x-content-type: application/json
-      x-accepts: text/plain
+      x-accepts:
+      - text/plain
   /v5.0/ocr/RecognizeImage:
     delete:
       operationId: CancelRecognizeImage
@@ -806,7 +839,8 @@ paths:
       summary: CancelRecognizeImage
       tags:
       - RecognizeImage
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     get:
       operationId: GetRecognizeImage
       parameters:
@@ -828,7 +862,8 @@ paths:
       summary: GetRecognizeImage
       tags:
       - RecognizeImage
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     post:
       operationId: PostRecognizeImage
       requestBody:
@@ -854,7 +889,8 @@ paths:
       tags:
       - RecognizeImage
       x-content-type: application/json
-      x-accepts: text/plain
+      x-accepts:
+      - text/plain
   /v5.0/ocr/RecognizeImageTrial:
     delete:
       operationId: CancelRecognizeImageTrial
@@ -873,7 +909,8 @@ paths:
       summary: CancelRecognizeImageTrial
       tags:
       - RecognizeImageTrial
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     get:
       operationId: GetRecognizeImageTrial
       parameters:
@@ -895,7 +932,8 @@ paths:
       summary: GetRecognizeImageTrial
       tags:
       - RecognizeImageTrial
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     post:
       operationId: PostRecognizeImageTrial
       requestBody:
@@ -915,7 +953,8 @@ paths:
       tags:
       - RecognizeImageTrial
       x-content-type: application/json
-      x-accepts: text/plain
+      x-accepts:
+      - text/plain
   /v5.0/ocr/RecognizeLabel:
     delete:
       operationId: CancelRecognizeLabel
@@ -934,7 +973,8 @@ paths:
       summary: CancelRecognizeLabel
       tags:
       - RecognizeLabel
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     get:
       operationId: GetRecognizeLabel
       parameters:
@@ -956,7 +996,8 @@ paths:
       summary: GetRecognizeLabel
       tags:
       - RecognizeLabel
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     post:
       operationId: PostRecognizeLabel
       requestBody:
@@ -982,7 +1023,8 @@ paths:
       tags:
       - RecognizeLabel
       x-content-type: application/json
-      x-accepts: text/plain
+      x-accepts:
+      - text/plain
   /v5.0/ocr/RecognizePdf:
     delete:
       operationId: CancelRecognizePdf
@@ -1001,7 +1043,8 @@ paths:
       summary: CancelRecognizePdf
       tags:
       - RecognizePdf
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     get:
       operationId: GetRecognizePdf
       parameters:
@@ -1023,7 +1066,8 @@ paths:
       summary: GetRecognizePdf
       tags:
       - RecognizePdf
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     post:
       operationId: PostRecognizePdf
       requestBody:
@@ -1049,7 +1093,8 @@ paths:
       tags:
       - RecognizePdf
       x-content-type: application/json
-      x-accepts: text/plain
+      x-accepts:
+      - text/plain
   /v5.0/ocr/RecognizeReceipt:
     delete:
       operationId: CancelRecognizeReceipt
@@ -1068,7 +1113,8 @@ paths:
       summary: CancelRecognizeReceipt
       tags:
       - RecognizeReceipt
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     get:
       operationId: GetRecognizeReceipt
       parameters:
@@ -1090,7 +1136,8 @@ paths:
       summary: GetRecognizeReceipt
       tags:
       - RecognizeReceipt
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     post:
       operationId: PostRecognizeReceipt
       requestBody:
@@ -1116,7 +1163,8 @@ paths:
       tags:
       - RecognizeReceipt
       x-content-type: application/json
-      x-accepts: text/plain
+      x-accepts:
+      - text/plain
   /v5.0/ocr/RecognizeRegions:
     delete:
       operationId: CancelRecognizeRegions
@@ -1135,7 +1183,8 @@ paths:
       summary: CancelRecognizeRegions
       tags:
       - RecognizeRegions
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     get:
       operationId: GetRecognizeRegions
       parameters:
@@ -1157,7 +1206,8 @@ paths:
       summary: GetRecognizeRegions
       tags:
       - RecognizeRegions
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     post:
       operationId: PostRecognizeRegions
       requestBody:
@@ -1183,7 +1233,8 @@ paths:
       tags:
       - RecognizeRegions
       x-content-type: application/json
-      x-accepts: text/plain
+      x-accepts:
+      - text/plain
   /v5.0/ocr/RecognizeTable:
     delete:
       operationId: CancelRecognizeTable
@@ -1202,7 +1253,8 @@ paths:
       summary: CancelRecognizeTable
       tags:
       - RecognizeTable
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     get:
       operationId: GetRecognizeTable
       parameters:
@@ -1224,7 +1276,8 @@ paths:
       summary: GetRecognizeTable
       tags:
       - RecognizeTable
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     post:
       operationId: PostRecognizeTable
       requestBody:
@@ -1250,7 +1303,8 @@ paths:
       tags:
       - RecognizeTable
       x-content-type: application/json
-      x-accepts: text/plain
+      x-accepts:
+      - text/plain
   /v5.0/ocr/TextToSpeech/PostTextToSpeech:
     post:
       deprecated: true
@@ -1279,7 +1333,8 @@ paths:
       tags:
       - TextToSpeech
       x-content-type: application/json
-      x-accepts: text/plain
+      x-accepts:
+      - text/plain
   /v5.0/ocr/TextToSpeech/GetTextToSpeechResult:
     get:
       deprecated: true
@@ -1303,7 +1358,8 @@ paths:
       summary: GetTextToSpeechResult
       tags:
       - TextToSpeech
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /v5.0/ocr/TextToSpeech/GetTextToSpeechResultFile:
     get:
       deprecated: true
@@ -1333,7 +1389,8 @@ paths:
       summary: GetTextToSpeechResultFile
       tags:
       - TextToSpeech
-      x-accepts: application/octet-stream
+      x-accepts:
+      - application/octet-stream
   /v5.0/ocr/UpscaleImage:
     delete:
       operationId: CancelUpscaleImage
@@ -1352,7 +1409,8 @@ paths:
       summary: CancelUpscaleImage
       tags:
       - UpscaleImage
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     get:
       operationId: GetUpscaleImage
       parameters:
@@ -1374,7 +1432,8 @@ paths:
       summary: GetUpscaleImage
       tags:
       - UpscaleImage
-      x-accepts: application/json
+      x-accepts:
+      - application/json
     post:
       operationId: PostUpscaleImage
       requestBody:
@@ -1400,7 +1459,8 @@ paths:
       tags:
       - UpscaleImage
       x-content-type: application/json
-      x-accepts: text/plain
+      x-accepts:
+      - text/plain
   /v5.0/ocr/Utilities/GetTaskStatus:
     get:
       operationId: GetTaskStatus
@@ -1429,7 +1489,10 @@ paths:
       summary: GetTaskStatus
       tags:
       - Utilities
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - text/json
+      - text/plain
 components:
   schemas:
     ActionResult:
@@ -1612,6 +1675,11 @@ components:
       - Wagdi
       - Malvi
       - Mewari
+      - Uyghur
+      - Telugu
+      - Kannada
+      - Tamil
+      - Devanagari
       type: string
     LanguageTTS:
       description: Text-to-speech target language
@@ -1651,7 +1719,7 @@ components:
         image: image
         settings:
           makeBinarization: true
-          dsrMode: null
+          dsrMode: Regions
           makeUpsampling: false
           makeContrastCorrection: false
           regions:
@@ -1669,11 +1737,11 @@ components:
             order: 2
           Rotate: 0
           makeSkewCorrect: true
-          language: null
+          language: English
           makeSpellCheck: false
-          resultType: null
-          dsrConfidence: null
-          resultTypeTable: null
+          resultType: Text
+          dsrConfidence: Default
+          resultTypeTable: Text
       properties:
         image:
           description: Gets or Sets Image
@@ -1705,7 +1773,7 @@ components:
         image: image
         settings:
           makeBinarization: true
-          dsrMode: null
+          dsrMode: Regions
           makeUpsampling: false
           makeContrastCorrection: false
           regions:
@@ -1723,11 +1791,11 @@ components:
             order: 2
           Rotate: 0
           makeSkewCorrect: true
-          language: null
+          language: English
           makeSpellCheck: false
-          resultType: null
-          dsrConfidence: null
-          resultTypeTable: null
+          resultType: Text
+          dsrConfidence: Default
+          resultTypeTable: Text
       properties:
         image:
           description: Gets or Sets Image
@@ -1773,7 +1841,7 @@ components:
         image: image
         settings:
           makeBinarization: false
-          dsrMode: null
+          dsrMode: Regions
           makeUpsampling: false
           makeContrastCorrection: false
           regions:
@@ -1791,11 +1859,11 @@ components:
             order: 2
           Rotate: 0
           makeSkewCorrect: false
-          language: null
-          resultType: null
+          language: English
+          resultType: Text
           makeSpellCheck: false
-          dsrConfidence: null
-          resultTypeTable: null
+          dsrConfidence: Default
+          resultTypeTable: Text
       properties:
         image:
           description: Gets or Sets Image
@@ -1814,7 +1882,7 @@ components:
         image: image
         settings:
           makeBinarization: true
-          dsrMode: null
+          dsrMode: Regions
           makeUpsampling: false
           makeContrastCorrection: false
           regions:
@@ -1832,11 +1900,11 @@ components:
             order: 2
           Rotate: 0
           makeSkewCorrect: true
-          language: null
+          language: English
           makeSpellCheck: false
-          resultType: null
-          dsrConfidence: null
-          resultTypeTable: null
+          resultType: Text
+          dsrConfidence: Default
+          resultTypeTable: Text
       properties:
         image:
           description: Gets or Sets Image
@@ -1855,7 +1923,7 @@ components:
         image: image
         settings:
           makeBinarization: false
-          dsrMode: null
+          dsrMode: Regions
           makeUpsampling: false
           makeContrastCorrection: false
           regions:
@@ -1873,11 +1941,11 @@ components:
             order: 2
           Rotate: 0
           makeSkewCorrect: true
-          language: null
+          language: English
           makeSpellCheck: false
-          resultType: null
-          dsrConfidence: null
-          resultTypeTable: null
+          resultType: Text
+          dsrConfidence: Default
+          resultTypeTable: Text
       properties:
         image:
           description: Gets or Sets Image
@@ -1896,7 +1964,7 @@ components:
         image: image
         settings:
           makeBinarization: false
-          dsrMode: null
+          dsrMode: Regions
           makeUpsampling: false
           makeContrastCorrection: false
           regions:
@@ -1914,11 +1982,11 @@ components:
             order: 2
           Rotate: 0
           makeSkewCorrect: false
-          language: null
+          language: English
           makeSpellCheck: false
-          resultType: null
-          dsrConfidence: null
-          resultTypeTable: null
+          resultType: Text
+          dsrConfidence: Default
+          resultTypeTable: Text
       properties:
         image:
           description: Gets or Sets Image
@@ -1937,7 +2005,7 @@ components:
         image: image
         settings:
           makeBinarization: true
-          dsrMode: null
+          dsrMode: Regions
           makeUpsampling: false
           makeContrastCorrection: false
           regions:
@@ -1955,11 +2023,11 @@ components:
             order: 2
           Rotate: 0
           makeSkewCorrect: true
-          language: null
+          language: English
           makeSpellCheck: false
-          resultType: null
-          dsrConfidence: null
-          resultTypeTable: null
+          resultType: Text
+          dsrConfidence: Default
+          resultTypeTable: Text
       properties:
         image:
           description: Gets or Sets Image
@@ -1978,7 +2046,7 @@ components:
         image: image
         settings:
           makeBinarization: true
-          dsrMode: null
+          dsrMode: Regions
           makeUpsampling: false
           makeContrastCorrection: false
           regions:
@@ -1996,11 +2064,11 @@ components:
             order: 2
           Rotate: 0
           makeSkewCorrect: true
-          language: null
+          language: English
           makeSpellCheck: false
-          resultType: null
-          dsrConfidence: null
-          resultTypeTable: null
+          resultType: Text
+          dsrConfidence: Default
+          resultTypeTable: Text
       properties:
         image:
           description: Gets or Sets Image
@@ -2019,7 +2087,7 @@ components:
         image: image
         settings:
           makeBinarization: true
-          dsrMode: null
+          dsrMode: Regions
           makeUpsampling: false
           makeContrastCorrection: false
           regions:
@@ -2037,11 +2105,11 @@ components:
             order: 2
           Rotate: 0
           makeSkewCorrect: true
-          language: null
+          language: English
           makeSpellCheck: false
-          resultType: null
-          dsrConfidence: null
-          resultTypeTable: null
+          resultType: Text
+          dsrConfidence: Default
+          resultTypeTable: Text
       properties:
         image:
           description: Gets or Sets Image
@@ -2060,7 +2128,7 @@ components:
         image: image
         settings:
           makeBinarization: true
-          dsrMode: null
+          dsrMode: Regions
           makeUpsampling: false
           makeContrastCorrection: false
           regions:
@@ -2078,11 +2146,11 @@ components:
             order: 2
           Rotate: 0
           makeSkewCorrect: true
-          language: null
+          language: English
           makeSpellCheck: false
-          resultType: null
-          resultTypeTable: null
-          dsrConfidence: null
+          resultType: Text
+          resultTypeTable: Text
+          dsrConfidence: Default
       properties:
         image:
           description: Gets or Sets Image
@@ -2142,7 +2210,7 @@ components:
       additionalProperties: false
       description: Response with Recognition result for specific task ID
       example:
-        responseStatusCode: null
+        responseStatusCode: Ok
         id: id
         error:
           warnings:
@@ -2156,7 +2224,7 @@ components:
           type: type
         - data: data
           type: type
-        taskStatus: null
+        taskStatus: Pending
       properties:
         id:
           description: The specific Task ID that result was made for
@@ -2198,7 +2266,7 @@ components:
       description: OCR Process setting for Image recognition
       example:
         makeBinarization: true
-        dsrMode: null
+        dsrMode: Regions
         makeUpsampling: false
         makeContrastCorrection: false
         regions:
@@ -2216,11 +2284,11 @@ components:
           order: 2
         Rotate: 0
         makeSkewCorrect: true
-        language: null
+        language: English
         makeSpellCheck: false
-        resultType: null
-        dsrConfidence: null
-        resultTypeTable: null
+        resultType: Text
+        dsrConfidence: Default
+        resultTypeTable: Text
       properties:
         makeSkewCorrect:
           default: true
@@ -2271,7 +2339,7 @@ components:
       description: OCR Process setting for Image recognition
       example:
         makeBinarization: true
-        dsrMode: null
+        dsrMode: Regions
         makeUpsampling: false
         makeContrastCorrection: false
         regions:
@@ -2289,11 +2357,11 @@ components:
           order: 2
         Rotate: 0
         makeSkewCorrect: true
-        language: null
+        language: English
         makeSpellCheck: false
-        resultType: null
-        dsrConfidence: null
-        resultTypeTable: null
+        resultType: Text
+        dsrConfidence: Default
+        resultTypeTable: Text
       properties:
         language:
           $ref: '#/components/schemas/Language'
@@ -2345,7 +2413,7 @@ components:
       description: OCR Process setting for Image recognition
       example:
         makeBinarization: false
-        dsrMode: null
+        dsrMode: Regions
         makeUpsampling: false
         makeContrastCorrection: false
         regions:
@@ -2363,11 +2431,11 @@ components:
           order: 2
         Rotate: 0
         makeSkewCorrect: false
-        language: null
-        resultType: null
+        language: English
+        resultType: Text
         makeSpellCheck: false
-        dsrConfidence: null
-        resultTypeTable: null
+        dsrConfidence: Default
+        resultTypeTable: Text
       properties:
         makeSkewCorrect:
           default: false
@@ -2419,7 +2487,7 @@ components:
       description: OCR Process setting for Font image recognition
       example:
         makeBinarization: true
-        dsrMode: null
+        dsrMode: Regions
         makeUpsampling: false
         makeContrastCorrection: false
         regions:
@@ -2437,11 +2505,11 @@ components:
           order: 2
         Rotate: 0
         makeSkewCorrect: true
-        language: null
+        language: English
         makeSpellCheck: false
-        resultType: null
-        dsrConfidence: null
-        resultTypeTable: null
+        resultType: Text
+        dsrConfidence: Default
+        resultTypeTable: Text
       properties:
         language:
           $ref: '#/components/schemas/Language'
@@ -2493,7 +2561,7 @@ components:
       description: OCR Process setting for Image recognition
       example:
         makeBinarization: false
-        dsrMode: null
+        dsrMode: Regions
         makeUpsampling: false
         makeContrastCorrection: false
         regions:
@@ -2511,11 +2579,11 @@ components:
           order: 2
         Rotate: 0
         makeSkewCorrect: true
-        language: null
+        language: English
         makeSpellCheck: false
-        resultType: null
-        dsrConfidence: null
-        resultTypeTable: null
+        resultType: Text
+        dsrConfidence: Default
+        resultTypeTable: Text
       properties:
         language:
           $ref: '#/components/schemas/Language'
@@ -2566,7 +2634,7 @@ components:
       description: OCR Process setting for Image recognition
       example:
         makeBinarization: false
-        dsrMode: null
+        dsrMode: Regions
         makeUpsampling: false
         makeContrastCorrection: false
         regions:
@@ -2584,11 +2652,11 @@ components:
           order: 2
         Rotate: 0
         makeSkewCorrect: false
-        language: null
+        language: English
         makeSpellCheck: false
-        resultType: null
-        dsrConfidence: null
-        resultTypeTable: null
+        resultType: Text
+        dsrConfidence: Default
+        resultTypeTable: Text
       properties:
         language:
           $ref: '#/components/schemas/Language'
@@ -2640,7 +2708,7 @@ components:
       description: OCR Process setting for Scanned multiple PDF document recognition
       example:
         makeBinarization: true
-        dsrMode: null
+        dsrMode: Regions
         makeUpsampling: false
         makeContrastCorrection: false
         regions:
@@ -2658,11 +2726,11 @@ components:
           order: 2
         Rotate: 0
         makeSkewCorrect: true
-        language: null
+        language: English
         makeSpellCheck: false
-        resultType: null
-        dsrConfidence: null
-        resultTypeTable: null
+        resultType: Text
+        dsrConfidence: Default
+        resultTypeTable: Text
       properties:
         language:
           $ref: '#/components/schemas/Language'
@@ -2714,7 +2782,7 @@ components:
       description: OCR Process setting for Receipt scan image recognition
       example:
         makeBinarization: true
-        dsrMode: null
+        dsrMode: Regions
         makeUpsampling: false
         makeContrastCorrection: false
         regions:
@@ -2732,11 +2800,11 @@ components:
           order: 2
         Rotate: 0
         makeSkewCorrect: true
-        language: null
+        language: English
         makeSpellCheck: false
-        resultType: null
-        dsrConfidence: null
-        resultTypeTable: null
+        resultType: Text
+        dsrConfidence: Default
+        resultTypeTable: Text
       properties:
         language:
           $ref: '#/components/schemas/Language'
@@ -2788,7 +2856,7 @@ components:
       description: OCR Process setting for Image recognition
       example:
         makeBinarization: true
-        dsrMode: null
+        dsrMode: Regions
         makeUpsampling: false
         makeContrastCorrection: false
         regions:
@@ -2806,11 +2874,11 @@ components:
           order: 2
         Rotate: 0
         makeSkewCorrect: true
-        language: null
+        language: English
         makeSpellCheck: false
-        resultType: null
-        dsrConfidence: null
-        resultTypeTable: null
+        resultType: Text
+        dsrConfidence: Default
+        resultTypeTable: Text
       properties:
         language:
           $ref: '#/components/schemas/Language'
@@ -2862,7 +2930,7 @@ components:
       description: OCR Process setting for Table image recognition
       example:
         makeBinarization: true
-        dsrMode: null
+        dsrMode: Regions
         makeUpsampling: false
         makeContrastCorrection: false
         regions:
@@ -2880,11 +2948,11 @@ components:
           order: 2
         Rotate: 0
         makeSkewCorrect: true
-        language: null
+        language: English
         makeSpellCheck: false
-        resultType: null
-        resultTypeTable: null
-        dsrConfidence: null
+        resultType: Text
+        resultTypeTable: Text
+        dsrConfidence: Default
       properties:
         language:
           $ref: '#/components/schemas/Language'
@@ -2955,6 +3023,12 @@ components:
       type: object
     ProblemDetails:
       additionalProperties: {}
+      example:
+        instance: instance
+        detail: detail
+        type: type
+        title: title
+        status: 0
       properties:
         type:
           nullable: true
@@ -3016,8 +3090,8 @@ components:
       description: Represents input text data with settings
       example:
         settings:
-          language: null
-          resultType: null
+          language: English
+          resultType: Wav
         text: text
       properties:
         text:
@@ -3034,9 +3108,9 @@ components:
       additionalProperties: false
       description: Represents input text data with settings
       example:
-        language: null
+        language: English
         text: text
-        resultType: null
+        resultType: Wav
       properties:
         text:
           description: Gets or Sets text
@@ -3082,7 +3156,7 @@ components:
       additionalProperties: false
       description: Response with Recognition result for specific task ID
       example:
-        responseStatusCode: null
+        responseStatusCode: Ok
         id: id
         error:
           warnings:
@@ -3096,7 +3170,7 @@ components:
           type: type
         - data: data
           type: type
-        taskStatus: null
+        taskStatus: Pending
       properties:
         id:
           description: The specific Task ID that result was made for
@@ -3137,8 +3211,8 @@ components:
       additionalProperties: false
       description: TTS setting
       example:
-        language: null
-        resultType: null
+        language: English
+        resultType: Wav
       properties:
         language:
           $ref: '#/components/schemas/LanguageTTS'

@@ -5,7 +5,7 @@
     <artifactId>aspose-ocr-cloud</artifactId>
     <packaging>jar</packaging>
     <name>aspose-ocr-cloud</name>
-    <version>24.8.0</version>
+    <version>24.11.0</version>
     <url>https://products.aspose.cloud/ocr/java</url>
     <description>Aspose cloud java SDK</description>
     <scm>
@@ -371,7 +371,7 @@
 		</repository>
     </repositories>
     
-    <distributionManagement>	        
+    <distributionManagement>       
         <repository>
             <id>aspose-cloud-s3-repo-ci</id>
             <url>s3://data.repository.aspose.cloud/java/repo/</url>

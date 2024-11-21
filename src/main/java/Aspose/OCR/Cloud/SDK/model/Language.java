@@ -325,7 +325,17 @@ public enum Language {
   
   MALVI("Malvi"),
   
-  MEWARI("Mewari");
+  MEWARI("Mewari"),
+  
+  UYGHUR("Uyghur"),
+  
+  TELUGU("Telugu"),
+  
+  KANNADA("Kannada"),
+  
+  TAMIL("Tamil"),
+  
+  DEVANAGARI("Devanagari");
 
   private String value;
 

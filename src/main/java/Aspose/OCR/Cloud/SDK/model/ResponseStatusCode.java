@@ -31,15 +31,15 @@ public enum ResponseStatusCode {
   
   OK("Ok"),
   
-  PARTIALLYNOTFOUND("PartiallyNotFound"),
+  PARTIALLY_NOT_FOUND("PartiallyNotFound"),
   
-  NOANYRESULTDATA("NoAnyResultData"),
+  NO_ANY_RESULT_DATA("NoAnyResultData"),
   
-  RESULTDATALOST("ResultDataLost"),
+  RESULT_DATA_LOST("ResultDataLost"),
   
-  TASKNOTFOUND("TaskNotFound"),
+  TASK_NOT_FOUND("TaskNotFound"),
   
-  NOTREADY("NotReady"),
+  NOT_READY("NotReady"),
   
   ERROR("Error");
 

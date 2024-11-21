@@ -7,19 +7,19 @@
 
 * `REGIONS` (value: `"Regions"`)
 
-* `DSRNOFILTER` (value: `"DsrNoFilter"`)
+* `DSR_NO_FILTER` (value: `"DsrNoFilter"`)
 
-* `DSRANDFILTER` (value: `"DsrAndFilter"`)
+* `DSR_AND_FILTER` (value: `"DsrAndFilter"`)
 
-* `NODSRNOFILTER` (value: `"NoDsrNoFilter"`)
+* `NO_DSR_NO_FILTER` (value: `"NoDsrNoFilter"`)
 
-* `TEXTDETECTOR` (value: `"TextDetector"`)
+* `TEXT_DETECTOR` (value: `"TextDetector"`)
 
-* `DSRPLUSDETECTOR` (value: `"DsrPlusDetector"`)
+* `DSR_PLUS_DETECTOR` (value: `"DsrPlusDetector"`)
 
-* `POLYGONALTEXTDETECTOR` (value: `"PolygonalTextDetector"`)
+* `POLYGONAL_TEXT_DETECTOR` (value: `"PolygonalTextDetector"`)
 
-* `LINEDETECTOR` (value: `"LineDetector"`)
+* `LINE_DETECTOR` (value: `"LineDetector"`)
 
 
 

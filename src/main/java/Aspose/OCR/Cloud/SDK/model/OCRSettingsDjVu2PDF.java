@@ -28,6 +28,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
 
@@ -55,7 +56,7 @@ import Aspose.OCR.Cloud.SDK.JSON;
 /**
  * OCR Process setting for Image recognition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-08-06T10:43:51.724963500+03:00[GMT+03:00]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-21T03:16:37.701975700+03:00[GMT+03:00]")
 public class OCRSettingsDjVu2PDF {
   public static final String SERIALIZED_NAME_LANGUAGE = "language";
   @SerializedName(SERIALIZED_NAME_LANGUAGE)
@@ -358,7 +359,7 @@ public class OCRSettingsDjVu2PDF {
     return this;
   }
 
-  public OCRSettingsDjVu2PDF addRegionsItem(OCRRegion regionsItem) {
+  public OCRSettingsDjVu2PDF addregionsItem(OCRRegion regionsItem) {
     if (this.regions == null) {
       this.regions = new ArrayList<OCRRegion>();
     }

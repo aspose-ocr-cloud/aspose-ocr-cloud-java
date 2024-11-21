@@ -37,7 +37,7 @@ public enum OCRTaskStatus {
   
   ERROR("Error"),
   
-  NOTEXIST("NotExist");
+  NOT_EXIST("NotExist");
 
   private String value;
 

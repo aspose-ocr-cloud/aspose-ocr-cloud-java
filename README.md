@@ -1,6 +1,7 @@
-# Aspose.OCR Cloud for Java SDK 24.8.0
+# Aspose.OCR Cloud for Java SDK 24.11.0
 
 [![License](https://img.shields.io/github/license/aspose-ocr-cloud/aspose-ocr-cloud-dotnet)](LICENSE)
+[![Nuget](https://img.shields.io/nuget/v/Aspose.OCR-Cloud)](https://www.nuget.org/packages/Aspose.OCR-Cloud/)
 
 [Aspose.OCR Cloud](https://products.aspose.cloud/ocr/) is an optical character recognition as a service. With it, you can easily add OCR functionality to almost any device or platform, including netbooks, mini PCs, or even entry-level smartphones.
 
@@ -15,191 +16,19 @@ Aspose.OCR Cloud SDK for .NET is open source under the MIT license. You can free
 :---: | :---: | :---:| :---:
 [![Scan Image](https://products.aspose.app/ocr/scan-image/img/ocr-recognize-48.png)](https://products.aspose.app/ocr/scan-image) | [![Image to Searchable PDF](https://products.aspose.app/ocr/scan-image/img/ocr-to-pdf-4-48.png)](https://products.aspose.app/ocr/ocr-to-pdf) | [![PDF OCR](https://products.aspose.app/ocr/scan-image/img/ocr-to-pdf-2-48.png)](https://products.aspose.app/ocr/pdf-ocr) | [![Receipt Scanner](https://products.aspose.app/ocr/scan-image/img/aspose-scan-receipt-48.png)](https://products.aspose.app/ocr/scan-receipt) 
 
-## What was changed in version 24.8.0
+## What was changed in version 24.11.0
 
-A summary of recent changes, enhancements and bug fixes in **Aspose.OCR Cloud SDK for Java 24.8.0** release:
+A summary of recent changes, enhancements and bug fixes in **Aspose.OCR Cloud SDK for Java 24.11.0** release:
 
-Key | Summary | Category
---- | ------- | --------
-OCR&#8209;3930 | Added support for 149 recognition languages. | Enhancement
-
-REST API changes: https://releases.aspose.cloud/ocr/release-notes/2024/aspose-ocr-cloud-24-8-0-release-notes/
-
-### Public API changes and backwards compatibility
-
-This section lists all public API changes introduced in **Aspose.OCR Cloud SDK for .NET 24.8.0** that may affect the code of existing applications.
-
-#### Added public APIs:
-
-_No changes._
 
 #### Updated public APIs:
 
-The following public APIs have been updated in this release:
-
-#### JSON result type
-
-{{% alert color="info" %}}
-**Compatibility: fully backward compatible.**
-{{% /alert %}}
-
-Aspose.OCR Cloud greatly expands the number of languages supported. We have added a total of 149 languages based on Latin, Cyrillic, Chinese and Indic scripts. By default, the text is considered to be in _English_.
-
-Language | Value
--------- | --------
-Afrikaans | `Language.Afrikaans`
-Albanian | `Language.Albanian`
-Arabic | `Language.Arabic`
-Awadhi | `Language.Awadhi`
-Azerbaijani | `Language.Azerbaijani`
-Belorussian | `Language.Belorussian`
-Bemba | `Language.Bemba`
-Bengali | `Language.Bengali`
-Betawi | `Language.Betawi`
-Bhojpuri | `Language.Bhojpuri`
-Bikol | `Language.Bikol`
-Bosnian | `Language.Bosnian`
-Bouyei | `Language.Bouyei`
-Bulgarian | `Language.Bulgarian`
-Cantonese | `Language.Cantonese`
-Catalan | `Language.Catalan`
-Cebuano | `Language.Cebuano`
-Chattisgarhi | `Language.Chattisgarhi`
-Chechen | `Language.Chechen`
-Chichewa | `Language.Chichewa`
-Chinese | `Language.Chinese`
-Croatian | `Language.Croatian`
-Czech | `Language.Czech`
-Danish | `Language.Danish`
-Dhundari | `Language.Dhundari`
-Dimli | `Language.Dimli`
-Dong | `Language.Dong`
-Dutch | `Language.Dutch`
-English | `Language.English`
-_Handwritten English_ | `Language.HWT_ENG`
-Estonian | `Language.Estonian`
-Finnish | `Language.Finnish`
-French | `Language.French`
-Galician | `Language.Galician`
-Gan | `Language.Gan`
-Garhwali | `Language.Garhwali`
-Georgian | `Language.Georgian`
-German | `Language.German`
-Gilaki | `Language.Gilaki`
-Greek | `Language.Greek`
-Gusii | `Language.Gusii`
-Hakka | `Language.Hakka`
-Haryanvi | `Language.Haryanvi`
-Hausa | `Language.Hausa`
-Hebrew | `Language.Hebrew`
-Hiligaynon | `Language.Hiligaynon`
-Hindi | `Language.Hindi`
-Hmong | `Language.Hmong`
-Hungarian | `Language.Hungarian`
-Ilocano | `Language.Ilocano`
-Indonesian | `Language.Indonesian`
-Italian | `Language.Italian`
-Japanese | `Language.Japanese`
-Javanese | `Language.Javanese`
-Kabardian | `Language.Kabardian`
-Kanauji | `Language.Kanauji`
-Kanuri | `Language.Kanuri`
-Kapampangan | `Language.Kapampangan`
-Kazah | `Language.Kazah`
-Kiche | `Language.Kiche`
-Kikongo | `Language.Kikongo`
-Konkani | `Language.Konkani`
-Korean | `Language.Korean`
-Kumauni | `Language.Kumauni`
-Kurdish | `Language.Kurdish`
-Lamani | `Language.Lamani`
-Latin | `Language.Latin`
-Latvian | `Language.Latvian`
-Lithuanian | `Language.Lithuanian`
-Low German | `Language.Low_German`
-Luguru | `Language.Luguru`
-Luo | `Language.Luo`
-Macedonian | `Language.Macedonian`
-Magahi | `Language.Magahi`
-Maithili | `Language.Maithili`
-Makassar | `Language.Makassar`
-Makua | `Language.Makua`
-Malagasy | `Language.Malagasy`
-Malay | `Language.Malay`
-Malvi | `Language.Malvi`
-Marathi | `Language.Marathi`
-Marwari | `Language.Marwari`
-Meru | `Language.Meru`
-Mewari | `Language.Mewari`
-Mewati | `Language.Mewati`
-Min Bei | `Language.Min_Bei`
-Min Dong | `Language.Min_Dong`
-Min Nan | `Language.Min_Nan`
-Minangkabau | `Language.Minangkabau`
-Muong | `Language.Muong`
-Musi | `Language.Musi`
-Nandi | `Language.Nandi`
-Ndebele | `Language.Ndebele`
-Nepali | `Language.Nepali`
-Netherlands | `Language.Netherlands`
-Norwegian | `Language.Norwegian`
-Occitan | `Language.Occitan`
-Oromo | `Language.Oromo`
-Palembang | `Language.Palembang`
-Pangasinan | `Language.Pangasinan`
-Persian | `Language.Persian`
-Polish | `Language.Polish`
-Portuguese | `Language.Portuguese`
-Pu-Xian | `Language.Pu_Xian`
-Quechua | `Language.Quechua`
-Rajbanshi | `Language.Rajbanshi`
-Romanian | `Language.Romanian`
-Russian | `Language.Russian`
-Rwanda | `Language.Rwanda`
-Sasak | `Language.Sasak`
-Serbian | `Language.Serbian`
-Serbo-Croatian | `Language.Serbo_Croatian`
-Serer-Sine | `Language.Serer_Sine`
-Shona | `Language.Shona`
-Slovak | `Language.Slovak`
-Slovene | `Language.Slovene`
-Somali | `Language.Somali`
-Sotho (Northern) | `Language.Sotho_Northern`
-Sotho (Southern) | `Language.Sotho_Southern`
-Spanish | `Language.Spanish`
-Sukuma | `Language.Sukuma`
-Sundanese | `Language.Sundanese`
-Swahili | `Language.Swahili`
-Swati | `Language.Swati`
-Swedish | `Language.Swedish`
-Tagalog | `Language.Tagalog`
-Thai | `Language.Thai`
-Tibetan | `Language.Tibetan`
-Tonga | `Language.Tonga`
-Tsonga | `Language.Tsonga`
-Tswana | `Language.Tswana`
-Tumbuka | `Language.Tumbuka`
-Turkish | `Language.Turkish`
-Turkmen | `Language.Turkmen`
-Ukrainan | `Language.Ukrainan`
-Umbundu | `Language.Umbundu`
-Urdu | `Language.Urdu`
-Uzbek | `Language.Uzbek`
-Vietnamese | `Language.Vietnamese`
-Wagdi | `Language.Wagdi`
-Waray-Waray | `Language.Waray_Waray`
-Wolaytta | `Language.Wolaytta`
-Wu | `Language.Wu`
-Xhosa | `Language.Xhosa`
-Xiang | `Language.Xiang`
-Yao | `Language.Yao`
-Yoruba | `Language.Yoruba`
-Zhuang | `Language.Zhuang`
-Zulu | `Language.Zulu`
+_No changes_
 
 #### Removed public APIs:
 
 _No changes._
+
 
 ## Requirements
 
@@ -231,7 +60,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.aspose</groupId>
   <artifactId>aspose-ocr-cloud</artifactId>
-  <version>24.8.0</version>
+  <version>24.11.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -247,7 +76,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.aspose:aspose-ocr-cloud:24.8.0"
+     implementation "com.aspose:aspose-ocr-cloud:24.11.0"
   }
 ```
 
@@ -261,7 +90,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/aspose-ocr-cloud-24.8.0.jar`
+* `target/aspose-ocr-cloud-24.11.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started

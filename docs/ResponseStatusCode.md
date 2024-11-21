@@ -7,15 +7,15 @@
 
 * `OK` (value: `"Ok"`)
 
-* `PARTIALLYNOTFOUND` (value: `"PartiallyNotFound"`)
+* `PARTIALLY_NOT_FOUND` (value: `"PartiallyNotFound"`)
 
-* `NOANYRESULTDATA` (value: `"NoAnyResultData"`)
+* `NO_ANY_RESULT_DATA` (value: `"NoAnyResultData"`)
 
-* `RESULTDATALOST` (value: `"ResultDataLost"`)
+* `RESULT_DATA_LOST` (value: `"ResultDataLost"`)
 
-* `TASKNOTFOUND` (value: `"TaskNotFound"`)
+* `TASK_NOT_FOUND` (value: `"TaskNotFound"`)
 
-* `NOTREADY` (value: `"NotReady"`)
+* `NOT_READY` (value: `"NotReady"`)
 
 * `ERROR` (value: `"Error"`)
 
